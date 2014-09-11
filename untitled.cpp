@@ -5,7 +5,6 @@
 //  Created by Vishal Patel on 9/09/2014.
 //  Copyright (c) 2014 Vishal Patel. All rights reserved.
 //
-
 #include <cstdio>
 #include <cmath>
 #include <cstring>
@@ -24,27 +23,12 @@
 #include <map>
 #include <set>
 #include <iostream>
+
+
 using namespace std;
 
-class Joke {
-public:
-    string amusingJoke(vector<string> input) {
-        
-        string a = input[0];
-        string b = input[1];
-        string c = input[2];
-        string ab = a + b;
-        sort(ab.begin(), ab.end());
-        sort(c.begin(), c.end());
-        
-        if ( ab == c )
-            return "YES";
-        else
-            return "NO";
-    }
-};
 // CUT begin
-ifstream data("/Users/Shared/Codeforces/Codeforces/input.txt");
+ifstream data("/Users/Shared/Codeforces/input.txt");
 
 string next_line() {
     string s;
@@ -85,44 +69,60 @@ string to_string(string t) {
 
 bool double_equal(const double &a, const double &b) { return b==b && a==a && fabs(b - a) <= 1e-9 * max(1.0, fabs(a) ); }
 
-bool do_test(vector<string> input,string __answer) {
-    Joke *instance = new Joke();
-    string __result = instance->amusingJoke(input);
-    delete instance;
-    if (__answer == __result ) {
-        cout << "PASSED!" << endl;
-        return true;
-    }
-    else {
-        cout << "FAILED!" << endl;
-        cout << "           Expected: " << to_string(__answer) << endl;
-        cout << "           Received: " << to_string(__result) << endl;
-        return false;
-    }
+bool do_test(vector<int> volume, vector<int> solute, int minVolume, double desiredStrength, double __expected) {
+//    time_t startClock = clock();
+//    ChemicalMixing *instance = new ChemicalMixing();
+//    double __result = instance->closestBlend(volume, solute, minVolume, desiredStrength);
+//    double elapsed = (double)(clock() - startClock) / CLOCKS_PER_SEC;
+//    delete instance;
+//    
+//    if (double_equal(__expected, __result)) {
+//        cout << "PASSED!" << " (" << elapsed << " seconds)" << endl;
+//        return true;
+//    }
+//    else {
+//        cout << "FAILED!" << " (" << elapsed << " seconds)" << endl;
+//        cout << "           Expected: " << to_string(__expected) << endl;
+//        cout << "           Received: " << to_string(__result) << endl;
+//        return false;
+//    }
     return true;
 }
+
 int run_test(bool mainProcess, const set<int> &case_set, const string command) {
     int cases = 0, passed = 0;
-    // skip first four lines.
-    next_line();
-    next_line();
-    next_line();
-    next_line();
     while (true) {
         if (next_line().find("input") != 0)
             break;
         //start writing here
-        vector<string> input;
-        from_stream(input);
+        vector<int> volume;
+        from_stream(volume);
+        vector<int> solute;
+        from_stream(solute);
+        int minVolume;
+        from_stream(minVolume);
+        double desiredStrength;
+        from_stream(desiredStrength);
         next_line();
-        string __answer;
+        double __answer;
         from_stream(__answer);
+        
         cases++;
+        if (case_set.size() > 0 && case_set.find(cases - 1) == case_set.end())
+            continue;
+        
         cout << "  Testcase #" << cases - 1 << " ... ";
-        if( do_test(input,__answer)) {
+        if ( do_test(volume, solute, minVolume, desiredStrength, __answer)) {
             passed++;
         }
         //end writing here
+    }
+    if (mainProcess) {
+        cout << endl << "Passed : " << passed << "/" << cases << " cases" << endl;
+        int T = time(NULL) - 1409981048;
+        double PT = T / 60.0, TT = 75.0;
+        cout << "Time   : " << T / 60 << " minutes " << T % 60 << " secs" << endl;
+        cout << "Score  : " << 1000 * (0.3 + (0.7 * TT * TT) / (10.0 * PT * PT + TT * TT)) << " points" << endl;
     }
     return 0;
 }
@@ -139,26 +139,8 @@ int main(int argc, char *argv[]) {
             cases.insert(atoi(argv[i]));
         }
     }
-//    cout << "Start testing" << endl << endl << endl;
-    //return run_test(mainProcess, cases, argv[0]);
-    //start input for on line judge
-//    cout << "enter no of elements :";
-//    int size_input ;
-//    cin >> size_input ;
-    vector<string> input ;
-//    cin.clear() ;
-//    cin.ignore(numeric_limits<streamsize>::max(), '\n');
-    for ( int i = 0 ; i < 3 ; i++ ) {
-        //cout << "enter " << i << "th string :";
-        string  input_var ;
-        cin.clear();
-        getline(cin, input_var) ;
-        input.push_back( input_var ) ;
-        cin.clear();
+    if (mainProcess) {
+        cout << "ChemicalMixing (1000 Points)" << endl << endl;
     }
-    //calling class
-    Joke *instance = new Joke() ;
-    cout << instance->amusingJoke(input);
-    delete instance;
-    //end input for on line judge
+    return run_test(mainProcess, cases, argv[0]);
 }
