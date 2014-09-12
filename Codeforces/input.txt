@@ -1,25 +1,12 @@
-ClassName:Joke
-MethodName:amusingJoke
-Parameters:vector<string>:input
-Returns:string
+ClassName:Socks460A
+MethodName:countPairs
+Parameters:string:input
+Returns:int
 input
-3
-SANTACLAUS
-DEDMOROZ
-SANTAMOROZDEDCLAUS
+2 2
 output
-YES
+3
 input
-3
-PAPAINOEL
-JOULUPUKKI
-JOULNAPAOILELUPUKKI
+9 3
 output
-NO
-input
-3
-BABBONATALE
-FATHERCHRISTMAS
-BABCHRISTMASBONATALLEFATHER
-output
-NO
+13

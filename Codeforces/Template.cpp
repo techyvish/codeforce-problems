@@ -5,6 +5,7 @@
 //  Created by Vishal Patel on 9/09/2014.
 //  Copyright (c) 2014 Vishal Patel. All rights reserved.
 //
+
 #include <cstdio>
 #include <cmath>
 #include <cstring>
@@ -23,12 +24,16 @@
 #include <map>
 #include <set>
 #include <iostream>
-
-
 using namespace std;
 
+class Socks460A {
+public:
+    int countPairs(string input) {
+        return 0;
+    }
+};
 // CUT begin
-ifstream data("/Users/Shared/Codeforces/input.txt");
+ifstream data("/Users/Shared/codeforces/codeforces/input.txt");
 
 string next_line() {
     string s;
@@ -69,62 +74,75 @@ string to_string(string t) {
 
 bool double_equal(const double &a, const double &b) { return b==b && a==a && fabs(b - a) <= 1e-9 * max(1.0, fabs(a) ); }
 
-bool do_test(vector<int> volume, vector<int> solute, int minVolume, double desiredStrength, double __expected) {
-//    time_t startClock = clock();
-//    ChemicalMixing *instance = new ChemicalMixing();
-//    double __result = instance->closestBlend(volume, solute, minVolume, desiredStrength);
-//    double elapsed = (double)(clock() - startClock) / CLOCKS_PER_SEC;
-//    delete instance;
-//    
-//    if (double_equal(__expected, __result)) {
-//        cout << "PASSED!" << " (" << elapsed << " seconds)" << endl;
-//        return true;
-//    }
-//    else {
-//        cout << "FAILED!" << " (" << elapsed << " seconds)" << endl;
-//        cout << "           Expected: " << to_string(__expected) << endl;
-//        cout << "           Received: " << to_string(__result) << endl;
-//        return false;
-//    }
+bool do_test(string input,int __answer) {
+    Socks460A *instance = new Socks460A();
+    int __result = instance->countPairs(input);
+    delete instance;
+    if (__answer == __result ) {
+        cout << "PASSED!" << endl;
+        return true;
+    }
+    else {
+        cout << "FAILED!" << endl;
+        cout << "           Expected: " << to_string(__answer) << endl;
+        cout << "           Received: " << to_string(__result) << endl;
+        return false;
+    }
     return true;
 }
-
 int run_test(bool mainProcess, const set<int> &case_set, const string command) {
     int cases = 0, passed = 0;
+    // skip first four lines.
+    next_line();
+    next_line();
+    next_line();
+    next_line();
     while (true) {
         if (next_line().find("input") != 0)
             break;
         //start writing here
-        vector<int> volume;
-        from_stream(volume);
-        vector<int> solute;
-        from_stream(solute);
-        int minVolume;
-        from_stream(minVolume);
-        double desiredStrength;
-        from_stream(desiredStrength);
+        string input;
+        from_stream(input);
         next_line();
-        double __answer;
+        int __answer;
         from_stream(__answer);
-        
         cases++;
-        if (case_set.size() > 0 && case_set.find(cases - 1) == case_set.end())
-            continue;
-        
         cout << "  Testcase #" << cases - 1 << " ... ";
-        if ( do_test(volume, solute, minVolume, desiredStrength, __answer)) {
+        if( do_test(input,__answer)) {
             passed++;
         }
         //end writing here
     }
-    if (mainProcess) {
-        cout << endl << "Passed : " << passed << "/" << cases << " cases" << endl;
-        int T = time(NULL) - 1409981048;
-        double PT = T / 60.0, TT = 75.0;
-        cout << "Time   : " << T / 60 << " minutes " << T % 60 << " secs" << endl;
-        cout << "Score  : " << 1000 * (0.3 + (0.7 * TT * TT) / (10.0 * PT * PT + TT * TT)) << " points" << endl;
-    }
     return 0;
+}
+
+//std::string trim(std::string const& str)
+//{
+//    std::size_t first = str.find_first_not_of(' ');
+//    std::size_t last  = str.find_last_not_of(' ');
+//    return str.substr(first, last-first+1);
+//}
+
+template <typename T>
+void getUserInput(T &input_var) {
+    while (true)
+    {
+
+        if (std::cin >> input_var)
+            break;
+        else if (std::cin.eof())
+            exit(EXIT_FAILURE);
+    }
+}
+
+string getStringInput()
+{
+    string s = "";
+    while (std::getline(std::cin, s, '\n')) {
+        if ( s != "")
+            break;
+    }
+    return s;
 }
 
 int main(int argc, char *argv[]) {
@@ -139,8 +157,14 @@ int main(int argc, char *argv[]) {
             cases.insert(atoi(argv[i]));
         }
     }
-    if (mainProcess) {
-        cout << "ChemicalMixing (1000 Points)" << endl << endl;
-    }
+    cout << "Start testing" << endl << endl << endl;
     return run_test(mainProcess, cases, argv[0]);
+    //start input for on line judge
+    string input = getStringInput();
+        //calling class
+    Socks460A *instance = new Socks460A() ;
+    int __result = instance->countPairs(input);
+    cout << __result ;
+    delete instance;
+    //end input for on line judge
 }

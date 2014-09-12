@@ -26,25 +26,14 @@
 #include <iostream>
 using namespace std;
 
-class Joke {
+class Socks460A {
 public:
-    string amusingJoke(vector<string> input) {
-        
-        string a = input[0];
-        string b = input[1];
-        string c = input[2];
-        string ab = a + b;
-        sort(ab.begin(), ab.end());
-        sort(c.begin(), c.end());
-        
-        if ( ab == c )
-            return "YES";
-        else
-            return "NO";
+    int countPairs(string input) {
+        return 0;
     }
 };
 // CUT begin
-ifstream data("/Users/Shared/Codeforces/Codeforces/input.txt");
+ifstream data("/Users/Shared/codeforces/codeforces/input.txt");
 
 string next_line() {
     string s;
@@ -85,9 +74,9 @@ string to_string(string t) {
 
 bool double_equal(const double &a, const double &b) { return b==b && a==a && fabs(b - a) <= 1e-9 * max(1.0, fabs(a) ); }
 
-bool do_test(vector<string> input,string __answer) {
-    Joke *instance = new Joke();
-    string __result = instance->amusingJoke(input);
+bool do_test(string input,int __answer) {
+    Socks460A *instance = new Socks460A();
+    int __result = instance->countPairs(input);
     delete instance;
     if (__answer == __result ) {
         cout << "PASSED!" << endl;
@@ -112,10 +101,10 @@ int run_test(bool mainProcess, const set<int> &case_set, const string command) {
         if (next_line().find("input") != 0)
             break;
         //start writing here
-        vector<string> input;
+        string input;
         from_stream(input);
         next_line();
-        string __answer;
+        int __answer;
         from_stream(__answer);
         cases++;
         cout << "  Testcase #" << cases - 1 << " ... ";
@@ -125,6 +114,35 @@ int run_test(bool mainProcess, const set<int> &case_set, const string command) {
         //end writing here
     }
     return 0;
+}
+
+//std::string trim(std::string const& str)
+//{
+//    std::size_t first = str.find_first_not_of(' ');
+//    std::size_t last  = str.find_last_not_of(' ');
+//    return str.substr(first, last-first+1);
+//}
+
+template <typename T>
+void getUserInput(T &input_var) {
+    while (true)
+    {
+
+        if (std::cin >> input_var)
+            break;
+        else if (std::cin.eof())
+            exit(EXIT_FAILURE);
+    }
+}
+
+string getStringInput()
+{
+    string s = "";
+    while (std::getline(std::cin, s, '\n')) {
+        if ( s != "")
+            break;
+    }
+    return s;
 }
 
 int main(int argc, char *argv[]) {
@@ -139,26 +157,14 @@ int main(int argc, char *argv[]) {
             cases.insert(atoi(argv[i]));
         }
     }
-//    cout << "Start testing" << endl << endl << endl;
+    cout << "Start testing" << endl << endl << endl;
     //return run_test(mainProcess, cases, argv[0]);
     //start input for on line judge
-//    cout << "enter no of elements :";
-//    int size_input ;
-//    cin >> size_input ;
-    vector<string> input ;
-//    cin.clear() ;
-//    cin.ignore(numeric_limits<streamsize>::max(), '\n');
-    for ( int i = 0 ; i < 3 ; i++ ) {
-        //cout << "enter " << i << "th string :";
-        string  input_var ;
-        cin.clear();
-        getline(cin, input_var) ;
-        input.push_back( input_var ) ;
-        cin.clear();
-    }
-    //calling class
-    Joke *instance = new Joke() ;
-    cout << instance->amusingJoke(input);
+    string input = getStringInput();
+        //calling class
+    Socks460A *instance = new Socks460A() ;
+    int __result = instance->countPairs(input);
+    cout << __result ;
     delete instance;
     //end input for on line judge
 }

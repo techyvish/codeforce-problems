@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C952441319BE62D2005E6DC4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C952441219BE62D2005E6DC4 /* main.cpp */; };
-		C952441519BE62D2005E6DC4 /* Codeforces.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C952441419BE62D2005E6DC4 /* Codeforces.1 */; };
+		C9E1246819C18824002D2885 /* translate41A.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9E1246719C18824002D2885 /* translate41A.cpp */; };
+		C9E1246A19C268DE002D2885 /* Socks460A.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9E1246919C268DE002D2885 /* Socks460A.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -18,7 +18,6 @@
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				C952441519BE62D2005E6DC4 /* Codeforces.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
@@ -26,9 +25,9 @@
 
 /* Begin PBXFileReference section */
 		C952440F19BE62D2005E6DC4 /* Codeforces */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Codeforces; sourceTree = BUILT_PRODUCTS_DIR; };
-		C952441219BE62D2005E6DC4 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		C952441419BE62D2005E6DC4 /* Codeforces.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Codeforces.1; sourceTree = "<group>"; };
-		C952441B19BE6318005E6DC4 /* input.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
+		C9E1246619C187D1002D2885 /* input.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
+		C9E1246719C18824002D2885 /* translate41A.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = translate41A.cpp; sourceTree = "<group>"; };
+		C9E1246919C268DE002D2885 /* Socks460A.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Socks460A.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,9 +60,9 @@
 		C952441119BE62D2005E6DC4 /* Codeforces */ = {
 			isa = PBXGroup;
 			children = (
-				C952441B19BE6318005E6DC4 /* input.txt */,
-				C952441219BE62D2005E6DC4 /* main.cpp */,
-				C952441419BE62D2005E6DC4 /* Codeforces.1 */,
+				C9E1246919C268DE002D2885 /* Socks460A.cpp */,
+				C9E1246719C18824002D2885 /* translate41A.cpp */,
+				C9E1246619C187D1002D2885 /* input.txt */,
 			);
 			path = Codeforces;
 			sourceTree = "<group>";
@@ -119,7 +118,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C952441319BE62D2005E6DC4 /* main.cpp in Sources */,
+				C9E1246A19C268DE002D2885 /* Socks460A.cpp in Sources */,
+				C9E1246819C18824002D2885 /* translate41A.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +229,7 @@
 				C952441A19BE62D2005E6DC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
