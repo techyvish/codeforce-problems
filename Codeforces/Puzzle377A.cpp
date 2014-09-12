@@ -29,6 +29,7 @@ using namespace std;
 class Puzzle377A {
 public:
     int minimumDifference(string input, string puzzles) {
+        
         return 0;
     }
 };

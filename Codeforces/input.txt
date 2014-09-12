@@ -1,12 +1,9 @@
-ClassName:Socks460A
-MethodName:countPairs
-Parameters:string:input
+ClassName:Puzzle377A
+MethodName:minimumDifference
+Parameters:string:input,string:puzzles
 Returns:int
 input
-2 2
+4 6
+10 12 10 7 5 22
 output
-3
-input
-9 3
-output
-13
+5
