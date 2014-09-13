@@ -25,56 +25,56 @@
 #include <set>
 #include <iostream>
 
-
-std::vector<std::string> split(std::string s) {
-    std::stringstream A(s);
-    std::vector<std::string> res;
-    std::string t;
-	while (A>>t) res.push_back(t);
-	return res;
-}
-
 using namespace std;
 
-class Puzzle377A {
+class MartianString149E {
 public:
-    int minimumDifference(string input, string puzzles) {
-        vector<string> s1 = split(input);
-        vector<string> s2 = split(puzzles);
-        int a[200] = {0};
-  
-        
-        for (int i = 0 ; i < s1.size() ; i++ )
+    int beautifulwords(string eyesequence, vector<string> words) {
+        set<string> stringset;
+        for ( int r = 0 ; r < eyesequence.size() ; r++ )
         {
-            stringstream buffer(s1[i]);
-            buffer >> a[i];
-        }
-        
-        vector<int> b;
-        for (int i = 0 ; i < s2.size() ; i++ )
-        {
-            int c ;
-            stringstream buffer(s2[i]);
-            buffer >> c;
-            b.push_back(c);
-        }
-        
-        sort(b.begin(),b.end());
-        
-        int best = INFINITY;
-        int total = a[0]-1;
-
-        for ( int i = 0; i < a[1]-a[0] ; i++)
-        {
-            if (i+total < b.size() )
-            {
-                best = min(best, b[i+total] - b[i] );
+            int n = (int)eyesequence.size();
+            std::vector<bool> v(n);
+            
+            for (int i = 0; i < n; ++i) {
+                v[i] = (i >= (n - r));
             }
+            do {
+                string s = "";
+                for (int i = 0; i < n; ++i) {
+                    if (v[i]) {
+                        //cout << eyesequence[i] << " ";
+                        stringstream buffer;
+                        string temp;
+                        buffer << eyesequence[i];
+                        buffer >> temp;
+                        s += temp;
+                    }
+                    else
+                    {
+                        //cout << "_ ";
+                    }
+                }
+                //cout << endl;
+
+                for (int i = 0 ; i < words.size() ;i++)
+                {
+                    if (words[i] == s)
+                        stringset.insert(s);
+                }
+            } while (std::next_permutation(v.begin(), v.end()));
+        }
+
+        for (int i = 0 ; i < words.size() ;i++)
+        {
+            if (words[i] == eyesequence)
+                stringset.insert(eyesequence);;
         }
         
-        return best;
+        return (int)stringset.size();
     }
 };
+
 //// CUT begin
 //ifstream data("/Users/Shared/codeforces/codeforces/input.txt");
 //
@@ -117,9 +117,9 @@ public:
 //
 //bool double_equal(const double &a, const double &b) { return b==b && a==a && fabs(b - a) <= 1e-9 * max(1.0, fabs(a) ); }
 //
-//bool do_test(string input,string puzzles,int __answer) {
-//    Puzzle377A *instance = new Puzzle377A();
-//    int __result = instance->minimumDifference(input, puzzles);
+//bool do_test(string eyesequence,vector<string> words,int __answer) {
+//    MartianString149E *instance = new MartianString149E();
+//    int __result = instance->beautifulwords(eyesequence, words);
 //    delete instance;
 //    if (__answer == __result ) {
 //        cout << "PASSED!" << endl;
@@ -144,16 +144,16 @@ public:
 //        if (next_line().find("input") != 0)
 //            break;
 //        //start writing here
-//        string input;
-//        from_stream(input);
-//        string puzzles;
-//        from_stream(puzzles);
+//        string eyesequence;
+//        from_stream(eyesequence);
+//        vector<string> words;
+//        from_stream(words);
 //        next_line();
 //        int __answer;
 //        from_stream(__answer);
 //        cases++;
 //        cout << "  Testcase #" << cases - 1 << " ... ";
-//        if( do_test(input,puzzles,__answer)) {
+//        if( do_test(eyesequence,words,__answer)) {
 //            passed++;
 //        }
 //        //end writing here
@@ -202,14 +202,22 @@ public:
 //            cases.insert(atoi(argv[i]));
 //        }
 //    }
-//    //cout << "Start testing" << endl << endl << endl;
-//    //return run_test(mainProcess, cases, argv[0]);
+//    cout << "Start testing" << endl << endl << endl;
+//    return run_test(mainProcess, cases, argv[0]);
 //    //start input for on line judge
-//    string input = getStringInput();
-//    string puzzles = getStringInput();
+//    string eyesequence = getStringInput();
+//    //cout << "enter no of elements :";
+//    int size_words ;
+//    getUserInput(size_words);
+//    vector<string> words ;
+//    for ( int i = 0 ; i < size_words ; i++ ) {
+//        //cout << "enter " << i << "th string :";
+//        string input_var = getStringInput();;
+//        words.push_back( input_var ) ;
+//    }
 //        //calling class
-//    Puzzle377A *instance = new Puzzle377A() ;
-//    int __result = instance->minimumDifference(input, puzzles);
+//    MartianString149E *instance = new MartianString149E() ;
+//    int __result = instance->beautifulwords(eyesequence, words);
 //    cout << __result ;
 //    delete instance;
 //    //end input for on line judge

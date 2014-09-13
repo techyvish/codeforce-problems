@@ -25,56 +25,78 @@
 #include <set>
 #include <iostream>
 
-
-std::vector<std::string> split(std::string s) {
-    std::stringstream A(s);
-    std::vector<std::string> res;
-    std::string t;
-	while (A>>t) res.push_back(t);
-	return res;
-}
-
 using namespace std;
 
-class Puzzle377A {
+class Pelisection17E {
 public:
-    int minimumDifference(string input, string puzzles) {
-        vector<string> s1 = split(input);
-        vector<string> s2 = split(puzzles);
-        int a[200] = {0};
-  
+    int getCrossingPairs(int number, string input) {
+      
+//        int n = (int)input.size();
+//        std::vector<int> v(n);
+//        std::fill(v.begin() + n - (n/2), v.end(), 1);
+//        do {
+//            for (int i = 0; i < n; ++i) {
+//                if (v[i]) {
+//                    cout << input[i] << " ";
+//                }
+//                else
+//                {
+//                    cout << "_ ";
+//                }
+//            }
+//            cout << endl;
+//
+//        } while (std::next_permutation(v.begin(), v.end()));
         
-        for (int i = 0 ; i < s1.size() ; i++ )
+        vector<vector<int> > final;
+        for ( int i = 0 ; i < input.size(); i++)
         {
-            stringstream buffer(s1[i]);
-            buffer >> a[i];
-        }
-        
-        vector<int> b;
-        for (int i = 0 ; i < s2.size() ; i++ )
-        {
-            int c ;
-            stringstream buffer(s2[i]);
-            buffer >> c;
-            b.push_back(c);
-        }
-        
-        sort(b.begin(),b.end());
-        
-        int best = INFINITY;
-        int total = a[0]-1;
-
-        for ( int i = 0; i < a[1]-a[0] ; i++)
-        {
-            if (i+total < b.size() )
+            for ( int j = i ; j < input.size() ; j++ )
             {
-                best = min(best, b[i+total] - b[i] );
+                if ( isPalindrom(i, j, input) )
+                {
+                    vector<int> v ;
+                    v.push_back(i+1);
+                    v.push_back(j+1);
+                    final.push_back(v);
+                }
             }
         }
         
-        return best;
+        int count = 0 ;
+        for ( int i = 0 ; i < final.size() ; i++ )
+        {
+            vector<int> item = final[i];
+           
+            for (int  j = i+1 ; j < final.size() ; j ++ )
+            {
+                vector<int> checkInItems = final[j];
+                if ( ( item[0] >= checkInItems[0] && item[0] <= checkInItems[1] ) ||
+                     ( item[1] >= checkInItems[0] && item[0] <= checkInItems[1] ))
+                {
+                    count ++;
+                }
+            }
+        }
+        
+        return count;
+    }
+    
+    
+    bool isPalindrom(int i , int j , string s )
+    {
+        if ( j == i - 1 )
+            return true;
+        
+        if ( i == j )
+            return true;
+        if ( s[i] == s[j] )
+            return isPalindrom(i+1, j-1,s);
+        else
+            return false;
     }
 };
+
 //// CUT begin
 //ifstream data("/Users/Shared/codeforces/codeforces/input.txt");
 //
@@ -117,9 +139,9 @@ public:
 //
 //bool double_equal(const double &a, const double &b) { return b==b && a==a && fabs(b - a) <= 1e-9 * max(1.0, fabs(a) ); }
 //
-//bool do_test(string input,string puzzles,int __answer) {
-//    Puzzle377A *instance = new Puzzle377A();
-//    int __result = instance->minimumDifference(input, puzzles);
+//bool do_test(int number,string input,int __answer) {
+//    Pelisection17E *instance = new Pelisection17E();
+//    int __result = instance->getCrossingPairs(number, input);
 //    delete instance;
 //    if (__answer == __result ) {
 //        cout << "PASSED!" << endl;
@@ -144,16 +166,16 @@ public:
 //        if (next_line().find("input") != 0)
 //            break;
 //        //start writing here
+//        int number;
+//        from_stream(number);
 //        string input;
 //        from_stream(input);
-//        string puzzles;
-//        from_stream(puzzles);
 //        next_line();
 //        int __answer;
 //        from_stream(__answer);
 //        cases++;
 //        cout << "  Testcase #" << cases - 1 << " ... ";
-//        if( do_test(input,puzzles,__answer)) {
+//        if( do_test(number,input,__answer)) {
 //            passed++;
 //        }
 //        //end writing here
@@ -205,11 +227,12 @@ public:
 //    //cout << "Start testing" << endl << endl << endl;
 //    //return run_test(mainProcess, cases, argv[0]);
 //    //start input for on line judge
+//    int number ;
+//    cin >> number ;
 //    string input = getStringInput();
-//    string puzzles = getStringInput();
 //        //calling class
-//    Puzzle377A *instance = new Puzzle377A() ;
-//    int __result = instance->minimumDifference(input, puzzles);
+//    Pelisection17E *instance = new Pelisection17E() ;
+//    int __result = instance->getCrossingPairs(number, input);
 //    cout << __result ;
 //    delete instance;
 //    //end input for on line judge

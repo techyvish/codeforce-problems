@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F58E926F-137C-43A6-887E-493243D85C5F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Codeforces</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>462ACCAFD75E33068777F42A27F33E75B5B79E9B</key>
+		<string>https://github.com/techyvish/codeforce-problems.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Codeforces.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>462ACCAFD75E33068777F42A27F33E75B5B79E9B</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/techyvish/codeforce-problems.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>462ACCAFD75E33068777F42A27F33E75B5B79E9B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>462ACCAFD75E33068777F42A27F33E75B5B79E9B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Codeforces</string>
+		</dict>
+	</array>
+</dict>
+</plist>

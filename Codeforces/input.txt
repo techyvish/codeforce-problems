@@ -1,9 +1,19 @@
-ClassName:Puzzle377A
-MethodName:minimumDifference
-Parameters:string:input,string:puzzles
-Returns:int
+ClassName:TwoStrings223B
+MethodName:checkSubstring
+Parameters:string:mainstring,string:substring
+Returns:string
 input
-4 6
-10 12 10 7 5 22
+abab
+ab
 output
-5
+Yes
+input
+abacaba
+aba
+output
+No
+input
+abc
+ba
+output
+No

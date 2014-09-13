@@ -25,56 +25,81 @@
 #include <set>
 #include <iostream>
 
-
-std::vector<std::string> split(std::string s) {
-    std::stringstream A(s);
-    std::vector<std::string> res;
-    std::string t;
-	while (A>>t) res.push_back(t);
-	return res;
-}
-
 using namespace std;
 
-class Puzzle377A {
+class FlipGame327A {
 public:
-    int minimumDifference(string input, string puzzles) {
+
+    std::vector<std::string> split(std::string s) {
+        std::stringstream A(s);
+        std::vector<std::string> res;
+        std::string t;
+        while (A>>t) res.push_back(t);
+        return res;
+    }
+    
+    vector<int> getIntVectorFromString(string input)
+    {
         vector<string> s1 = split(input);
-        vector<string> s2 = split(puzzles);
-        int a[200] = {0};
-  
-        
+        vector<int> b;
         for (int i = 0 ; i < s1.size() ; i++ )
         {
-            stringstream buffer(s1[i]);
-            buffer >> a[i];
-        }
-        
-        vector<int> b;
-        for (int i = 0 ; i < s2.size() ; i++ )
-        {
             int c ;
-            stringstream buffer(s2[i]);
+            stringstream buffer(s1[i]);
             buffer >> c;
             b.push_back(c);
         }
-        
-        sort(b.begin(),b.end());
-        
-        int best = INFINITY;
-        int total = a[0]-1;
+        return b;
+    }
 
-        for ( int i = 0; i < a[1]-a[0] ; i++)
-        {
-            if (i+total < b.size() )
+    int getMaxOnes(string input, string sequence) {
+        vector<string> s1 = split(input);
+        vector<string> s2 = split(sequence);
+        vector<int> a = getIntVectorFromString(sequence);
+        vector<int> b = getIntVectorFromString(sequence);
+        int p = 0 ,q = 1;
+        int max = 0;
+        while (true) {
+            if ( p == b.size() - 1 && q == b.size() -1 )
+                break;
+            int diff = flip(p,q,b);
+            if  ( max  <  diff )
             {
-                best = min(best, b[i+total] - b[i] );
+                max = diff;
+                if ( q != b.size() -1)
+                    q++;
             }
+            else
+            {
+                if ( p != b.size() -1)
+                    p++;
+                //if ( q != b.size() -1)
+                //    q++;
+            };
+        
         }
         
-        return best;
+        return max;
+    }
+    
+    int  flip(int p,int q, vector<int> b)
+    {
+        for ( int i = p ; i <= q ; i++ )
+        {
+            if (b[i] == 1)
+                b[i] = 0;
+            else
+                b[i] = 1;
+        }
+        int cnt =0;
+        for (int i = 0 ; i < b.size(); i++){
+            if (b[i] == 1)
+                cnt++;
+        }
+        return cnt;
     }
 };
+
 //// CUT begin
 //ifstream data("/Users/Shared/codeforces/codeforces/input.txt");
 //
@@ -117,9 +142,9 @@ public:
 //
 //bool double_equal(const double &a, const double &b) { return b==b && a==a && fabs(b - a) <= 1e-9 * max(1.0, fabs(a) ); }
 //
-//bool do_test(string input,string puzzles,int __answer) {
-//    Puzzle377A *instance = new Puzzle377A();
-//    int __result = instance->minimumDifference(input, puzzles);
+//bool do_test(string input,string sequence,int __answer) {
+//    FlipGame327A *instance = new FlipGame327A();
+//    int __result = instance->getMaxOnes(input, sequence);
 //    delete instance;
 //    if (__answer == __result ) {
 //        cout << "PASSED!" << endl;
@@ -146,14 +171,14 @@ public:
 //        //start writing here
 //        string input;
 //        from_stream(input);
-//        string puzzles;
-//        from_stream(puzzles);
+//        string sequence;
+//        from_stream(sequence);
 //        next_line();
 //        int __answer;
 //        from_stream(__answer);
 //        cases++;
 //        cout << "  Testcase #" << cases - 1 << " ... ";
-//        if( do_test(input,puzzles,__answer)) {
+//        if( do_test(input,sequence,__answer)) {
 //            passed++;
 //        }
 //        //end writing here
@@ -202,14 +227,14 @@ public:
 //            cases.insert(atoi(argv[i]));
 //        }
 //    }
-//    //cout << "Start testing" << endl << endl << endl;
-//    //return run_test(mainProcess, cases, argv[0]);
+//    cout << "Start testing" << endl << endl << endl;
+//    return run_test(mainProcess, cases, argv[0]);
 //    //start input for on line judge
 //    string input = getStringInput();
-//    string puzzles = getStringInput();
+//    string sequence = getStringInput();
 //        //calling class
-//    Puzzle377A *instance = new Puzzle377A() ;
-//    int __result = instance->minimumDifference(input, puzzles);
+//    FlipGame327A *instance = new FlipGame327A() ;
+//    int __result = instance->getMaxOnes(input, sequence);
 //    cout << __result ;
 //    delete instance;
 //    //end input for on line judge

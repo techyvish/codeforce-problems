@@ -30,8 +30,41 @@ using namespace std;
 class TwoStrings223B {
 public:
     string checkSubstring(string mainstring, string substring) {
-        return " ";
+        set<string> stringset;
+        
+        int n = (int)mainstring.size();
+        std::vector<bool> v(n);
+        int r = (int)substring.size();
+        for (int i = 0; i < n; ++i) {
+            v[i] = (i >= (n - r));
+        }
+        do {
+            string s = "";
+            for (int i = 0; i < n; ++i) {
+                if (v[i]) {
+                    cout << mainstring[i] << " ";
+                    stringstream buffer;
+                    string temp;
+                    buffer << mainstring[i];
+                    buffer >> temp;
+                    s += temp;
+                }
+                else
+                {
+                    cout << "_ ";
+                }
+            }
+            cout << endl;
+            
+            //                for (int i = 0 ; i < words.size() ;i++)
+            //                {
+            //                    if (words[i] == s)
+            //                        stringset.insert(s);
+            //                }
+        } while (std::next_permutation(v.begin(), v.end()));
+        return "";
     }
+   
 };
 
 // CUT begin

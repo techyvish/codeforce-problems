@@ -25,56 +25,67 @@
 #include <set>
 #include <iostream>
 
-
-std::vector<std::string> split(std::string s) {
-    std::stringstream A(s);
-    std::vector<std::string> res;
-    std::string t;
-	while (A>>t) res.push_back(t);
-	return res;
-}
-
 using namespace std;
 
-class Puzzle377A {
+class CheapTravel466A {
 public:
-    int minimumDifference(string input, string puzzles) {
+    
+    std::vector<std::string> split(std::string s) {
+        std::stringstream A(s);
+        std::vector<std::string> res;
+        std::string t;
+        while (A>>t) res.push_back(t);
+        return res;
+    }
+    
+    vector<int> getIntVectorFromString(string input)
+    {
         vector<string> s1 = split(input);
-        vector<string> s2 = split(puzzles);
-        int a[200] = {0};
-  
-        
+        vector<int> b;
         for (int i = 0 ; i < s1.size() ; i++ )
         {
-            stringstream buffer(s1[i]);
-            buffer >> a[i];
-        }
-        
-        vector<int> b;
-        for (int i = 0 ; i < s2.size() ; i++ )
-        {
             int c ;
-            stringstream buffer(s2[i]);
+            stringstream buffer(s1[i]);
             buffer >> c;
             b.push_back(c);
         }
+        return b;
+    }
+    
+    int getMinSum(string input) {
         
-        sort(b.begin(),b.end());
+        vector<int> a = getIntVectorFromString(input);
         
-        int best = INFINITY;
-        int total = a[0]-1;
-
-        for ( int i = 0; i < a[1]-a[0] ; i++)
-        {
-            if (i+total < b.size() )
+        int costforeachtravel = a[0] * a[2];
+        int ridesinMtravel = a[1];
+        int constforMticket = a[3];
+        
+        int totaltravel = a[0] / ridesinMtravel;
+        int remaningtravel = a[0] % ridesinMtravel;
+        int reducedcostforMtravels = totaltravel * constforMticket;
+        
+        if ( remaningtravel == 0 ){
+            if (reducedcostforMtravels <= costforeachtravel )
             {
-                best = min(best, b[i+total] - b[i] );
+                return reducedcostforMtravels;
+            }
+            else{
+                return costforeachtravel;
             }
         }
+        else
+        {
+            if ( remaningtravel * a[2] <= constforMticket )
+                return  reducedcostforMtravels + remaningtravel * a[2];
+            else
+                return  reducedcostforMtravels + constforMticket;
+        }
         
-        return best;
+
+        return 0;
     }
 };
+
 //// CUT begin
 //ifstream data("/Users/Shared/codeforces/codeforces/input.txt");
 //
@@ -117,9 +128,9 @@ public:
 //
 //bool double_equal(const double &a, const double &b) { return b==b && a==a && fabs(b - a) <= 1e-9 * max(1.0, fabs(a) ); }
 //
-//bool do_test(string input,string puzzles,int __answer) {
-//    Puzzle377A *instance = new Puzzle377A();
-//    int __result = instance->minimumDifference(input, puzzles);
+//bool do_test(string input,int __answer) {
+//    CheapTravel466A *instance = new CheapTravel466A();
+//    int __result = instance->getMinSum(input);
 //    delete instance;
 //    if (__answer == __result ) {
 //        cout << "PASSED!" << endl;
@@ -146,14 +157,12 @@ public:
 //        //start writing here
 //        string input;
 //        from_stream(input);
-//        string puzzles;
-//        from_stream(puzzles);
 //        next_line();
 //        int __answer;
 //        from_stream(__answer);
 //        cases++;
 //        cout << "  Testcase #" << cases - 1 << " ... ";
-//        if( do_test(input,puzzles,__answer)) {
+//        if( do_test(input,__answer)) {
 //            passed++;
 //        }
 //        //end writing here
@@ -206,10 +215,9 @@ public:
 //    //return run_test(mainProcess, cases, argv[0]);
 //    //start input for on line judge
 //    string input = getStringInput();
-//    string puzzles = getStringInput();
 //        //calling class
-//    Puzzle377A *instance = new Puzzle377A() ;
-//    int __result = instance->minimumDifference(input, puzzles);
+//    CheapTravel466A *instance = new CheapTravel466A() ;
+//    int __result = instance->getMinSum(input);
 //    cout << __result ;
 //    delete instance;
 //    //end input for on line judge
