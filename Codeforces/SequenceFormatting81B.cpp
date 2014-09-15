@@ -27,44 +27,87 @@
 
 using namespace std;
 
-class TwoStrings223B {
+class SequenceFormatting81B {
 public:
-    string checkSubstring(string mainstring, string substring) {
-        set<string> stringset;
+    string formatSequence(string s) {
+        string line = "";
         
-        int n = (int)mainstring.size();
-        std::vector<bool> v(n);
-        int r = (int)substring.size();
-        for (int i = 0; i < n; ++i) {
-            v[i] = (i >= (n - r));
-        }
-        do {
-            string s = "";
-            for (int i = 0; i < n; ++i) {
-                if (v[i]) {
-                    cout << mainstring[i] << " ";
-                    stringstream buffer;
-                    string temp;
-                    buffer << mainstring[i];
-                    buffer >> temp;
-                    s += temp;
-                }
-                else
+//        a=s.size();
+//        for (i=0;i<a;i++)
+//        {
+//            if (s[i]==',')
+//            {r+=s[i];
+//                if (i!=s.size()-1)
+//                    r+=' ';
+//                continue;}
+//            if (s[i]=='.' && s[i+1]=='.' && s[i+2]=='.')
+//            {
+//                if (i!=0 && r[r.size()-1]!=' ')
+//                    r+=' ';
+//                r+=s[i++],r+=s[i++],r+=s[i];
+//                continue;
+//            }
+//            if (s[i]==' ')
+//                continue;
+//            if (r[r.size()-1]>='0' && r[r.size()-1]<='9' && s[i-1]==' ')
+//                r+=' ';
+//            r+=s[i];
+//        }
+//        cout<<r;
+
+        
+        int i = 0;
+        while (s[i]) {
+            if ( s[i] - 48 < 0 || s[i] - 48 > 9 )
+            {
+                //cout << s[i] <<endl;
+                while (s[i] == ' ')
                 {
-                    cout << "_ ";
+                    ++i;
                 }
+                
+                if ( (s[i] -48  < 0 || s[i] -48 > 9) && s[i] != '.')
+                {
+                    line += s[i++];
+                }
+                
+                while (s[i] == ' ')
+                {
+                    ++i;
+                }
+                
+                if (s[i] && i != 0)
+                    line += ' ';
+                int c = 0;
+                bool en = false;
+                while (s[i] == '.') {
+                    en = true;
+                    line += s[i++];
+                    if ( c == 2 ){
+                            line += ' ';
+                        c = 0;
+                    }
+                    else {
+                        c++;
+                    }
+                }
+                if ( en )
+                    line.pop_back();
             }
-            cout << endl;
-            
-            //                for (int i = 0 ; i < words.size() ;i++)
-            //                {
-            //                    if (words[i] == s)
-            //                        stringset.insert(s);
-            //                }
-        } while (std::next_permutation(v.begin(), v.end()));
-        return "";
+            else
+            {
+                if (line[line.size()-1]
+                    == ' ' && line[line.size()-2]
+                    == '.' )
+                    line.pop_back();
+                line += s[i++];
+                //cout << line << endl;
+            }
+        }
+        
+        //cout << line;
+        return line;
     }
-   
 };
 
 //// CUT begin
@@ -109,9 +152,9 @@ public:
 //
 //bool double_equal(const double &a, const double &b) { return b==b && a==a && fabs(b - a) <= 1e-9 * max(1.0, fabs(a) ); }
 //
-//bool do_test(string mainstring,string substring,string __answer) {
-//    TwoStrings223B *instance = new TwoStrings223B();
-//    string __result = instance->checkSubstring(mainstring, substring);
+//bool do_test(string sequence,string __answer) {
+//    SequenceFormatting81B *instance = new SequenceFormatting81B();
+//    string __result = instance->formatSequence(sequence);
 //    delete instance;
 //    if (__answer == __result ) {
 //        cout << "PASSED!" << endl;
@@ -136,16 +179,14 @@ public:
 //        if (next_line().find("input") != 0)
 //            break;
 //        //start writing here
-//        string mainstring;
-//        from_stream(mainstring);
-//        string substring;
-//        from_stream(substring);
+//        string sequence;
+//        from_stream(sequence);
 //        next_line();
 //        string __answer;
 //        from_stream(__answer);
 //        cases++;
 //        cout << "  Testcase #" << cases - 1 << " ... ";
-//        if( do_test(mainstring,substring,__answer)) {
+//        if( do_test(sequence,__answer)) {
 //            passed++;
 //        }
 //        //end writing here
@@ -194,14 +235,13 @@ public:
 //            cases.insert(atoi(argv[i]));
 //        }
 //    }
-//    cout << "Start testing" << endl << endl << endl;
-//    return run_test(mainProcess, cases, argv[0]);
+//    //cout << "Start testing" << endl << endl << endl;
+//    //return run_test(mainProcess, cases, argv[0]);
 //    //start input for on line judge
-//    string mainstring = getStringInput();
-//    string substring = getStringInput();
+//    string sequence = getStringInput();
 //        //calling class
-//    TwoStrings223B *instance = new TwoStrings223B() ;
-//    string __result = instance->checkSubstring(mainstring, substring);
+//    SequenceFormatting81B *instance = new SequenceFormatting81B() ;
+//    string __result = instance->formatSequence(sequence);
 //    cout << __result ;
 //    delete instance;
 //    //end input for on line judge

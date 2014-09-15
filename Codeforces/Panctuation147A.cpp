@@ -27,44 +27,79 @@
 
 using namespace std;
 
-class TwoStrings223B {
+class Panctuation147A {
 public:
-    string checkSubstring(string mainstring, string substring) {
-        set<string> stringset;
-        
-        int n = (int)mainstring.size();
-        std::vector<bool> v(n);
-        int r = (int)substring.size();
-        for (int i = 0; i < n; ++i) {
-            v[i] = (i >= (n - r));
+    string correctPanctuation(string s) {
+        string line = "";
+        int i=0;
+        while(s[i])
+        {
+            if(s[i]<'a' || s[i]>'z')
+            {
+                while(s[i]==' ')++i;
+                if(s[i]&&(s[i]<'a' || s[i]>'z'))line += s[i++];
+                while(s[i]==' ')++i;
+                if(s[i]) line += ' ';
+            }
+            else line += s[i++];
         }
-        do {
-            string s = "";
-            for (int i = 0; i < n; ++i) {
-                if (v[i]) {
-                    cout << mainstring[i] << " ";
-                    stringstream buffer;
-                    string temp;
-                    buffer << mainstring[i];
-                    buffer >> temp;
-                    s += temp;
+        return line;
+    }
+
+    /*
+        for ( int i = 0 ; i < line.size() ;i++)
+        {
+            //cout << s << endl;
+            if ( line[i] == '?' ||  line[i] == '!' || line[i] == ',' || line[i] == '.')
+            {
+                s += line[i];
+                while ( line[++i] == ' ' ) {
+
                 }
-                else
+                --i;
+                if ( i != line.size() - 1)
+                    s += ' ';
+            }
+            else if( line[i] == ' ' )
+            {
+                s += ' ';
+                for ( int j = i + 1 ; j < line.size() ; j++ )
                 {
-                    cout << "_ ";
+                    if ( line[j] == '?' ||  line[j] == '!' || line[j] == ',' || line[j] == '.')
+                    {
+                        
+                        s.pop_back();
+                        s += line[j];
+                        int k = j ;
+                        while ( line[k++] == ' ' ) {
+                            j++;
+                        }
+                         if ( i != line.size() - 1)
+                         {
+                             s += ' ';
+                             i++;
+                         }
+                        
+                    }
+                    else if ( line[j] != ' ' )
+                    {
+                        break;
+                    }
+                    else if ( line[j] == ' ')
+                    {
+                        ++i;
+                    }
+                    
                 }
             }
-            cout << endl;
-            
-            //                for (int i = 0 ; i < words.size() ;i++)
-            //                {
-            //                    if (words[i] == s)
-            //                        stringset.insert(s);
-            //                }
-        } while (std::next_permutation(v.begin(), v.end()));
-        return "";
+            else{
+                s+= line[i];
+                //cout << s << endl;
+            }
+        }
+        return s;
     }
-   
+     */
 };
 
 //// CUT begin
@@ -109,9 +144,9 @@ public:
 //
 //bool double_equal(const double &a, const double &b) { return b==b && a==a && fabs(b - a) <= 1e-9 * max(1.0, fabs(a) ); }
 //
-//bool do_test(string mainstring,string substring,string __answer) {
-//    TwoStrings223B *instance = new TwoStrings223B();
-//    string __result = instance->checkSubstring(mainstring, substring);
+//bool do_test(string stringtocorrect,string __answer) {
+//    Panctuation147A *instance = new Panctuation147A();
+//    string __result = instance->correctPanctuation(stringtocorrect);
 //    delete instance;
 //    if (__answer == __result ) {
 //        cout << "PASSED!" << endl;
@@ -136,16 +171,14 @@ public:
 //        if (next_line().find("input") != 0)
 //            break;
 //        //start writing here
-//        string mainstring;
-//        from_stream(mainstring);
-//        string substring;
-//        from_stream(substring);
+//        string stringtocorrect;
+//        from_stream(stringtocorrect);
 //        next_line();
 //        string __answer;
 //        from_stream(__answer);
 //        cases++;
 //        cout << "  Testcase #" << cases - 1 << " ... ";
-//        if( do_test(mainstring,substring,__answer)) {
+//        if( do_test(stringtocorrect,__answer)) {
 //            passed++;
 //        }
 //        //end writing here
@@ -197,11 +230,10 @@ public:
 //    cout << "Start testing" << endl << endl << endl;
 //    return run_test(mainProcess, cases, argv[0]);
 //    //start input for on line judge
-//    string mainstring = getStringInput();
-//    string substring = getStringInput();
+//    string stringtocorrect = getStringInput();
 //        //calling class
-//    TwoStrings223B *instance = new TwoStrings223B() ;
-//    string __result = instance->checkSubstring(mainstring, substring);
+//    Panctuation147A *instance = new Panctuation147A() ;
+//    string __result = instance->correctPanctuation(stringtocorrect);
 //    cout << __result ;
 //    delete instance;
 //    //end input for on line judge

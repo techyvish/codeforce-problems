@@ -30,6 +30,25 @@ using namespace std;
 class PetyaAndStrings112A {
 public:
     int compareString(string first, string second) {
+        
+        transform(first.begin(), first.end(), first.begin(), ::tolower);
+        transform(second.begin(), second.end(), second.begin(), ::tolower);
+        
+        vector<string> str;
+        str.push_back(first);
+        str.push_back(second);
+        
+        sort(str.begin(), str.end());
+        if (str[0] == str[1])
+            return 0;
+        
+        if ( str[0] == first )
+            return -1;
+        else if ( str[0] == second )
+            return 1;
+        else
+            return 0;
+        
         return 0;
     }
 };
@@ -161,8 +180,8 @@ int main(int argc, char *argv[]) {
             cases.insert(atoi(argv[i]));
         }
     }
-    cout << "Start testing" << endl << endl << endl;
-    return run_test(mainProcess, cases, argv[0]);
+    //cout << "Start testing" << endl << endl << endl;
+    //return run_test(mainProcess, cases, argv[0]);
     //start input for on line judge
     string first = getStringInput();
     string second = getStringInput();
