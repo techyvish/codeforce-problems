@@ -27,32 +27,40 @@
 
 using namespace std;
 
-class PetyaAndStrings112A {
+class Dubstep208B {
 public:
-    int compareString(string first, string second) {
+    string findOriginalString(string s) {
+        int i = 0;
+        string line = "";
+        while (s[i]) {
+            if ( i == s.size() -1 && s[i] == ' ')
+            {
+                s.pop_back();
+            }
         
-        transform(first.begin(), first.end(), first.begin(), ::tolower);
-        transform(second.begin(), second.end(), second.begin(), ::tolower);
-        
-        vector<string> str;
-        str.push_back(first);
-        str.push_back(second);
-        
-        sort(str.begin(), str.end());
-        if (str[0] == str[1])
-            return 0;
-        
-        if ( str[0] == first )
-            return -1;
-        else if ( str[0] == second )
-            return 1;
-        else
-            return 0;
-        
-        return 0;
+            bool found = false;
+            while (s[i] == 'W' && s[i+1] == 'U' && s[i+2] == 'B')
+            {
+                i+=3;
+                found = true;
+            }
+            
+            if ( line.size() && i < s.size() && found )
+            {
+                line += ' ';
+            }
+           
+            if (i < s.size())
+            {
+                line += s[i];
+                i++;
+            }
+            
+        }
+        return line ;
     }
 };
-//
+
 //// CUT begin
 //ifstream data("/Users/Shared/codeforces/codeforces/input.txt");
 //
@@ -95,9 +103,9 @@ public:
 //
 //bool double_equal(const double &a, const double &b) { return b==b && a==a && fabs(b - a) <= 1e-9 * max(1.0, fabs(a) ); }
 //
-//bool do_test(string first,string second,int __answer) {
-//    PetyaAndStrings112A *instance = new PetyaAndStrings112A();
-//    int __result = instance->compareString(first, second);
+//bool do_test(string input,string __answer) {
+//    Dubstep208B *instance = new Dubstep208B();
+//    string __result = instance->findOriginalString(input);
 //    delete instance;
 //    if (__answer == __result ) {
 //        cout << "PASSED!" << endl;
@@ -122,16 +130,14 @@ public:
 //        if (next_line().find("input") != 0)
 //            break;
 //        //start writing here
-//        string first;
-//        from_stream(first);
-//        string second;
-//        from_stream(second);
+//        string input;
+//        from_stream(input);
 //        next_line();
-//        int __answer;
+//        string __answer;
 //        from_stream(__answer);
 //        cases++;
 //        cout << "  Testcase #" << cases - 1 << " ... ";
-//        if( do_test(first,second,__answer)) {
+//        if( do_test(input,__answer)) {
 //            passed++;
 //        }
 //        //end writing here
@@ -183,11 +189,10 @@ public:
 //    //cout << "Start testing" << endl << endl << endl;
 //    //return run_test(mainProcess, cases, argv[0]);
 //    //start input for on line judge
-//    string first = getStringInput();
-//    string second = getStringInput();
+//    string input = getStringInput();
 //        //calling class
-//    PetyaAndStrings112A *instance = new PetyaAndStrings112A() ;
-//    int __result = instance->compareString(first, second);
+//    Dubstep208B *instance = new Dubstep208B() ;
+//    string __result = instance->findOriginalString(input);
 //    cout << __result ;
 //    delete instance;
 //    //end input for on line judge

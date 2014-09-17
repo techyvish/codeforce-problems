@@ -24,13 +24,26 @@
 #include <map>
 #include <set>
 #include <iostream>
+#include <unordered_map>
 
 using namespace std;
 
 class Chatroom58A {
 public:
-    string findHello(string input) {
-        return " ";
+    string findHello(string s) {
+        
+        string a = "hello";
+        int k = 0;
+        for ( int i = 0 ; i < s.size() ; i++ )
+        {
+            if ( s[i] == a[k] )
+            {
+                k++;
+            }
+        }
+        if ( k == 5)
+            return "YES";
+        return "NO";
     }
 };
 
@@ -159,8 +172,8 @@ int main(int argc, char *argv[]) {
             cases.insert(atoi(argv[i]));
         }
     }
-    cout << "Start testing" << endl << endl << endl;
-    return run_test(mainProcess, cases, argv[0]);
+    //cout << "Start testing" << endl << endl << endl;
+    //return run_test(mainProcess, cases, argv[0]);
     //start input for on line judge
     string input = getStringInput();
         //calling class

@@ -27,32 +27,47 @@
 
 using namespace std;
 
-class PetyaAndStrings112A {
+class KString219A {
 public:
-    int compareString(string first, string second) {
+    string generateKstring(int k, string input) {
+        map<char,int> dict;
+        int i = 0;
+        while ( input[i]) {
+            dict[input[i]]++;
+            i++;
+        }
+       
+        for ( auto it = dict.begin() ; it != dict.end() ; it++)
+        {
+                if ( dict[it->first] % k != 0 )
+                {
+                    string str;
+                    stringstream ss;
+                    ss << -1;
+                    ss >> str;
+                    return str;
+                }
+        }
         
-        transform(first.begin(), first.end(), first.begin(), ::tolower);
-        transform(second.begin(), second.end(), second.begin(), ::tolower);
+        string line;
+        for ( auto it = dict.begin() ; it != dict.end() ; it++)
+        {
+            int val = dict[it->first];
+            for ( int i = 0 ; i < val/k ; i++ )
+            {
+                line += it->first;
+            }
+        }
+        string a = line ;
+        for ( int i = 1; i < k ; i++)
+        {
+            line += a;
+        }
         
-        vector<string> str;
-        str.push_back(first);
-        str.push_back(second);
-        
-        sort(str.begin(), str.end());
-        if (str[0] == str[1])
-            return 0;
-        
-        if ( str[0] == first )
-            return -1;
-        else if ( str[0] == second )
-            return 1;
-        else
-            return 0;
-        
-        return 0;
+        return line;
     }
 };
-//
+
 //// CUT begin
 //ifstream data("/Users/Shared/codeforces/codeforces/input.txt");
 //
@@ -95,9 +110,9 @@ public:
 //
 //bool double_equal(const double &a, const double &b) { return b==b && a==a && fabs(b - a) <= 1e-9 * max(1.0, fabs(a) ); }
 //
-//bool do_test(string first,string second,int __answer) {
-//    PetyaAndStrings112A *instance = new PetyaAndStrings112A();
-//    int __result = instance->compareString(first, second);
+//bool do_test(int k,string input,string __answer) {
+//    KString219A *instance = new KString219A();
+//    string __result = instance->generateKstring(k, input);
 //    delete instance;
 //    if (__answer == __result ) {
 //        cout << "PASSED!" << endl;
@@ -122,16 +137,16 @@ public:
 //        if (next_line().find("input") != 0)
 //            break;
 //        //start writing here
-//        string first;
-//        from_stream(first);
-//        string second;
-//        from_stream(second);
+//        int k;
+//        from_stream(k);
+//        string input;
+//        from_stream(input);
 //        next_line();
-//        int __answer;
+//        string __answer;
 //        from_stream(__answer);
 //        cases++;
 //        cout << "  Testcase #" << cases - 1 << " ... ";
-//        if( do_test(first,second,__answer)) {
+//        if( do_test(k,input,__answer)) {
 //            passed++;
 //        }
 //        //end writing here
@@ -183,11 +198,12 @@ public:
 //    //cout << "Start testing" << endl << endl << endl;
 //    //return run_test(mainProcess, cases, argv[0]);
 //    //start input for on line judge
-//    string first = getStringInput();
-//    string second = getStringInput();
+//    int k ;
+//    cin >> k ;
+//    string input = getStringInput();
 //        //calling class
-//    PetyaAndStrings112A *instance = new PetyaAndStrings112A() ;
-//    int __result = instance->compareString(first, second);
+//    KString219A *instance = new KString219A() ;
+//    string __result = instance->generateKstring(k, input);
 //    cout << __result ;
 //    delete instance;
 //    //end input for on line judge
