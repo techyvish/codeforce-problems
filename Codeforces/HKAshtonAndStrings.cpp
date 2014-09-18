@@ -24,26 +24,57 @@
 #include <map>
 #include <set>
 #include <iostream>
-#include <unordered_map>
+#include <numeric>
 
 using namespace std;
 
-class Chatroom58A {
+class HKAshtonAndStrings {
 public:
-    string findHello(string s) {
-        
-        string a = "hello";
-        int k = 0;
-        for ( int i = 0 ; i < s.size() ; i++ )
-        {
-            if ( s[i] == a[k] )
-            {
+    
+    string getindex(string input, int k) {
+        vector<string> stringset;
+        int i = 1;
+        while ( i < input.size() ) {
+            int k = 0 ;
+            while (input[k]) {
+                if ( k+i <= input.size() ){
+                    stringset.push_back(input.substr(k,i));
+                }
                 k++;
             }
+            i++;
         }
-        if ( k == 5)
-            return "YES";
-        return "NO";
+        
+        stringset.push_back(input);
+        //sort(stringset.begin(), stringset.end());
+        
+        for (int i = 0 ; i < stringset.size() ; i++ )
+        {
+            for ( int j = i + 1; j < stringset.size() ; j++ )
+            {
+                if ( !lexicographical_compare(stringset[i].begin(), stringset[i].end(), stringset[j].begin(), stringset[j].end()))
+                {
+                    string temp = stringset[i];
+                    stringset[i] = stringset[j];
+                    stringset[j] = temp;
+                }
+            }
+                
+        }
+        
+        string a = accumulate(stringset.begin(),stringset.end(),string(""));
+        string p = "";
+        
+    
+        
+        for ( int i = 0 ; i < a.size(); i++)
+        {
+            if ( i == k - 1 ) {
+                p += a[i];
+                break;
+            }
+        }
+        return p;
     }
 };
 
@@ -89,9 +120,9 @@ public:
 //
 //bool double_equal(const double &a, const double &b) { return b==b && a==a && fabs(b - a) <= 1e-9 * max(1.0, fabs(a) ); }
 //
-//bool do_test(string input,string __answer) {
-//    Chatroom58A *instance = new Chatroom58A();
-//    string __result = instance->findHello(input);
+//bool do_test(string input,int k,string __answer) {
+//    HKAshtonAndStrings *instance = new HKAshtonAndStrings();
+//    string __result = instance->getindex(input, k);
 //    delete instance;
 //    if (__answer == __result ) {
 //        cout << "PASSED!" << endl;
@@ -118,12 +149,14 @@ public:
 //        //start writing here
 //        string input;
 //        from_stream(input);
+//        int k;
+//        from_stream(k);
 //        next_line();
 //        string __answer;
 //        from_stream(__answer);
 //        cases++;
 //        cout << "  Testcase #" << cases - 1 << " ... ";
-//        if( do_test(input,__answer)) {
+//        if( do_test(input,k,__answer)) {
 //            passed++;
 //        }
 //        //end writing here
@@ -172,14 +205,34 @@ public:
 //            cases.insert(atoi(argv[i]));
 //        }
 //    }
-//    //cout << "Start testing" << endl << endl << endl;
-//    //return run_test(mainProcess, cases, argv[0]);
+//    cout << "Start testing" << endl << endl << endl;
+//    return run_test(mainProcess, cases, argv[0]);
 //    //start input for on line judge
-//    string input = getStringInput();
+//    int testcases;
+//    cin >> testcases;
+//    vector<string> strings ;
+//    vector<int> numbers;
+//    for ( int i = 0 ; i < testcases ; i++ )
+//    {
+//        string input = getStringInput();
+//        strings.push_back(input);
+//        int k ;
+//        cin >> k ;
+//        numbers.push_back(k);
+//        
+//
+//    }
+//    
+//    for ( int i = 0 ; i < testcases ; i++ )
+//    {
 //        //calling class
-//    Chatroom58A *instance = new Chatroom58A() ;
-//    string __result = instance->findHello(input);
-//    cout << __result ;
-//    delete instance;
+//        HKAshtonAndStrings *instance = new HKAshtonAndStrings() ;
+//        string input = strings[i];
+//        int k  = numbers[i];
+//        string __result = instance->getindex(input, k);
+//        cout << __result ;
+//        delete instance;
+//    }
 //    //end input for on line judge
+//        
 //}

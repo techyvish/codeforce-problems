@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9A4BC1A19C967F9002A89D9 /* Eevee452A.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9A4BC1919C967F9002A89D9 /* Eevee452A.cpp */; };
 		C9E1246819C18824002D2885 /* translate41A.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9E1246719C18824002D2885 /* translate41A.cpp */; };
 		C9E1246A19C268DE002D2885 /* Socks460A.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9E1246919C268DE002D2885 /* Socks460A.cpp */; };
 		C9E1246C19C27622002D2885 /* Puzzle377A.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9E1246B19C27622002D2885 /* Puzzle377A.cpp */; };
@@ -23,6 +24,9 @@
 		C9F2CEE819C824D2009A2773 /* GnikoolSsalg130B.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9F2CEE719C824D2009A2773 /* GnikoolSsalg130B.cpp */; };
 		C9F2CEEE19C8FB68009A2773 /* Dubstep208B.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9F2CEED19C8FB68009A2773 /* Dubstep208B.cpp */; };
 		C9F2CEF019C903D1009A2773 /* Chatroom58A.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9F2CEEF19C903D1009A2773 /* Chatroom58A.cpp */; };
+		C9F2CEF219CA8F20009A2773 /* HKAshtonAndStrings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9F2CEF119CA8F20009A2773 /* HKAshtonAndStrings.cpp */; };
+		C9F2CEF419CAF769009A2773 /* PinProblem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9F2CEF319CAF769009A2773 /* PinProblem.cpp */; };
+		C9F2CEF619CAFFAA009A2773 /* Pangrams.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9F2CEF519CAFFAA009A2773 /* Pangrams.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		C952440F19BE62D2005E6DC4 /* Codeforces */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Codeforces; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9A4BC1919C967F9002A89D9 /* Eevee452A.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Eevee452A.cpp; sourceTree = "<group>"; };
 		C9E1246619C187D1002D2885 /* input.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
 		C9E1246719C18824002D2885 /* translate41A.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = translate41A.cpp; sourceTree = "<group>"; };
 		C9E1246919C268DE002D2885 /* Socks460A.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Socks460A.cpp; sourceTree = "<group>"; };
@@ -56,6 +61,9 @@
 		C9F2CEE719C824D2009A2773 /* GnikoolSsalg130B.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GnikoolSsalg130B.cpp; sourceTree = "<group>"; };
 		C9F2CEED19C8FB68009A2773 /* Dubstep208B.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Dubstep208B.cpp; sourceTree = "<group>"; };
 		C9F2CEEF19C903D1009A2773 /* Chatroom58A.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Chatroom58A.cpp; sourceTree = "<group>"; };
+		C9F2CEF119CA8F20009A2773 /* HKAshtonAndStrings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HKAshtonAndStrings.cpp; sourceTree = "<group>"; };
+		C9F2CEF319CAF769009A2773 /* PinProblem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PinProblem.cpp; sourceTree = "<group>"; };
+		C9F2CEF519CAFFAA009A2773 /* Pangrams.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Pangrams.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +96,10 @@
 		C952441119BE62D2005E6DC4 /* Codeforces */ = {
 			isa = PBXGroup;
 			children = (
+				C9F2CEF519CAFFAA009A2773 /* Pangrams.cpp */,
+				C9F2CEF319CAF769009A2773 /* PinProblem.cpp */,
+				C9F2CEF119CA8F20009A2773 /* HKAshtonAndStrings.cpp */,
+				C9A4BC1919C967F9002A89D9 /* Eevee452A.cpp */,
 				C9F2CEEF19C903D1009A2773 /* Chatroom58A.cpp */,
 				C9F2CEED19C8FB68009A2773 /* Dubstep208B.cpp */,
 				C9F2CEE719C824D2009A2773 /* GnikoolSsalg130B.cpp */,
@@ -162,6 +174,8 @@
 			files = (
 				C9E1246C19C27622002D2885 /* Puzzle377A.cpp in Sources */,
 				C9F2CEBF19C411DF009A2773 /* Football43A.cpp in Sources */,
+				C9F2CEF619CAFFAA009A2773 /* Pangrams.cpp in Sources */,
+				C9F2CEF219CA8F20009A2773 /* HKAshtonAndStrings.cpp in Sources */,
 				C9F2CEEE19C8FB68009A2773 /* Dubstep208B.cpp in Sources */,
 				C9F2CED219C65675009A2773 /* SequenceFormatting81B.cpp in Sources */,
 				C9F2CEC419C4CE4F009A2773 /* TwoStrings223B.cpp in Sources */,
@@ -171,6 +185,8 @@
 				C9F2CEC119C41E67009A2773 /* MartianString149E.cpp in Sources */,
 				C9E1246E19C30880002D2885 /* FlipGame327A.cpp in Sources */,
 				C9E1247019C3B825002D2885 /* CheapTravel466A.cpp in Sources */,
+				C9A4BC1A19C967F9002A89D9 /* Eevee452A.cpp in Sources */,
+				C9F2CEF419CAF769009A2773 /* PinProblem.cpp in Sources */,
 				C9F2CEF019C903D1009A2773 /* Chatroom58A.cpp in Sources */,
 				C9F2CEBD19C3FE7B009A2773 /* Pelisection17E.cpp in Sources */,
 				C9F2CED019C5638A009A2773 /* Panctuation147A.cpp in Sources */,

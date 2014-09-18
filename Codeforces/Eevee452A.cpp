@@ -24,26 +24,47 @@
 #include <map>
 #include <set>
 #include <iostream>
-#include <unordered_map>
 
 using namespace std;
 
-class Chatroom58A {
+class Eevee452A {
 public:
-    string findHello(string s) {
+    string findName(int chars, string s) {
         
-        string a = "hello";
-        int k = 0;
-        for ( int i = 0 ; i < s.size() ; i++ )
+        vector<string> str ;
+        
+        str.push_back("Vaporeon");
+        str.push_back("Jolteon");
+        str.push_back("Flareon");
+        str.push_back("Espeon");
+        str.push_back("Umbreon");
+        str.push_back("Leafeon");
+        str.push_back("Glaceon");
+        str.push_back("Sylveon");
+        
+        for ( int i = 0 ; i < str.size() ; i++ )
         {
-            if ( s[i] == a[k] )
-            {
-                k++;
+            string check = str[i];
+            int k = 0;
+            int c = 0;
+            string tobechecked = s;
+            while (tobechecked[k]) {
+                if(tobechecked[k] == '.')
+                    tobechecked[k] = check[c];
+                k++,c++;
             }
+            
+            transform(check.begin(),check.end(),check.begin(),::tolower);
+            transform(tobechecked.begin(),tobechecked.end(),tobechecked.begin(),::tolower);
+            
+            if ( tobechecked == check )
+            {
+                return check;
+            }
+            
         }
-        if ( k == 5)
-            return "YES";
-        return "NO";
+        
+        return " ";
     }
 };
 
@@ -89,9 +110,9 @@ public:
 //
 //bool double_equal(const double &a, const double &b) { return b==b && a==a && fabs(b - a) <= 1e-9 * max(1.0, fabs(a) ); }
 //
-//bool do_test(string input,string __answer) {
-//    Chatroom58A *instance = new Chatroom58A();
-//    string __result = instance->findHello(input);
+//bool do_test(int chars,string input,string __answer) {
+//    Eevee452A *instance = new Eevee452A();
+//    string __result = instance->findName(chars, input);
 //    delete instance;
 //    if (__answer == __result ) {
 //        cout << "PASSED!" << endl;
@@ -116,6 +137,8 @@ public:
 //        if (next_line().find("input") != 0)
 //            break;
 //        //start writing here
+//        int chars;
+//        from_stream(chars);
 //        string input;
 //        from_stream(input);
 //        next_line();
@@ -123,7 +146,7 @@ public:
 //        from_stream(__answer);
 //        cases++;
 //        cout << "  Testcase #" << cases - 1 << " ... ";
-//        if( do_test(input,__answer)) {
+//        if( do_test(chars,input,__answer)) {
 //            passed++;
 //        }
 //        //end writing here
@@ -175,10 +198,12 @@ public:
 //    //cout << "Start testing" << endl << endl << endl;
 //    //return run_test(mainProcess, cases, argv[0]);
 //    //start input for on line judge
+//    int chars ;
+//    cin >> chars ;
 //    string input = getStringInput();
 //        //calling class
-//    Chatroom58A *instance = new Chatroom58A() ;
-//    string __result = instance->findHello(input);
+//    Eevee452A *instance = new Eevee452A() ;
+//    string __result = instance->findName(chars, input);
 //    cout << __result ;
 //    delete instance;
 //    //end input for on line judge

@@ -30,8 +30,25 @@ using namespace std;
 class Pangrams {
 public:
     string checkPangrams(string input1) {
-        return " ";
+        char a[500] = {0};
+        transform(input1.begin(), input1.end(), input1.begin(), ::tolower);
+        for ( int i = 0 ; i < input1.size() ; i++)
+        {
+            a[input1[i]] ++;
+        }
+        
+        int count = 0 ;
+        for ( int i = 'a' ; i <= 'z' ;i++)
+        {
+            if (a[i] != 0)
+                count ++;
+        }
+        if (count == 26)
+            return  "pangram";
+        else
+            return "not pangram";
     }
+    
 };
 class PinProblem {
 public:
@@ -165,22 +182,13 @@ int main(int argc, char *argv[]) {
             cases.insert(atoi(argv[i]));
         }
     }
-    cout << "Start testing" << endl << endl << endl;
-    return run_test(mainProcess, cases, argv[0]);
+    //cout << "Start testing" << endl << endl << endl;
+    //return run_test(mainProcess, cases, argv[0]);
     //start input for on line judge
     string input1 = getStringInput();
         //calling class
     Pangrams *instance = new Pangrams() ;
     string __result = instance->checkPangrams(input1);
-    cout << __result ;
-    delete instance;
-    //end input for on line judge
-    //start input for on line judge
-    string input1 = getStringInput();
-    string input2 = getStringInput();
-        //calling class
-    PinProblem *instance = new PinProblem() ;
-    int __result = instance->getPin(input1, input2);
     cout << __result ;
     delete instance;
     //end input for on line judge

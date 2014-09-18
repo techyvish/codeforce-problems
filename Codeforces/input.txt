@@ -1,16 +1,12 @@
-ClassName:Chatroom58A
-MethodName:findHello
-Parameters:string:input
+ClassName:Pangrams
+MethodName:checkPangrams
+Parameters:string:input1
 Returns:string
 input
-helhcludoo
-Output
-YES
-input
-ahhellllloou
+We promptly judged antique ivory buckles for the next prize
 output
-YES
+pangram
 input
-hlelo
+We promptly judged antique ivory buckles for the prize
 output
-NO
+not pangram

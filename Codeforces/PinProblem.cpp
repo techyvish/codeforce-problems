@@ -24,26 +24,55 @@
 #include <map>
 #include <set>
 #include <iostream>
-#include <unordered_map>
 
 using namespace std;
 
-class Chatroom58A {
+class PinProblem {
 public:
-    string findHello(string s) {
-        
-        string a = "hello";
-        int k = 0;
-        for ( int i = 0 ; i < s.size() ; i++ )
+    
+    std::vector<std::string> split(std::string s) {
+        std::stringstream A(s);
+        std::vector<std::string> res;
+        std::string t;
+        while (A>>t) res.push_back(t);
+        return res;
+    }
+    
+    vector<long> getIntVectorFromString(string input)
+    {
+        vector<string> s1 = split(input);
+        vector<long> b;
+        for (int i = 0 ; i < s1.size() ; i++ )
         {
-            if ( s[i] == a[k] )
-            {
-                k++;
-            }
+            long c ;
+            stringstream buffer(s1[i]);
+            buffer >> c;
+            b.push_back(c);
         }
-        if ( k == 5)
-            return "YES";
-        return "NO";
+        return b;
+    }
+    
+    long getPin(string input1, string input2) {
+        
+        vector<long> a = getIntVectorFromString(input1);
+        vector<long> b = getIntVectorFromString(input2);
+        long  n = a[0];
+        long m = a[1];
+        
+        long total = 0;
+        for ( long long i = 1 ; i <= n ; i++ )
+        {
+            int count = 0;
+            for (long j = 0 ; j < m ; j++)
+            {
+                if ( i % b[j] == 0 )
+                    count ++;
+            }
+            if (count == m )
+                total++;
+        }
+        
+        return total;
     }
 };
 
@@ -89,9 +118,9 @@ public:
 //
 //bool double_equal(const double &a, const double &b) { return b==b && a==a && fabs(b - a) <= 1e-9 * max(1.0, fabs(a) ); }
 //
-//bool do_test(string input,string __answer) {
-//    Chatroom58A *instance = new Chatroom58A();
-//    string __result = instance->findHello(input);
+//bool do_test(string input1,string input2,int __answer) {
+//    PinProblem *instance = new PinProblem();
+//    long __result = instance->getPin(input1, input2);
 //    delete instance;
 //    if (__answer == __result ) {
 //        cout << "PASSED!" << endl;
@@ -116,28 +145,30 @@ public:
 //        if (next_line().find("input") != 0)
 //            break;
 //        //start writing here
-//        string input;
-//        from_stream(input);
+//        string input1;
+//        from_stream(input1);
+//        string input2;
+//        from_stream(input2);
 //        next_line();
-//        string __answer;
+//        int __answer;
 //        from_stream(__answer);
 //        cases++;
 //        cout << "  Testcase #" << cases - 1 << " ... ";
-//        if( do_test(input,__answer)) {
+//        if( do_test(input1,input2,__answer)) {
 //            passed++;
 //        }
 //        //end writing here
 //    }
 //    return 0;
 //}
-//
-////std::string trim(std::string const& str)
-////{
-////    std::size_t first = str.find_first_not_of(' ');
-////    std::size_t last  = str.find_last_not_of(' ');
-////    return str.substr(first, last-first+1);
-////}
-//
+
+//std::string trim(std::string const& str)
+//{
+//    std::size_t first = str.find_first_not_of(' ');
+//    std::size_t last  = str.find_last_not_of(' ');
+//    return str.substr(first, last-first+1);
+//}
+
 //template <typename T>
 //void getUserInput(T &input_var) {
 //    while (true)
@@ -175,11 +206,26 @@ public:
 //    //cout << "Start testing" << endl << endl << endl;
 //    //return run_test(mainProcess, cases, argv[0]);
 //    //start input for on line judge
-//    string input = getStringInput();
+//    int testcases = 0;
+//    cin >> testcases;
+//    vector<string> s1;
+//    vector<string> s2;
+//    for ( int i = 0 ;  i < testcases ; i++ )
+//    {
+//        string input1 = getStringInput();
+//        s1.push_back(input1);
+//        string input2 = getStringInput();
+//        s2.push_back(input2);
+//    }
 //        //calling class
-//    Chatroom58A *instance = new Chatroom58A() ;
-//    string __result = instance->findHello(input);
-//    cout << __result ;
+//    for ( int i = 0 ; i < testcases ; i++)
+//    {
+//    PinProblem *instance = new PinProblem() ;
+//    string input1 = s1[i];
+//    string input2 = s2[i];
+//    long __result = instance->getPin(input1, input2);
+//    cout << __result << endl;
 //    delete instance;
+//    }
 //    //end input for on line judge
 //}
