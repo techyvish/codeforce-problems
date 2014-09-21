@@ -27,36 +27,75 @@
 
 using namespace std;
 
-class Pangrams {
-public:
-    string checkPangrams(string input1) {
-        char a[500] = {0};
-        transform(input1.begin(), input1.end(), input1.begin(), ::tolower);
-        for ( int i = 0 ; i < input1.size() ; i++)
-        {
-            a[input1[i]] ++;
-        }
-        
-        int count = 0 ;
-        for ( int i = 'a' ; i <= 'z' ;i++)
-        {
-            if (a[i] != 0)
-                count ++;
-        }
-        if (count == 26)
-            return  "pangram";
-        else
-            return "not pangram";
+class WannaBeTheGuy {
+    
+    std::vector<std::string> split(std::string s) {
+        std::stringstream A(s);
+        std::vector<std::string> res;
+        std::string t;
+        while (A>>t) res.push_back(t);
+        return res;
     }
     
+    vector<int> getIntVectorFromString(string input)
+    {
+        vector<string> s1 = split(input);
+        vector<int> b;
+        for (int i = 0 ; i < s1.size() ; i++ )
+        {
+            int c ;
+            stringstream buffer(s1[i]);
+            buffer >> c;
+            b.push_back(c);
+        }
+        return b;
+    }
+    
+public:
+    string canItBepassed(int levels, string levelsX, string levelsY) {
+        
+        vector<int> lx = getIntVectorFromString(levelsX);
+        vector<int> ly = getIntVectorFromString(levelsY);
+        
+        set<int> final ;
+        
+        for (int i = 1 ; i < lx.size() ; i++ )
+        {
+            final.insert(lx[i]);
+        }
+        
+        
+        for (int i = 1 ; i < ly.size() ; i++ )
+        {
+            final.insert(ly[i]);
+        }
+        
+        
+        bool found = true;
+        int k = 1;
+        for ( auto  it = final.begin() ; k <= levels ; it++, k++)
+        {
+            if ( it == final.end()  )
+            {
+             
+                found = false;
+                break;
+            }
+
+            if ( *it != k )
+            {
+                found = false;
+                break;
+            }
+            
+        }
+        
+        if (!found)
+            return "Oh, my keyboard!";
+        else
+            return "I become the guy.";
+    }
 };
-//class PinProblem {
-//public:
-//    int getPin(string input1, string input2) {
-//        return 0;
-//    }
-//};
-//
 //// CUT begin
 //ifstream data("/Users/Shared/codeforces/codeforces/input.txt");
 //
@@ -99,9 +138,9 @@ public:
 //
 //bool double_equal(const double &a, const double &b) { return b==b && a==a && fabs(b - a) <= 1e-9 * max(1.0, fabs(a) ); }
 //
-//bool do_test(string input1,string __answer) {
-//    Pangrams *instance = new Pangrams();
-//    string __result = instance->checkPangrams(input1);
+//bool do_test(int levels,string levelsX,string levelsY,string __answer) {
+//    WannaBeTheGuy *instance = new WannaBeTheGuy();
+//    string __result = instance->canItBepassed(levels, levelsX, levelsY);
 //    delete instance;
 //    if (__answer == __result ) {
 //        cout << "PASSED!" << endl;
@@ -126,14 +165,18 @@ public:
 //        if (next_line().find("input") != 0)
 //            break;
 //        //start writing here
-//        string input1;
-//        from_stream(input1);
+//        int levels;
+//        from_stream(levels);
+//        string levelsX;
+//        from_stream(levelsX);
+//        string levelsY;
+//        from_stream(levelsY);
 //        next_line();
 //        string __answer;
 //        from_stream(__answer);
 //        cases++;
 //        cout << "  Testcase #" << cases - 1 << " ... ";
-//        if( do_test(input1,__answer)) {
+//        if( do_test(levels,levelsX,levelsY,__answer)) {
 //            passed++;
 //        }
 //        //end writing here
@@ -185,10 +228,13 @@ public:
 //    //cout << "Start testing" << endl << endl << endl;
 //    //return run_test(mainProcess, cases, argv[0]);
 //    //start input for on line judge
-//    string input1 = getStringInput();
+//    int levels ;
+//    cin >> levels ;
+//    string levelsX = getStringInput();
+//    string levelsY = getStringInput();
 //        //calling class
-//    Pangrams *instance = new Pangrams() ;
-//    string __result = instance->checkPangrams(input1);
+//    WannaBeTheGuy *instance = new WannaBeTheGuy() ;
+//    string __result = instance->canItBepassed(levels, levelsX, levelsY);
 //    cout << __result ;
 //    delete instance;
 //    //end input for on line judge

@@ -27,36 +27,35 @@
 
 using namespace std;
 
-class Pangrams {
+class HKCommonChild {
 public:
-    string checkPangrams(string input1) {
-        char a[500] = {0};
-        transform(input1.begin(), input1.end(), input1.begin(), ::tolower);
-        for ( int i = 0 ; i < input1.size() ; i++)
-        {
-            a[input1[i]] ++;
-        }
-        
-        int count = 0 ;
-        for ( int i = 'a' ; i <= 'z' ;i++)
-        {
-            if (a[i] != 0)
-                count ++;
-        }
-        if (count == 26)
-            return  "pangram";
-        else
-            return "not pangram";
+    vector<string> str;
+    
+    int commonString(string input1, string input2) {
+    
+        int i = 0;
+        i = lCSubseq(input1,input2,(int)input1.size()-1,(int)input2.size()-1);
+        return i;
     }
     
+    int lCSubseq(string &input1,string &input2,int x,int y)
+    {
+        if ( x == -1 || y == -1 ){
+            //cout << "----" << endl;
+            return 0;
+        }
+        
+        //cout << "is " << input1[x] << "==" << input2[y] << "?" << endl;
+        if ( input1[x] == input2[y] ){
+            
+            return 1 + lCSubseq(input1,input2,x-1,y-1);
+        }
+        else
+            return max(lCSubseq(input1,input2,x,y-1),lCSubseq(input1,input2,x-1,y));
+        
+    }
 };
-//class PinProblem {
-//public:
-//    int getPin(string input1, string input2) {
-//        return 0;
-//    }
-//};
-//
+
 //// CUT begin
 //ifstream data("/Users/Shared/codeforces/codeforces/input.txt");
 //
@@ -99,9 +98,9 @@ public:
 //
 //bool double_equal(const double &a, const double &b) { return b==b && a==a && fabs(b - a) <= 1e-9 * max(1.0, fabs(a) ); }
 //
-//bool do_test(string input1,string __answer) {
-//    Pangrams *instance = new Pangrams();
-//    string __result = instance->checkPangrams(input1);
+//bool do_test(string input1,string input2,int __answer) {
+//    HKCommonChild *instance = new HKCommonChild();
+//    int __result = instance->commonString(input1, input2);
 //    delete instance;
 //    if (__answer == __result ) {
 //        cout << "PASSED!" << endl;
@@ -128,12 +127,14 @@ public:
 //        //start writing here
 //        string input1;
 //        from_stream(input1);
+//        string input2;
+//        from_stream(input2);
 //        next_line();
-//        string __answer;
+//        int __answer;
 //        from_stream(__answer);
 //        cases++;
 //        cout << "  Testcase #" << cases - 1 << " ... ";
-//        if( do_test(input1,__answer)) {
+//        if( do_test(input1,input2,__answer)) {
 //            passed++;
 //        }
 //        //end writing here
@@ -186,9 +187,10 @@ public:
 //    //return run_test(mainProcess, cases, argv[0]);
 //    //start input for on line judge
 //    string input1 = getStringInput();
+//    string input2 = getStringInput();
 //        //calling class
-//    Pangrams *instance = new Pangrams() ;
-//    string __result = instance->checkPangrams(input1);
+//    HKCommonChild *instance = new HKCommonChild() ;
+//    int __result = instance->commonString(input1, input2);
 //    cout << __result ;
 //    delete instance;
 //    //end input for on line judge

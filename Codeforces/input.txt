@@ -1,12 +1,19 @@
-ClassName:Pangrams
-MethodName:checkPangrams
-Parameters:string:input1
+ClassName:Game24
+MethodName:makeTwentyFour
+Parameters:int:num
 Returns:string
 input
-We promptly judged antique ivory buckles for the next prize
+8
 output
-pangram
+YES
+8 * 7 = 56
+6 * 5 = 30
+3 - 4 = -1
+1 - 2 = -1
+30 - -1 = 31
+56 - 31 = 25
+25 + -1 = 24
 input
-We promptly judged antique ivory buckles for the prize
+1
 output
-not pangram
+NO
