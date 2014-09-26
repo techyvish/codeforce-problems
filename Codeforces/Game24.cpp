@@ -24,67 +24,32 @@
 #include <map>
 #include <set>
 #include <iostream>
+#include <queue>
 
 using namespace std;
 #define NMAX 50
 
 class Game24 {
 public:
-    
-    bool finished = false;
-    
-    bool is_a_solution(int a[],int k, int n)
-    {
-        return ( k == n - 1 );
-    }
-    
-    void process_solution(int a[],int k , int n)
-    {
-        
-    }
-    
-    void construct_candidates(int a[],int k, int n, int c[], int *ncandidates)
-    {
-        c[*ncandidates] = '*';
-        c[*ncandidates+1] = '+';
-        c[*ncandidates+2] = '-';
-        *ncandidates = *ncandidates + 3;
-    }
-    
-    void backtrack(int a[],int k , int  n)
-    {
-        int c[4] = {0};
-        int ncandidates =0;
-        int i ;
-        
-        if ( is_a_solution(a,k,n))
-            process_solution(a,k,n);
-        else
-        {
-            k = k+2;
-            construct_candidates(a,k,n,c,&ncandidates);
-            for ( i = 0 ; i < ncandidates ; i++ )
-            {
-                //a[k] = c[i];
-                backtrack(a,k,n);
-                if ( finished )
-                    return;
-            }
-        }
-    }
-    
-    void startit(int n )
-    {
-        int a[NMAX] = {0};  /* solution vector */
-        int k = 0;
-        for ( int i = n ; i > 0 ; i-- )
-        {
-            a[k++] = i;
-        }
-        backtrack(a,-1,n);
-    }
+
     string makeTwentyFour(int num) {
-        startit(num);
+       
+        queue<int> q;
+        for (int i = 0 ; i < num ; i++ )
+        {
+            q.push(i);
+        }
+        
+        int i = 0 ;
+        while ( !q.empty() ) {
+            int i1 = q.front();
+            int i2 = q.front();
+        }
+        
+        
+        
+        
+        
         return " ";
     }
 };
