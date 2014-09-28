@@ -27,12 +27,99 @@
 
 using namespace std;
 
-class Game24 {
+class MuhAndSticksA {
+    
+    std::vector<std::string> split(std::string s) {
+        std::stringstream A(s);
+        std::vector<std::string> res;
+        std::string t;
+        while (A>>t) res.push_back(t);
+        return res;
+    }
+    
+    vector<int> getIntVectorFromString(string input)
+    {
+        vector<string> s1 = split(input);
+        vector<int> b;
+        for (int i = 0 ; i < s1.size() ; i++ )
+        {
+            int c ;
+            stringstream buffer(s1[i]);
+            buffer >> c;
+            b.push_back(c);
+        }
+        return b;
+    }
+
 public:
-    string makeTwentyFour(int num) {
-        return " ";
+    string whichAnimal(string sticks) {
+        if ( sticks.size() < 6 )
+            return  "Alien";
+        
+        vector<int> s = getIntVectorFromString(sticks);
+        sort(s.begin(), s.end());
+        string final = "Alien";
+        for ( int i = 0 ; i < s.size() ; i++ )
+        {
+            if ( i < s.size() - 3 )
+            {
+                if ( s[i]  + s[i+1] + s[i + 2] + s[i + 3 ] == s[i] * 4 )
+                {
+                    if ( i == 0 )
+                    {
+                        if ( s[4] < s[5] )
+                        {
+                            final = "Bear";
+                        }
+                        else if ( s[4] == s[5] )
+                        {
+                            final = "Elephant";
+                        }
+                        else
+                        {
+                            final = "Alien";
+                        }
+                    }
+                    if ( i == 1)
+                    {
+                        if ( s[0] < s[5] )
+                        {
+                            final = "Bear";
+                        }
+                        else if ( s[0] == s[5] )
+                        {
+                            final = "Elephant";
+                        }
+                        else
+                        {
+                            final = "Alien";
+                        }
+                    }
+                    if ( i == 2 )
+                    {
+                        if ( s[0] < s[1] )
+                        {
+                            final = "Bear";
+                        }
+                        else if ( s[0] == s[1] )
+                        {
+                            final = "Elephant";
+                        }
+                        else
+                        {
+                            final = "Alien";
+                        }
+                    }
+                
+                }
+            }
+        }
+      
+        return final;
+
     }
 };
+
 //// CUT begin
 //ifstream data("/Users/Shared/codeforces/codeforces/input.txt");
 //
@@ -75,9 +162,9 @@ public:
 //
 //bool double_equal(const double &a, const double &b) { return b==b && a==a && fabs(b - a) <= 1e-9 * max(1.0, fabs(a) ); }
 //
-//bool do_test(int num,string __answer) {
-//    Game24 *instance = new Game24();
-//    string __result = instance->makeTwentyFour(num);
+//bool do_test(string sticks,string __answer) {
+//    MuhAndSticksA *instance = new MuhAndSticksA();
+//    string __result = instance->whichAnimal(sticks);
 //    delete instance;
 //    if (__answer == __result ) {
 //        cout << "PASSED!" << endl;
@@ -102,14 +189,14 @@ public:
 //        if (next_line().find("input") != 0)
 //            break;
 //        //start writing here
-//        int num;
-//        from_stream(num);
+//        string sticks;
+//        from_stream(sticks);
 //        next_line();
 //        string __answer;
 //        from_stream(__answer);
 //        cases++;
 //        cout << "  Testcase #" << cases - 1 << " ... ";
-//        if( do_test(num,__answer)) {
+//        if( do_test(sticks,__answer)) {
 //            passed++;
 //        }
 //        //end writing here
@@ -158,14 +245,13 @@ public:
 //            cases.insert(atoi(argv[i]));
 //        }
 //    }
-//    cout << "Start testing" << endl << endl << endl;
-//    return run_test(mainProcess, cases, argv[0]);
+//    //cout << "Start testing" << endl << endl << endl;
+//    //return run_test(mainProcess, cases, argv[0]);
 //    //start input for on line judge
-//    int num ;
-//    cin >> num ;
+//    string sticks = getStringInput();
 //        //calling class
-//    Game24 *instance = new Game24() ;
-//    string __result = instance->makeTwentyFour(num);
+//    MuhAndSticksA *instance = new MuhAndSticksA() ;
+//    string __result = instance->whichAnimal(sticks);
 //    cout << __result ;
 //    delete instance;
 //    //end input for on line judge

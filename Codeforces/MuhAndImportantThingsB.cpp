@@ -1,3 +1,4 @@
+
 //
 //  main.cpp
 //  Codeforces
@@ -27,9 +28,116 @@
 
 using namespace std;
 
+
+struct MyComparator
+{
+    const vector<int> & value_vector;
+    
+    MyComparator(const vector<int> & val_vec):
+    value_vector(val_vec) {}
+    
+    bool operator()(int i1, int i2)
+    {
+        return value_vector[i1] < value_vector[i2];
+    }
+};
+
 class MuhAndImportantThingsB {
+    
+    vector<int> order;
+    vector<int> diff;
+    
+    bool comp (int a, int b)
+    {
+        return  diff[a] < diff[b];
+    }
+    
+    std::vector<std::string> split(std::string s) {
+        std::stringstream A(s);
+        std::vector<std::string> res;
+        std::string t;
+        while (A>>t) res.push_back(t);
+        return res;
+    }
+    
+    vector<int> getIntVectorFromString(string input)
+    {
+        vector<string> s1 = split(input);
+        vector<int> b;
+        for (int i = 0 ; i < s1.size() ; i++ )
+        {
+            int c ;
+            stringstream buffer(s1[i]);
+            buffer >> c;
+            b.push_back(c);
+            order.push_back(i);
+        }
+        return b;
+    }
+    
+    
+    struct sortstruct
+    {
+        MuhAndImportantThingsB *m;
+        sortstruct(MuhAndImportantThingsB *p): m(p){};
+        
+        bool operator()( int a , int b )
+        {
+            return ( m->diff[a] < m->diff[b] );
+        }
+        
+        
+    };
+    
 public:
+
     vector<int> getPlans(int tasks, string difficulty) {
+        map<int,int> ma;
+        int ok = 0;
+        diff = getIntVectorFromString(difficulty);
+        
+        // sort one vector based on another;
+//        vector<int> b;
+//        for ( int i = 0 ; i < diff.size() ; i++ )
+//        {
+//            b.push_back(i+1);
+//        }
+//        sort(b.begin(), b.end(), MyComparator(diff));
+        
+        for ( int i = 0 ; i < diff.size() ; i++ )
+        {
+            ma[diff[i]] ++;
+            if ( ma[diff[i]] >= 2)
+                ok++;
+        }
+        
+        if ( ok <= 1 )
+            cout << "NO";
+        
+        
+        cout << "YES\n";
+        sortstruct s(this);
+        sort(order.begin(),order.end(),s);
+        for(int x: order) {
+            cout << x + 1 << " ";
+        }
+        cout << "\n";
+        int cnt = 0;
+        
+        for(int i = 0; i + 1 < diff.size(); ++i) {
+            if(diff[order[i]] == diff[order[i + 1]]) {
+                ++cnt;
+                swap(order[i], order[i + 1]);
+                for(int x: order) {
+                    cout << x + 1 << " ";
+                }
+                cout << "\n";
+                if(cnt == 2) {
+                    break;
+                }
+            }
+        }
+        cout << endl;
         return vector<int>();
     }
 };
@@ -65,7 +173,7 @@ template <typename T> void from_stream(vector<T> &ts) {
 template <typename T>
 string to_string(T t) {
     stringstream s;
-    s << t;
+    s << &t;
     return s.str();
 }
 
@@ -160,8 +268,8 @@ int main(int argc, char *argv[]) {
             cases.insert(atoi(argv[i]));
         }
     }
-    cout << "Start testing" << endl << endl << endl;
-    return run_test(mainProcess, cases, argv[0]);
+    //cout << "Start testing" << endl << endl << endl;
+    //return run_test(mainProcess, cases, argv[0]);
     //start input for on line judge
     int tasks ;
     cin >> tasks ;
@@ -169,7 +277,7 @@ int main(int argc, char *argv[]) {
         //calling class
     MuhAndImportantThingsB *instance = new MuhAndImportantThingsB() ;
     vector<int> __result = instance->getPlans(tasks, difficulty);
-    cout << __result ;
+    //cout << __result ;
     delete instance;
     //end input for on line judge
 
