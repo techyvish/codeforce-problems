@@ -24,13 +24,39 @@
 #include <map>
 #include <set>
 #include <iostream>
+#include <numeric>
 
 using namespace std;
 
 class TeXQuote {
 public:
-    string formattedQuote(string quotes) {
-        return " ";
+    string formattedQuote(string str) {
+        bool start = false;
+        bool end = false;
+        string s ;
+    
+        for (int j =0 ; j < str.size() ; j++)
+        {
+            if ( !start && !end && str[j] == '"')
+            {
+                start = true;
+                s += "``";
+                j++;
+            }
+            if ( start && !end && str[j] == '"')
+            {
+                end = true;
+                s += "''";
+                j++;
+                start = false;
+                end = false;
+            }
+            if ( j < str.size() )
+                s += str[j];
+        }
+        cout << s << endl;
+        
+        return s ;
     }
 };
 // CUT begin
@@ -139,10 +165,18 @@ void getUserInput(T &input_var) {
 string getStringInput()
 {
     string s = "";
-    while (std::getline(std::cin, s, '\n')) {
-        if ( s != "")
-            break;
+    std::getline(std::cin, s);
+//    while (std::getline(std::cin, s, '')) {
+//        //if ( s != "")
+//        //    break;
+//    }
+    
+    vector<string > p;
+    while(getline (cin,s))
+    {
+        p.push_back(s);
     }
+    //string c = std::accumulate(p.begin(), p.end(), std::string());
     return s;
 }
 
@@ -158,8 +192,8 @@ int main(int argc, char *argv[]) {
             cases.insert(atoi(argv[i]));
         }
     }
-    cout << "Start testing" << endl << endl << endl;
-    return run_test(mainProcess, cases, argv[0]);
+    //cout << "Start testing" << endl << endl << endl;
+    //return run_test(mainProcess, cases, argv[0]);
     //start input for on line judge
     string quotes = getStringInput();
         //calling class
