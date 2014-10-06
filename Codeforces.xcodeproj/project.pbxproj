@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9711A5B19E2EDE900D17AB6 /* KeyboardA.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9711A5A19E2EDE900D17AB6 /* KeyboardA.cpp */; };
+		C9711A5D19E2F2BF00D17AB6 /* WormsB.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9711A5C19E2F2BF00D17AB6 /* WormsB.cpp */; };
 		C9A4BC1A19C967F9002A89D9 /* Eevee452A.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9A4BC1919C967F9002A89D9 /* Eevee452A.cpp */; };
 		C9A4BC1C19CDB2A1002A89D9 /* WannaBeTheGuy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9A4BC1B19CDB2A1002A89D9 /* WannaBeTheGuy.cpp */; };
 		C9A4BC1E19CDB96A002A89D9 /* Game24.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9A4BC1D19CDB96A002A89D9 /* Game24.cpp */; };
@@ -49,6 +51,8 @@
 
 /* Begin PBXFileReference section */
 		C952440F19BE62D2005E6DC4 /* Codeforces */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Codeforces; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9711A5A19E2EDE900D17AB6 /* KeyboardA.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KeyboardA.cpp; sourceTree = "<group>"; };
+		C9711A5C19E2F2BF00D17AB6 /* WormsB.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WormsB.cpp; sourceTree = "<group>"; };
 		C9A4BC1919C967F9002A89D9 /* Eevee452A.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Eevee452A.cpp; sourceTree = "<group>"; };
 		C9A4BC1B19CDB2A1002A89D9 /* WannaBeTheGuy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WannaBeTheGuy.cpp; sourceTree = "<group>"; };
 		C9A4BC1D19CDB96A002A89D9 /* Game24.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game24.cpp; sourceTree = "<group>"; };
@@ -108,6 +112,8 @@
 		C952441119BE62D2005E6DC4 /* Codeforces */ = {
 			isa = PBXGroup;
 			children = (
+				C9711A5C19E2F2BF00D17AB6 /* WormsB.cpp */,
+				C9711A5A19E2EDE900D17AB6 /* KeyboardA.cpp */,
 				C9E2FD9419DE195B0001BB1A /* TeXQuote.cpp */,
 				C9E7404919D5C5EF00CB4525 /* MuhAndImportantThingsB.cpp */,
 				C9E7404719D5BF8600CB4525 /* MuhAndSticksA.cpp */,
@@ -194,6 +200,8 @@
 				C9E7404A19D5C5EF00CB4525 /* MuhAndImportantThingsB.cpp in Sources */,
 				C9F2CEF819CBA789009A2773 /* HKCommonChild.cpp in Sources */,
 				C9F2CEBF19C411DF009A2773 /* Football43A.cpp in Sources */,
+				C9711A5B19E2EDE900D17AB6 /* KeyboardA.cpp in Sources */,
+				C9711A5D19E2F2BF00D17AB6 /* WormsB.cpp in Sources */,
 				C9F2CEF619CAFFAA009A2773 /* Pangrams.cpp in Sources */,
 				C9F2CEF219CA8F20009A2773 /* HKAshtonAndStrings.cpp in Sources */,
 				C9F2CEEE19C8FB68009A2773 /* Dubstep208B.cpp in Sources */,

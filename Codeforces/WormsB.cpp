@@ -28,8 +28,69 @@
 using namespace std;
 
 class WormsB {
+    
+    std::vector<std::string> split(std::string s) {
+        std::stringstream A(s);
+        std::vector<std::string> res;
+        std::string t;
+        while (A>>t) res.push_back(t);
+        return res;
+    }
+    
+    vector<long long> getIntVectorFromString(string input)
+    {
+        vector<string> s1 = split(input);
+        vector<long long> b;
+        for (long long i = 0 ; i < s1.size() ; i++ )
+        {
+            long long c ;
+            stringstream buffer(s1[i]);
+            buffer >> c;
+            b.push_back(c);
+           
+        }
+        return b;
+    }
+
+    
 public:
     int getPiles(int worms, string pworms, int piles, string jworms) {
+        
+        vector<long long> a = getIntVectorFromString(pworms);
+        vector<long long> b = getIntVectorFromString(jworms);
+        
+        vector<vector<long long>> p;
+
+        long long g[1000000] = {0};
+        int r = 0;
+        for ( long long k = 0 ; k < a.size() ; k++ )
+        {
+            if ( k != 0 )
+            {
+                long long dd =  g[r-1];
+                g[r++] = dd +1;
+                g[r++] = dd + a[k];
+            }
+            else
+            {
+                g[r++] = 1;
+                g[r++] = a[k];
+            }
+        }
+        
+        for ( int i = 0 ; i < b.size() ; i++ )
+        {
+            for ( int j = 0 ; j < r ; j +=2 )
+            {
+                if ( b[i] >= g[j] && b[i] <= g[j+1])
+                {
+                    cout << j / 2  + 1 << endl;
+                    break;
+                }
+            }
+            
+        }
+    
         return 0;
     }
 };
@@ -164,8 +225,8 @@ int main(int argc, char *argv[]) {
             cases.insert(atoi(argv[i]));
         }
     }
-    cout << "Start testing" << endl << endl << endl;
-    return run_test(mainProcess, cases, argv[0]);
+    //cout << "Start testing" << endl << endl << endl;
+    //return run_test(mainProcess, cases, argv[0]);
     //start input for on line judge
     int worms ;
     cin >> worms ;
@@ -176,7 +237,7 @@ int main(int argc, char *argv[]) {
         //calling class
     WormsB *instance = new WormsB() ;
     int __result = instance->getPiles(worms, pworms, piles, jworms);
-    cout << __result ;
+    //cout << __result ;
     delete instance;
     //end input for on line judge
 }

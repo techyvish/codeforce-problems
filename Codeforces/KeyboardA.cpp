@@ -24,39 +24,49 @@
 #include <map>
 #include <set>
 #include <iostream>
-#include <numeric>
 
 using namespace std;
 
-class TeXQuote {
+class KeyboardA {
 public:
-    string formattedQuote(string str) {
-        bool start = false;
-        bool end = false;
-        string s ;
-    
-        for (int j =0 ; j < str.size() ; j++)
-        {
-            if ( !start && !end && str[j] == '"')
-            {
-                start = true;
-                s += "``";
-                j++;
-            }
-            if ( start && !end && str[j] == '"')
-            {
-                end = true;
-                s += "''";
-                j++;
-                start = false;
-                end = false;
-            }
-            if ( j < str.size() )
-                s += str[j];
-        }
-        cout << s << endl;
+    string getOrignal(string dir, string text) {
         
-        return s ;
+        vector<string> p;
+        p.push_back("qwertyuiop");
+        p.push_back("asdfghjkl;");
+        p.push_back("zxcvbnm,./");
+        
+        string op = "";
+        bool found = false;
+        
+        for ( int k = 0 ; k < text.size()  ; k ++)
+        {
+            found = false;
+            for ( int i = 0 ; i < p.size() ; i++ )
+            {
+                string s = p[i];
+                for ( int j = 0 ; j < s.size() ; j ++ )
+                {
+                    if ( text[k] == s[j] )
+                    {
+                        if ( dir == "R" )
+                        {
+                            op += s[j-1];
+                        }
+                        else
+                        {
+                            op+= s[j+1];
+                        }
+                        break;
+                        found = true;
+                    }
+                }
+                if ( found )
+                    break;
+            }
+        }
+        //cout << op << endl;
+        return op;
     }
 };
 //// CUT begin
@@ -101,9 +111,9 @@ public:
 //
 //bool double_equal(const double &a, const double &b) { return b==b && a==a && fabs(b - a) <= 1e-9 * max(1.0, fabs(a) ); }
 //
-//bool do_test(string quotes,string __answer) {
-//    TeXQuote *instance = new TeXQuote();
-//    string __result = instance->formattedQuote(quotes);
+//bool do_test(string dir,string text,string __answer) {
+//    KeyboardA *instance = new KeyboardA();
+//    string __result = instance->getOrignal(dir, text);
 //    delete instance;
 //    if (__answer == __result ) {
 //        cout << "PASSED!" << endl;
@@ -128,14 +138,16 @@ public:
 //        if (next_line().find("input") != 0)
 //            break;
 //        //start writing here
-//        string quotes;
-//        from_stream(quotes);
+//        string dir;
+//        from_stream(dir);
+//        string text;
+//        from_stream(text);
 //        next_line();
 //        string __answer;
 //        from_stream(__answer);
 //        cases++;
 //        cout << "  Testcase #" << cases - 1 << " ... ";
-//        if( do_test(quotes,__answer)) {
+//        if( do_test(dir,text,__answer)) {
 //            passed++;
 //        }
 //        //end writing here
@@ -165,18 +177,10 @@ public:
 //string getStringInput()
 //{
 //    string s = "";
-//    std::getline(std::cin, s);
-////    while (std::getline(std::cin, s, '')) {
-////        //if ( s != "")
-////        //    break;
-////    }
-//    
-//    vector<string > p;
-//    while(getline (cin,s))
-//    {
-//        p.push_back(s);
+//    while (std::getline(std::cin, s, '\n')) {
+//        if ( s != "")
+//            break;
 //    }
-//    //string c = std::accumulate(p.begin(), p.end(), std::string());
 //    return s;
 //}
 //
@@ -195,10 +199,11 @@ public:
 //    //cout << "Start testing" << endl << endl << endl;
 //    //return run_test(mainProcess, cases, argv[0]);
 //    //start input for on line judge
-//    string quotes = getStringInput();
+//    string dir = getStringInput();
+//    string text = getStringInput();
 //        //calling class
-//    TeXQuote *instance = new TeXQuote() ;
-//    string __result = instance->formattedQuote(quotes);
+//    KeyboardA *instance = new KeyboardA() ;
+//    string __result = instance->getOrignal(dir, text);
 //    cout << __result ;
 //    delete instance;
 //    //end input for on line judge

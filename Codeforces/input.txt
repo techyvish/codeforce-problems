@@ -1,10 +1,13 @@
-ClassName:TeXQuote
-MethodName:formattedQuote
-Parameters:string:quotes
-Returns:string
+ClassName:WormsB
+MethodName:getPiles
+Parameters:int:worms,string:pworms,int:piles,string:jworms
+Returns:int
 input
-"To be or not to be," quoth the Bard, "that is the question".
-The programming contestant replied: "I must disagree. To `C' or not to `C', that is The Question!"
+5
+2 7 3 4 9
+3
+1 25 11
 output
-``To be or not to be,'' quoth the Bard, ``that is the question''.
-The programming contestant replied: ``I must disagree. To `C' or not to `C', that is The Question!''
+1
+5
+3
