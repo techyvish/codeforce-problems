@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C93E84FA19E7F1D900BCC99C /* TexQuotes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C93E84F919E7F1D900BCC99C /* TexQuotes.cpp */; };
+		C93E84FD19E7F81200BCC99C /* uva1124.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C93E84FC19E7F81200BCC99C /* uva1124.cpp */; };
+		C93E84FF19E801D500BCC99C /* uva11364.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C93E84FE19E801D500BCC99C /* uva11364.cpp */; };
+		C93E850119E890E300BCC99C /* uva621.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C93E850019E890E300BCC99C /* uva621.cpp */; };
 		C9711A5B19E2EDE900D17AB6 /* KeyboardA.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9711A5A19E2EDE900D17AB6 /* KeyboardA.cpp */; };
 		C9711A5D19E2F2BF00D17AB6 /* WormsB.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9711A5C19E2F2BF00D17AB6 /* WormsB.cpp */; };
 		C9A4BC1A19C967F9002A89D9 /* Eevee452A.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9A4BC1919C967F9002A89D9 /* Eevee452A.cpp */; };
@@ -50,6 +54,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C93E84F919E7F1D900BCC99C /* TexQuotes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TexQuotes.cpp; sourceTree = "<group>"; };
+		C93E84FB19E7F36100BCC99C /* in.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = in.txt; sourceTree = "<group>"; };
+		C93E84FC19E7F81200BCC99C /* uva1124.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uva1124.cpp; sourceTree = "<group>"; };
+		C93E84FE19E801D500BCC99C /* uva11364.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uva11364.cpp; sourceTree = "<group>"; };
+		C93E850019E890E300BCC99C /* uva621.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uva621.cpp; sourceTree = "<group>"; };
 		C952440F19BE62D2005E6DC4 /* Codeforces */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Codeforces; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9711A5A19E2EDE900D17AB6 /* KeyboardA.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KeyboardA.cpp; sourceTree = "<group>"; };
 		C9711A5C19E2F2BF00D17AB6 /* WormsB.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WormsB.cpp; sourceTree = "<group>"; };
@@ -141,6 +150,11 @@
 				C9E1246919C268DE002D2885 /* Socks460A.cpp */,
 				C9E1246719C18824002D2885 /* translate41A.cpp */,
 				C9E1246619C187D1002D2885 /* input.txt */,
+				C93E84F919E7F1D900BCC99C /* TexQuotes.cpp */,
+				C93E84FB19E7F36100BCC99C /* in.txt */,
+				C93E84FC19E7F81200BCC99C /* uva1124.cpp */,
+				C93E84FE19E801D500BCC99C /* uva11364.cpp */,
+				C93E850019E890E300BCC99C /* uva621.cpp */,
 			);
 			path = Codeforces;
 			sourceTree = "<group>";
@@ -196,8 +210,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C93E850119E890E300BCC99C /* uva621.cpp in Sources */,
 				C9E1246C19C27622002D2885 /* Puzzle377A.cpp in Sources */,
+				C93E84FA19E7F1D900BCC99C /* TexQuotes.cpp in Sources */,
 				C9E7404A19D5C5EF00CB4525 /* MuhAndImportantThingsB.cpp in Sources */,
+				C93E84FF19E801D500BCC99C /* uva11364.cpp in Sources */,
 				C9F2CEF819CBA789009A2773 /* HKCommonChild.cpp in Sources */,
 				C9F2CEBF19C411DF009A2773 /* Football43A.cpp in Sources */,
 				C9711A5B19E2EDE900D17AB6 /* KeyboardA.cpp in Sources */,
@@ -219,6 +236,7 @@
 				C9F2CEF419CAF769009A2773 /* PinProblem.cpp in Sources */,
 				C9F2CEF019C903D1009A2773 /* Chatroom58A.cpp in Sources */,
 				C9F2CEBD19C3FE7B009A2773 /* Pelisection17E.cpp in Sources */,
+				C93E84FD19E7F81200BCC99C /* uva1124.cpp in Sources */,
 				C9A4BC1C19CDB2A1002A89D9 /* WannaBeTheGuy.cpp in Sources */,
 				C9F2CED019C5638A009A2773 /* Panctuation147A.cpp in Sources */,
 				C9F2CEE819C824D2009A2773 /* GnikoolSsalg130B.cpp in Sources */,
