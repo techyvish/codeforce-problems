@@ -1,0 +1,13 @@
+afasdf
+asdf
+asdfsdfasdfasdf]sadfsdf
+asdf
+asdfsadf
+END
+TESTFORCAPITALsequence
+END
+testforbrecket(start scanning)fgsdgsdgsdfgsdfg
+END
+TEST FOR "Scan Between Quotes" and display
+END
+TEST FOR "Scan with quotes" and display

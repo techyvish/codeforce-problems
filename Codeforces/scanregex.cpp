@@ -1,12 +1,12 @@
 //
-//  uva230.cpp
+//  scanregex.cpp
 //  Codeforces
 //
-//  Created by Vishal Patel on 12/10/2014.
+//  Created by Vishal Patel on 14/10/2014.
 //  Copyright (c) 2014 Vishal Patel. All rights reserved.
 //
 
-
+#include <stdio.h>
 #include <stdio.h>
 #include <cstdio>
 #include <cstdlib>
@@ -24,9 +24,8 @@
 #include <stack>
 #include <utility>
 #include <vector>
-#include <iostream>
 #include <fstream>
-#include <algorithm>
+#include <string>
 
 using namespace std;
 
@@ -94,76 +93,46 @@ const double eps = 1e-9;
 #define trace6(a, b, c, d, e, f)
 
 #endif
-
-map<string, string> author;
-map<string, int> pos;
-vector<string> all;
 //#define fin cin
-/*
-bool cmp(const string &a, const string  &b)
-{
-    if ( author[a] != author[b] )
-    {
-        return author[a] < author[b];
-    }
-    return a < b;
-}
-
 int main()
 {
     //FILE *fp = freopen("/Users/Shared/codeforces/codeforces/in.txt", "rt", stdin);
-    //ifstream fin;
-    //fin.open("/Users/Shared/codeforces/codeforces/in.txt");
+    fstream fin("/Users/Shared/codeforces/codeforces/scantest.txt");
     
-    char buf[1024], cmd[1024], sti[1024], sa[1024];
-    while (gets(buf) && sscanf(buf, " \"%[^\"]\" by %[^\n\r]",sti,sa) == 2) {
-        author[sti] = sa;
-        all.push_back(string(sti));
+    char sti[1024];
+    string buffstr;
+    while (getline(fin, buffstr) && sscanf(buffstr.c_str(), "%[^\n\r]",sti) == 1) {
+        if ( buffstr == "END")
+            break;
+        cout << sti << endl;
     }
     
-    sort(all.begin(), all.end(), cmp);
-    int N = (int)all.size();
-    
-    for ( int i = 0 ; i < N ; i++)
-    {
-        pos[all[i]] = i;
+    while (getline(fin, buffstr) && sscanf(buffstr.c_str(), "%[A-Z]",sti) == 1) {
+        if ( buffstr == "END")
+            break;
+        cout << sti << endl;
     }
     
-    set<int> avail;
-    int i ;
-    FOR(i, 0, N) avail.insert(i);
-
-    vector<int> ret;
     
-    while (gets(buf) && sscanf(buf, " %[A-Z]", cmd) == 1)
-    {
-        if (strcmp(cmd, "END") == 0) break;
-        
-        if (strcmp(cmd, "BORROW") == 0)
-        {
-            sscanf(buf, " BORROW \"%[^\"]\"", sti);
-            avail.erase(pos[string(sti)]);
-        }
-        else if (strcmp(cmd, "RETURN") == 0)
-        {
-            sscanf(buf, " RETURN \"%[^\"]\"", sti);
-            ret.push_back(pos[string(sti)]);
-        }
-        else if (strcmp(cmd, "SHELVE") == 0)
-        {
-            sort(ret.begin(), ret.end());
-            for (int i = 0; i < (int)ret.size(); i++)
-            {
-                printf("Put \"%s\" ", all[ret[i]].c_str());
-                set<int>::iterator it = avail.insert(ret[i]).first;
-                if (it == avail.begin())
-                    printf("first\n");
-                else
-                    printf("after \"%s\"\n", all[*(--it)].c_str());
-            }
-            printf("END\n");
-            ret.clear();
-        }
+    //%*[^(]   read and discard everything up to opening paren
+    //(        read and discard the opening paren
+    //%[^)]    read and store up up to (but not including) the closing paren
+    //%*[^\n]  read and discard up to (but not including) the newline
+    while (getline(fin, buffstr) && sscanf(buffstr.c_str(), "%*[^(](%[^)]%*[^\n\r]",sti) == 1) {
+        if ( buffstr == "END")
+            break;
+        cout << sti << endl;
+    }
+    
+    while (getline(fin, buffstr) && sscanf(buffstr.c_str(), "TEST FOR \"%[^\"]%*[^\n\r]",sti) == 1) {
+        if ( buffstr == "END")
+            break;
+        cout << sti << endl;
+    }
+    
+    while (getline(fin, buffstr) && sscanf(buffstr.c_str(), "TEST FOR \"%[^\"]%*[^\n\r]",sti) == 1) {
+        if ( buffstr == "END")
+            break;
+        cout << sti << endl;
     }
 }
-*/

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C919F9C219EC42D600E001F2 /* scanregex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C919F9C119EC42D600E001F2 /* scanregex.cpp */; };
 		C93E84FA19E7F1D900BCC99C /* TexQuotes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C93E84F919E7F1D900BCC99C /* TexQuotes.cpp */; };
 		C93E84FD19E7F81200BCC99C /* uva1124.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C93E84FC19E7F81200BCC99C /* uva1124.cpp */; };
 		C93E84FF19E801D500BCC99C /* uva11364.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C93E84FE19E801D500BCC99C /* uva11364.cpp */; };
@@ -55,6 +56,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C919F9C119EC42D600E001F2 /* scanregex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scanregex.cpp; sourceTree = "<group>"; };
+		C919F9C319EC447A00E001F2 /* scantest.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = scantest.txt; sourceTree = "<group>"; };
 		C93E84F919E7F1D900BCC99C /* TexQuotes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TexQuotes.cpp; sourceTree = "<group>"; };
 		C93E84FB19E7F36100BCC99C /* in.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = in.txt; sourceTree = "<group>"; };
 		C93E84FC19E7F81200BCC99C /* uva1124.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uva1124.cpp; sourceTree = "<group>"; };
@@ -158,6 +161,8 @@
 				C93E84FE19E801D500BCC99C /* uva11364.cpp */,
 				C93E850019E890E300BCC99C /* uva621.cpp */,
 				C93E850219E9B09A00BCC99C /* uva230.cpp */,
+				C919F9C119EC42D600E001F2 /* scanregex.cpp */,
+				C919F9C319EC447A00E001F2 /* scantest.txt */,
 			);
 			path = Codeforces;
 			sourceTree = "<group>";
@@ -213,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C919F9C219EC42D600E001F2 /* scanregex.cpp in Sources */,
 				C93E850119E890E300BCC99C /* uva621.cpp in Sources */,
 				C9E1246C19C27622002D2885 /* Puzzle377A.cpp in Sources */,
 				C93E84FA19E7F1D900BCC99C /* TexQuotes.cpp in Sources */,
