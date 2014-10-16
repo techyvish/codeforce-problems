@@ -1,41 +1,39 @@
 //
-//  uva230.cpp
+//  uva10038.cpp
 //  Codeforces
 //
-//  Created by Vishal Patel on 12/10/2014.
+//  Created by Vishal Patel on 15/10/2014.
 //  Copyright (c) 2014 Vishal Patel. All rights reserved.
 //
 
-
+//#include <stdio.h>
 #include <stdio.h>
 #include <cstdio>
-#include <cstdlib>
-#include <cstring>
-#include <ctime>
-#include <functional>
-#include <iomanip>
-#include <iostream>
-#include <list>
-#include <map>
-#include <numeric>
-#include <queue>
-#include <set>
-#include <sstream>
-#include <stack>
-#include <utility>
-#include <vector>
-#include <iostream>
-#include <fstream>
+#include <stdlib.h>
 #include <algorithm>
+#include <iostream>
+//#include <cstdlib>
+//#include <cstring>
+//#include <ctime>
+//#include <functional>
+//#include <iomanip>
+//#include <iostream>
+//#include <list>
+//#include <map>
+//#include <numeric>
+//#include <queue>
+//#include <set>
+//#include <sstream>
+//#include <stack>
+//#include <utility>
+//#include <vector>
+//#include <fstream>
+//#include <string>
 
 using namespace std;
-//
-//typedef long long ll;
-//typedef vector<int> vi;
-//typedef pair<int,int> pi;
-//typedef vector<string> vs;
-//
-//// Basic macros
+
+
+// Basic macros
 //#define st          first
 //#define se          second
 //#define all(x)      (x).begin(), (x).end()
@@ -61,7 +59,7 @@ using namespace std;
 //#define TR(v,it) for( LET(it,v.begin()) ; it != v.end() ; it++)
 //#define FORi(i,a,b) for(LET(i,a) ; i<b; i++)
 //#define repi(i,n) FORi(i,(__typeof(n))0,n)
-#define FOR(i,a,b) for(i=a ; i<b; i++)
+//#define FOR(i,a,b) for(i=a ; i<b; i++)
 //#define rep(i,n) FOR(i,0,n)
 //#define si(n) scanf("%d",&n)
 //#define sll(n) scanf("%lld",&n)
@@ -94,76 +92,44 @@ using namespace std;
 //#define trace6(a, b, c, d, e, f)
 //
 //#endif
-/*
-map<string, string> author;
-map<string, int> pos;
-vector<string> all;
 //#define fin cin
-
-bool cmp(const string &a, const string  &b)
-{
-    if ( author[a] != author[b] )
-    {
-        return author[a] < author[b];
-    }
-    return a < b;
-}
 
 int main()
 {
     //FILE *fp = freopen("/Users/Shared/codeforces/codeforces/in.txt", "rt", stdin);
-    //ifstream fin;
-    //fin.open("/Users/Shared/codeforces/codeforces/in.txt");
-    
-    char buf[1024], cmd[1024], sti[1024], sa[1024];
-    while (gets(buf) && sscanf(buf, " \"%[^\"]\" by %[^\n\r]",sti,sa) == 2) {
-        author[sti] = sa;
-        all.push_back(string(sti));
-    }
-    
-    sort(all.begin(), all.end(), cmp);
-    int N = (int)all.size();
-    
-    for ( int i = 0 ; i < N ; i++)
+    //fstream fin("/Users/Shared/codeforces/codeforces/in.txt");
+    int n = 0;
+    int arr[100001] = {0};
+    int jolly[100001] = {0};
+    while ( scanf("%d", &n) == 1 )
     {
-        pos[all[i]] = i;
-    }
-    
-    set<int> avail;
-    int i ;
-    FOR(i, 0, N) avail.insert(i);
-
-    vector<int> ret;
-    
-    while (gets(buf) && sscanf(buf, " %[A-Z]", cmd) == 1)
-    {
-        if (strcmp(cmd, "END") == 0) break;
+        //memset(jolly, 0, 100001);
+        int i = 0 ;
+        int tc = n;
+        while ( tc--) {
+            scanf("%d",&arr[i++]);
+        }
         
-        if (strcmp(cmd, "BORROW") == 0)
+
+        for(int i = 0; i < n - 1; i++)
+            jolly[i] = abs(arr[i + 1] - arr[i]);
+        sort(jolly, jolly + n - 1);
+        
+        bool isJolly = true;
+        for(int i = 0; i < n - 1; i++)
         {
-            sscanf(buf, " BORROW \"%[^\"]\"", sti);
-            avail.erase(pos[string(sti)]);
-        }
-        else if (strcmp(cmd, "RETURN") == 0)
-        {
-            sscanf(buf, " RETURN \"%[^\"]\"", sti);
-            ret.push_back(pos[string(sti)]);
-        }
-        else if (strcmp(cmd, "SHELVE") == 0)
-        {
-            sort(ret.begin(), ret.end());
-            for (int i = 0; i < (int)ret.size(); i++)
-            {
-                printf("Put \"%s\" ", all[ret[i]].c_str());
-                set<int>::iterator it = avail.insert(ret[i]).first;
-                if (it == avail.begin())
-                    printf("first\n");
-                else
-                    printf("after \"%s\"\n", all[*(--it)].c_str());
+            if(jolly[i] != i + 1) {
+                cout << "Not jolly\n";
+                isJolly= false;
+                break;
             }
-            printf("END\n");
-            ret.clear();
         }
+        if (isJolly )
+            cout << "Jolly\n";
+        
     }
+    //char sti[1024];
+    //string buffstr;
+    
 }
-*/
+
