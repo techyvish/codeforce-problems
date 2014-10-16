@@ -1,11 +1,10 @@
 //
-//  uva11239.cpp
+//  272A.cpp
 //  Codeforces
 //
-//  Created by Vishal Patel on 16/10/2014.
+//  Created by Vishal Patel on 17/10/2014.
 //  Copyright (c) 2014 Vishal Patel. All rights reserved.
 //
-
 
 #include <stdio.h>
 #include <cstdio>
@@ -26,14 +25,13 @@
 #include <vector>
 #include <fstream>
 #include <string>
-#include <unordered_map>
 
 using namespace std;
 
-typedef long long ll;
-typedef vector<int> vi;
-typedef pair<int,int> pi;
-typedef vector<string> vs;
+//typedef long long ll;
+//typedef vector<int> vi;
+//typedef pair<int,int> pi;
+//typedef vector<string> vs;
 
 // Basic macros
 #define st          first
@@ -95,68 +93,29 @@ const double eps = 1e-9;
 
 #endif
 #define fin cin
-
+/*
 int main()
 {
-    //FILE *fp = freopen("/Users/Shared/codeforces/codeforces/in.txt", "rt", stdin);
-    fstream fin("/Users/Shared/codeforces/codeforces/in.txt");
+    //FILE *fp = freopen("/Users/Shared/codeforces/codeforces/272/A.txt", "rt", stdin);
     
-    char stp[1024];
-    char std[1024];
     string buffstr;
-    //vector<string> project;
-    unordered_map<string, set<string>> project;
-    getline(fin, buffstr) ;
-    sscanf(buffstr.c_str(), "%[A-Z]%*[^\n\r]",stp);
-    while ( string(stp) != "") {
-        if ( buffstr == "0")
-            break;
-        if ( string(stp) == "1")
-        {
-            //print solution
-            for ( auto i = project.begin() ; i != project.end() ; i++ )
-            {
-                set<string> s = i->second;
-                for ( auto it = s.begin()   ; it != s.end() ; it++ )
-                {
-                    string std = *it;
-                    for ( auto i = project.begin() ; i != project.end() ; i++ )
-                    {
-                        set<string> projectset = i->second;
-                        if ( projectset.find(std) != s.end() )
-                        {
-                            set<string>::iterator itt = projectset.find(std);
-                            projectset.erase(itt);
-                        }
-                    }
-                }
-            }
-            
-            for ( auto i = project.begin() ; i != project.end() ; i++ )
-            {
-                cout << i->first << " ";
-                set<string> projectset = i->second;
-                cout << projectset.size();
-                cout << endl;
-            }
-        }
-        
-        set<string> students;
-        while (getline(fin, buffstr) && sscanf(buffstr.c_str(), "%[a-z0-9 ]",std) == 1) {
-            students.insert(string(std));
-            if ( string(std) == "0" || string(std) == "1")
-                break;
-        }
-        project[string(stp)] = students;
-        memcpy(stp, buffstr.c_str(), buffstr.size());
+    int n = 0 ;
+    int sum = 0 ;
+    int k = 0;
+    while (  scanf("%d", &k) == 1) {
+        n++;
+        sum += k;
     }
-}
-
-
-
-
-
-
-
-
-
+    
+    if ( n != 5 )
+    {
+        cout <<  -1 << "\n";
+        return 0;
+    }
+    
+    if ( sum % 5 == 0)
+        cout << ( sum/5 ) << "\n";
+    else
+        cout << -1 << "\n";
+    
+}*/

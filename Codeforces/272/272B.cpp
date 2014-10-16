@@ -1,39 +1,39 @@
 //
-//  uva10038.cpp
+//  272A.cpp
 //  Codeforces
 //
-//  Created by Vishal Patel on 15/10/2014.
+//  Created by Vishal Patel on 17/10/2014.
 //  Copyright (c) 2014 Vishal Patel. All rights reserved.
 //
 
-//#include <stdio.h>
 #include <stdio.h>
 #include <cstdio>
-#include <stdlib.h>
-#include <algorithm>
+#include <cstdlib>
+#include <cstring>
+#include <ctime>
+#include <functional>
+#include <iomanip>
 #include <iostream>
-//#include <cstdlib>
-//#include <cstring>
-//#include <ctime>
-//#include <functional>
-//#include <iomanip>
-//#include <iostream>
-//#include <list>
-//#include <map>
-//#include <numeric>
-//#include <queue>
-//#include <set>
-//#include <sstream>
-//#include <stack>
-//#include <utility>
-//#include <vector>
-//#include <fstream>
-//#include <string>
+#include <list>
+#include <map>
+#include <numeric>
+#include <queue>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <utility>
+#include <vector>
+#include <fstream>
+#include <string>
 
 using namespace std;
-
-
-// Basic macros
+//
+//typedef long long ll;
+//typedef vector<int> vi;
+//typedef pair<int,int> pi;
+//typedef vector<string> vs;
+//
+//// Basic macros
 //#define st          first
 //#define se          second
 //#define all(x)      (x).begin(), (x).end()
@@ -93,45 +93,50 @@ using namespace std;
 //
 //#endif
 //#define fin cin
+
+//long fact(long n)
+//{
+//    long f = 0;
+//    for ( long i = 1 ; i <= n ; i++)
+//        f *= i;
+//    return f;
+//}
 /*
 int main()
 {
-    //FILE *fp = freopen("/Users/Shared/codeforces/codeforces/in.txt", "rt", stdin);
-    //fstream fin("/Users/Shared/codeforces/codeforces/in.txt");
-    int n = 0;
-    int arr[100001] = {0};
-    int jolly[100001] = {0};
-    while ( scanf("%d", &n) == 1 )
-    {
-        //memset(jolly, 0, 100001);
-        int i = 0 ;
-        int tc = n;
-        while ( tc--) {
-            scanf("%d",&arr[i++]);
-        }
-        
-
-        for(int i = 0; i < n - 1; i++)
-            jolly[i] = abs(arr[i + 1] - arr[i]);
-        sort(jolly, jolly + n - 1);
-        
-        bool isJolly = true;
-        for(int i = 0; i < n - 1; i++)
-        {
-            if(jolly[i] != i + 1) {
-                cout << "Not jolly\n";
-                isJolly= false;
-                break;
-            }
-        }
-        if (isJolly )
-            cout << "Jolly\n";
-        
-    }
-    //char sti[1024];
-    //string buffstr;
     
-}
-*/
- 
+    
+    
+    //FILE *fp = freopen("/Users/Shared/codeforces/codeforces/272/B.txt", "rt", stdin);
+    //fstream fin("/Users/Shared/codeforces/codeforces/272/A.txt");
+    int persons,teams;
+    long long a[1000000000] = {0};
+    scanf("%d %d", &persons,&teams);
+    
+    for ( int i = 0 ; i < persons ; i++ )
+    {
+        for ( int j = 0 ; j < teams ; j++ )
+        {
+            a[j] += 1;
+        }
+    }
+    
+    sort ( a, a+teams-1);
+    
+    long minperson = 0;
+    for (long   i = 0 ; i < teams ; i++ )
+    {
+        if ( a[i] >= 2 )
+        {
+            minperson = a[i];
+            break;
+        }
+    }
+//    long min = fact(minperson) / fact(minperson-2) * 2;
+//    cout << min << " ";
+//    long  maxpersons = persons - (teams-1);
+//    long max = fact(maxpersons) / fact(maxpersons-2) * 2;
+//    cout << max << endl;
+
+}*/
 
