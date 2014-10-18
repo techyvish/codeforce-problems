@@ -27,135 +27,167 @@
 #include <fstream>
 #include <string>
 #include <unordered_map>
+#include <algorithm>
 
 using namespace std;
 
-typedef long long ll;
-typedef vector<int> vi;
-typedef pair<int,int> pi;
-typedef vector<string> vs;
-
-// Basic macros
-#define st          first
-#define se          second
-#define all(x)      (x).begin(), (x).end()
-#define ini(a, v)   memset(a, v, sizeof(a))
-#define re(i,s,n)  	for(int i=s;i<(n);++i)
-#define rep(i,s,n)  for(int i=s;i<=(n);++i)
-#define fr(i,n)     re(i,0,n)
-#define repv(i,f,t) for(int i = f; i >= t; --i)
-#define rev(i,f,t)  repv(i,f - 1,t)
-#define frv(i,n)    rev(i,n,0)
-#define pu          push_back
-#define mp          make_pair
-#define sz(x)       (int)(x.size())
-
-#define PB push_back
-#define MP make_pair
-#define F first
-#define S second
-#define SZ(a) (int)(a.size())
-#define CLR(a) a.clear()
-#define SET(a,b) memset(a,b,sizeof(a))
-#define LET(x,a) __typeof(a) x(a)
-#define TR(v,it) for( LET(it,v.begin()) ; it != v.end() ; it++)
-#define FORi(i,a,b) for(LET(i,a) ; i<b; i++)
-#define repi(i,n) FORi(i,(__typeof(n))0,n)
-#define FOR(i,a,b) for(i=a ; i<b; i++)
-#define rep(i,n) FOR(i,0,n)
-#define si(n) scanf("%d",&n)
-#define sll(n) scanf("%lld",&n)
-#define pi(n) printf("%d",n)
-#define piw(n) printf("%d ",n)
-#define pin(n) printf("%d\n",n)
-#define sortv(a) sort(a.begin(),a.end())
-#define DRT()  int t; cin>>t; while(t--)
-#define DRI(n)  int n; cin>>n;
-#define DRII(n,m)  int n,m; cin>>n>>m;
-
-const int oo = 2000000009;
-const double eps = 1e-9;
-
-#ifdef TRACE
-#define trace1(x)                cerr << #x << ": " << x << endl;
-#define trace2(x, y)             cerr << #x << ": " << x << " | " << #y << ": " << y << endl;
-#define trace3(x, y, z)          cerr << #x << ": " << x << " | " << #y << ": " << y << " | " << #z << ": " << z << endl;
-#define trace4(a, b, c, d)       cerr << #a << ": " << a << " | " << #b << ": " << b << " | " << #c << ": " << c << " | " << #d << ": " << d << endl;
-#define trace5(a, b, c, d, e)    cerr << #a << ": " << a << " | " << #b << ": " << b << " | " << #c << ": " << c << " | " << #d << ": " << d << " | " << #e << ": " << e << endl;
-#define trace6(a, b, c, d, e, f) cerr << #a << ": " << a << " | " << #b << ": " << b << " | " << #c << ": " << c << " | " << #d << ": " << d << " | " << #e << ": " << e << " | " << #f << ": " << f << endl;
-
-#else
-
-#define trace1(x)
-#define trace2(x, y)
-#define trace3(x, y, z)
-#define trace4(a, b, c, d)
-#define trace5(a, b, c, d, e)
-#define trace6(a, b, c, d, e, f)
-
-#endif
+//typedef long long ll;
+//typedef vector<int> vi;
+//typedef pair<int,int> pi;
+//typedef vector<string> vs;
+//
+//// Basic macros
+//#define st          first
+//#define se          second
+//#define all(x)      (x).begin(), (x).end()
+//#define ini(a, v)   memset(a, v, sizeof(a))
+//#define re(i,s,n)  	for(int i=s;i<(n);++i)
+//#define rep(i,s,n)  for(int i=s;i<=(n);++i)
+//#define fr(i,n)     re(i,0,n)
+//#define repv(i,f,t) for(int i = f; i >= t; --i)
+//#define rev(i,f,t)  repv(i,f - 1,t)
+//#define frv(i,n)    rev(i,n,0)
+//#define pu          push_back
+//#define mp          make_pair
+//#define sz(x)       (int)(x.size())
+//
+//#define PB push_back
+//#define MP make_pair
+//#define F first
+//#define S second
+//#define SZ(a) (int)(a.size())
+//#define CLR(a) a.clear()
+//#define SET(a,b) memset(a,b,sizeof(a))
+//#define LET(x,a) __typeof(a) x(a)
+//#define TR(v,it) for( LET(it,v.begin()) ; it != v.end() ; it++)
+//#define FORi(i,a,b) for(LET(i,a) ; i<b; i++)
+//#define repi(i,n) FORi(i,(__typeof(n))0,n)
+//#define FOR(i,a,b) for(i=a ; i<b; i++)
+//#define rep(i,n) FOR(i,0,n)
+//#define si(n) scanf("%d",&n)
+//#define sll(n) scanf("%lld",&n)
+//#define pi(n) printf("%d",n)
+//#define piw(n) printf("%d ",n)
+//#define pin(n) printf("%d\n",n)
+//#define sortv(a) sort(a.begin(),a.end())
+//#define DRT()  int t; cin>>t; while(t--)
+//#define DRI(n)  int n; cin>>n;
+//#define DRII(n,m)  int n,m; cin>>n>>m;
+//
+//const int oo = 2000000009;
+//const double eps = 1e-9;
+//
+//#ifdef TRACE
+//#define trace1(x)                cerr << #x << ": " << x << endl;
+//#define trace2(x, y)             cerr << #x << ": " << x << " | " << #y << ": " << y << endl;
+//#define trace3(x, y, z)          cerr << #x << ": " << x << " | " << #y << ": " << y << " | " << #z << ": " << z << endl;
+//#define trace4(a, b, c, d)       cerr << #a << ": " << a << " | " << #b << ": " << b << " | " << #c << ": " << c << " | " << #d << ": " << d << endl;
+//#define trace5(a, b, c, d, e)    cerr << #a << ": " << a << " | " << #b << ": " << b << " | " << #c << ": " << c << " | " << #d << ": " << d << " | " << #e << ": " << e << endl;
+//#define trace6(a, b, c, d, e, f) cerr << #a << ": " << a << " | " << #b << ": " << b << " | " << #c << ": " << c << " | " << #d << ": " << d << " | " << #e << ": " << e << " | " << #f << ": " << f << endl;
+//
+//#else
+//
+//#define trace1(x)
+//#define trace2(x, y)
+//#define trace3(x, y, z)
+//#define trace4(a, b, c, d)
+//#define trace5(a, b, c, d, e)
+//#define trace6(a, b, c, d, e, f)
+//
+//#endif
 #define fin cin
+
+auto CompareKeys = [](std::pair<string,int> const & a, std::pair<string,int> const & b)
+{
+    return a.second != b.second?  a.second > b.second : a.first < b.first;
+};
 
 int main()
 {
     //FILE *fp = freopen("/Users/Shared/codeforces/codeforces/in.txt", "rt", stdin);
-    fstream fin("/Users/Shared/codeforces/codeforces/in.txt");
+    //fstream fin("/Users/Shared/codeforces/codeforces/in.txt");
     
     char stp[1024];
     char std[1024];
     string buffstr;
     //vector<string> project;
-    unordered_map<string, set<string>> project;
+    map<string, set<string>> project;
+    map<string,int> repeated;
+    vector<pair<string,int>> final;
     getline(fin, buffstr) ;
-    sscanf(buffstr.c_str(), "%[A-Z]%*[^\n\r]",stp);
+    sscanf(buffstr.c_str(), "%[A-Z ]%*[^\n\r]",stp);
     while ( string(stp) != "") {
         if ( buffstr == "0")
             break;
         if ( string(stp) == "1")
         {
             //print solution
-            for ( auto i = project.begin() ; i != project.end() ; i++ )
+            int p = 0;
+            for ( auto i = project.begin() ; i != project.end() ; i++ , p++)
             {
                 set<string> s = i->second;
-                for ( auto it = s.begin()   ; it != s.end() ; it++ )
+              for ( auto it = s.begin()   ; it != s.end() ; it++ )
                 {
                     string std = *it;
-                    for ( auto i = project.begin() ; i != project.end() ; i++ )
-                    {
-                        set<string> projectset = i->second;
-                        if ( projectset.find(std) != s.end() )
-                        {
-                            set<string>::iterator itt = projectset.find(std);
-                            projectset.erase(itt);
-                        }
-                    }
+                    int i = repeated[std];
+                    repeated[std] = i + 1;
                 }
             }
             
+            for ( auto it = repeated.begin() ; it != repeated.end() ; it++ )
+            {
+                if ( it->second >= 2)
+                {
+                    for ( auto i = project.begin() ; i != project.end() ; i++ , p++)
+                    {
+                        set<string> studset = i->second;
+                        if ( studset.find(it->first) != studset.end())
+                        {
+                            set<string>::iterator itr = studset.find(it->first);
+                            studset.erase(itr);
+                            project[i->first] = studset;
+                        }
+                    }
+                }
+                else
+                {
+                    break;
+                }
+            }
+            
+            
             for ( auto i = project.begin() ; i != project.end() ; i++ )
             {
+                final.push_back(make_pair(i->first, (i->second).size()));
+            }
+            sort(final.begin(),final.end(),CompareKeys);
+            for ( auto i = final.begin()  ; i != final.end() ; i++ )
+            {
                 cout << i->first << " ";
-                set<string> projectset = i->second;
-                cout << projectset.size();
+                cout << i->second;
                 cout << endl;
             }
+            project.clear();
+            repeated.clear();
+            final.clear();
         }
         
         set<string> students;
+        buffstr = "";
         while (getline(fin, buffstr) && sscanf(buffstr.c_str(), "%[a-z0-9 ]",std) == 1) {
-            students.insert(string(std));
             if ( string(std) == "0" || string(std) == "1")
                 break;
+            students.insert(string(std));
         }
-        project[string(stp)] = students;
+        if (string(stp) != "1")
+            project[string(stp)] = students;
+        
+        //if ( string(std) != "0" || string(std) != "1")
+        fill_n(stp, 50, 0);
         memcpy(stp, buffstr.c_str(), buffstr.size());
+        buffstr = "";
     }
 }
-
-
-
-
-
 
 
 

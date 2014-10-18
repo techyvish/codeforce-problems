@@ -28,25 +28,26 @@
 #include <algorithm>
 
 using namespace std;
-long fact(long n)
+long long fact(long long n)
 {
-    long f = 1;
-    for ( long i = 1 ; i <= n ; i++)
+    long long f = 1;
+    for ( long long i = 1 ; i <= n ; i++)
         f *= i;
     return f;
-}/*
+}
+/*
 int main()
 {
     //FILE *fp = freopen("/Users/Shared/codeforces/codeforces/272/B.txt", "rt", stdin);
     //fstream fin("/Users/Shared/codeforces/codeforces/272/A.txt");
-    int persons,teams;
+    long long persons,teams;
     long long a[1000000] = {0};
-    scanf("%d %d", &persons,&teams);
+    scanf("%lld %lld", &persons,&teams);
     
-    int k = 0;
-    for ( int i = 0 ; i < persons ; i++ )
+    long long k = 0;
+    for ( long long i = 0 ; i < persons ; i++ )
     {
-        for ( int j = 0 ; j < teams ; j++ )
+        for ( long long j = 0 ; j < teams ; j++ )
         {
             if ( k < persons )
             {
@@ -60,37 +61,38 @@ int main()
         }
     }
     
-    sort ( a, a+teams-1);
+    sort ( a, a+teams);
     
-    long minperson = 0;
-    long count  = 0;
-    long minpair = 0;
-    for (long   i = 0 ; i < teams ; i++ )
+    long long minperson = 0;
+    long long count  = 0;
+    long long minpair = 0;
+    for (long long   i = 0 ; i < teams ; i++ )
     {
         if (a[i] >= 2 ) {
             minpair = a[i];
             break;
         }
     }
-    
-    for (long   i = 0 ; i < teams ; i++ )
+
+    for (long long   i = 0 ; i < teams ; i++ )
     {
-        if ( a[i] >= minpair )
+        if ( a[i] == minpair )
         {
 
             minperson = a[i];
             count ++;
         }
-        else
+        
+        if ( a[i] >= 2 && a[i] > minperson  )
         {
             break;
         }
     }
     
-    long min = fact(minperson) / (fact(minperson-2) * 2);
+    long long min = fact(minperson) / (fact(minperson-2) * 2);
     cout << min * count << " ";
-    long  maxpersons = persons - (teams-1);
-    long max = fact(maxpersons) / (fact(maxpersons-2) * 2);
+    long long  maxpersons = persons - (teams-1);
+    long long max = fact(maxpersons) / (fact(maxpersons-2) * 2);
     cout << max << endl;
     
 }*/

@@ -107,7 +107,7 @@ int main()
         sum += k;
     }
     
-    if ( n != 5 )
+    if ( n != 5 || sum == 0)
     {
         cout <<  -1 << "\n";
         return 0;
@@ -118,4 +118,5 @@ int main()
     else
         cout << -1 << "\n";
     
-}*/
+}
+*/
