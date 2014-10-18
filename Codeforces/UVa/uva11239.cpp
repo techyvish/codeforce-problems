@@ -105,12 +105,11 @@ auto CompareKeys = [](std::pair<string,int> const & a, std::pair<string,int> con
 int main()
 {
     //FILE *fp = freopen("/Users/Shared/codeforces/codeforces/in.txt", "rt", stdin);
-    //fstream fin("/Users/Shared/codeforces/codeforces/in.txt");
+    //fstream fin("/Users/Shared/codeforces/codeforces/uva/uva11239.txt");
     
     char stp[1024];
     char std[1024];
     string buffstr;
-    //vector<string> project;
     map<string, set<string>> project;
     map<string,int> repeated;
     vector<pair<string,int>> final;
@@ -134,7 +133,11 @@ int main()
                 }
             }
             
-            for ( auto it = repeated.begin() ; it != repeated.end() ; it++ )
+            vector<pair<string, int> > v;
+            copy(repeated.begin(), repeated.end(), back_inserter(v));
+            sort(v.begin(), v.end(), CompareKeys);
+            
+            for ( auto it = v.begin() ; it != v.end() ; it++ )
             {
                 if ( it->second >= 2)
                 {
@@ -154,7 +157,6 @@ int main()
                     break;
                 }
             }
-            
             
             for ( auto i = project.begin() ; i != project.end() ; i++ )
             {
