@@ -95,6 +95,8 @@ using namespace std;
 //#define trace6(a, b, c, d, e, f)
 //
 //#endif
+
+/*
 #define fin cin
 
 auto CompareKeys = [](std::pair<string,int> const & a, std::pair<string,int> const & b)
@@ -191,6 +193,6 @@ int main()
     }
 }
 
-
+*/
 
 
