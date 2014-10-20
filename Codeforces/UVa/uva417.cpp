@@ -26,6 +26,7 @@
 #include <vector>
 #include <fstream>
 #include <string>
+#include <algorithm>
 
 using namespace std;
 
@@ -92,20 +93,176 @@ const double eps = 1e-9;
 #define trace6(a, b, c, d, e, f)
 
 #endif
-//#define fin cin
+#define fin cin
+/*
+// case-independent (ci) string less_than
+// returns true if s1 < s2
+struct ci_less : binary_function<string, string, bool>
+{
+    
+	// case-independent (ci) compare_less binary function
+    
+	struct nocase_compare : public binary_function<unsigned char,unsigned
+    char,bool>
+	{
+		bool operator() (const unsigned char& c1, const unsigned char& c2) const
+		{
+            cout << c1  << ":" << c2 <<endl;
+            return tolower (c1) < tolower (c2);
+        }
+	};
+    
+	bool operator() (const string & s1, const string & s2) const
+	{
+		return lexicographical_compare
+        (s1.begin (), s1.end (),   // source range
+         s2.begin (), s2.end (),   // dest range
+         nocase_compare());  // comparison
+	}
+}; // end of ci_less
+
+// OR a simpler (and probably faster) version (by dave):
+struct ci_less2
+{
+    bool operator() (const string & s1, const string & s2) const
+    {
+        if ( s1.size () == s2.size() )
+        {
+            return s1 < s2;
+        }
+        else
+        {
+            return s1.size() < s2. size();
+        }
+    }
+};
+
 
 int main()
 {
     //FILE *fp = freopen("/Users/Shared/codeforces/codeforces/in.txt", "rt", stdin);
-    fstream fin("/Users/Shared/codeforces/codeforces/uva/uva417.txt");
+    //fstream fin("/Users/Shared/codeforces/codeforces/uva/uva417.txt");
+
+    map<string,int,ci_less2> words;
+    
+    int P = 1;
+ 
+    for ( int i = 0 ; i < 26 ; i++ )
+    {
+        char c = i + 97;
+        string  s ;
+        s+=c;
+        words[s] = P++;
+    }
+    
+    for ( int i = 0 ; i < 26; i ++ )
+    {
+        for ( int j = i + 1; j < 26 ; j ++ )
+        {
+            char c = i + 97;
+            string  s ;
+            s+=c;
+            char d = j + 97;
+            s+=d;
+            words[s] = P++;
+        }
+    }
+    
+    for ( int i = 0 ; i < 26; i ++ )
+    {
+        for ( int j = i + 1; j < 26 ; j ++ )
+        {
+            for ( int k = j + 1; k < 26 ; k ++ )
+            {
+                
+                char c = i + 97;
+                string  s ;
+                s+=c;
+                char d = j + 97;
+                s+=d;
+                char e = k + 97;
+                s+=e;
+                words[s] = P++;
+            }
+        }
+    }
+    
+    
+    for ( int i = 0 ; i < 26; i ++ )
+    {
+        for ( int j = i + 1; j < 26 ; j ++ )
+        {
+            for ( int k = j + 1; k < 26 ; k ++ )
+            {
+                for ( int l = k + 1; l < 26 ; l ++ )
+                {
+                    char c = i + 97;
+                    string  s ;
+                    s+=c;
+                    char d = j + 97;
+                    s+=d;
+                    char e = k + 97;
+                    s+=e;
+                    char f = l + 97;
+                    s+=f;
+                    words[s] = P++;
+                }
+            }
+        }
+    }
+    
+    for ( int i = 0 ; i < 26; i ++ )
+    {
+        for ( int j = i + 1; j < 26 ; j ++ )
+        {
+            for ( int k = j + 1; k < 26 ; k ++ )
+            {
+                for ( int l = k + 1; l < 26 ; l ++ )
+                {
+                    for ( int m = l + 1; m < 26 ; m ++ )
+                    {
+                        char c = i + 97;
+                        string  s ;
+                        s+=c;
+                        char d = j + 97;
+                        s+=d;
+                        char e = k + 97;
+                        s+=e;
+                        char f = l + 97;
+                        s+=f;
+                        char g = m + 97;
+                        s+=g;
+                        words[s] = P++;
+                        
+                        if ( P > 83681)
+                            break;
+                    }
+                }
+                if ( P > 83681)
+                    break;
+            }
+            if ( P > 83681)
+                break;
+        }
+        if ( P > 83681)
+            break;
+    }
+    
+    
     
     char sti[1024];
     string buffstr;
     while (getline(fin, buffstr) && sscanf(buffstr.c_str(), "%[^\n\r]",sti) == 1) {
-        if ( buffstr == "END")
-            break;
         string s = string(sti);
+        if ( words[s] == 0 )
+        {
+            cout << "0" << endl;
+        }
+        else
+        {
+            cout << words[s] << endl;
+        }
     }
-
-    
 }
+
+ */
