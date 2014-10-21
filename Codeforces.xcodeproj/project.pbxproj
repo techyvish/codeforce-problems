@@ -10,6 +10,7 @@
 		C918ABDE19EDD0CB004BAFE7 /* uva10038.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C918ABDD19EDD0CB004BAFE7 /* uva10038.cpp */; };
 		C919F9C219EC42D600E001F2 /* scanregex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C919F9C119EC42D600E001F2 /* scanregex.cpp */; };
 		C925A6D919F02FB000AF67B6 /* 272Bnew.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C925A6D819F02FB000AF67B6 /* 272Bnew.cpp */; };
+		C93E0A2619F5C0A80002B559 /* uva12100.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C93E0A2419F5C0A80002B559 /* uva12100.cpp */; };
 		C93E84FA19E7F1D900BCC99C /* TexQuotes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C93E84F919E7F1D900BCC99C /* TexQuotes.cpp */; };
 		C93E84FD19E7F81200BCC99C /* uva1124.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C93E84FC19E7F81200BCC99C /* uva1124.cpp */; };
 		C93E84FF19E801D500BCC99C /* uva11364.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C93E84FE19E801D500BCC99C /* uva11364.cpp */; };
@@ -17,6 +18,7 @@
 		C93E850319E9B09A00BCC99C /* uva230.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C93E850219E9B09A00BCC99C /* uva230.cpp */; };
 		C9711A5B19E2EDE900D17AB6 /* KeyboardA.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9711A5A19E2EDE900D17AB6 /* KeyboardA.cpp */; };
 		C9711A5D19E2F2BF00D17AB6 /* WormsB.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9711A5C19E2F2BF00D17AB6 /* WormsB.cpp */; };
+		C98FE17919F49A7700AA46B9 /* uva540.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C98FE17719F49A7700AA46B9 /* uva540.cpp */; };
 		C9A4BC1A19C967F9002A89D9 /* Eevee452A.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9A4BC1919C967F9002A89D9 /* Eevee452A.cpp */; };
 		C9A4BC1C19CDB2A1002A89D9 /* WannaBeTheGuy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9A4BC1B19CDB2A1002A89D9 /* WannaBeTheGuy.cpp */; };
 		C9A4BC1E19CDB96A002A89D9 /* Game24.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9A4BC1D19CDB96A002A89D9 /* Game24.cpp */; };
@@ -66,6 +68,8 @@
 		C919F9C119EC42D600E001F2 /* scanregex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scanregex.cpp; sourceTree = "<group>"; };
 		C919F9C319EC447A00E001F2 /* scantest.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = scantest.txt; sourceTree = "<group>"; };
 		C925A6D819F02FB000AF67B6 /* 272Bnew.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 272Bnew.cpp; sourceTree = "<group>"; };
+		C93E0A2419F5C0A80002B559 /* uva12100.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uva12100.cpp; sourceTree = "<group>"; };
+		C93E0A2519F5C0A80002B559 /* uva12100.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = uva12100.txt; sourceTree = "<group>"; };
 		C93E84F919E7F1D900BCC99C /* TexQuotes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TexQuotes.cpp; sourceTree = "<group>"; };
 		C93E84FB19E7F36100BCC99C /* in.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = in.txt; sourceTree = "<group>"; };
 		C93E84FC19E7F81200BCC99C /* uva1124.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uva1124.cpp; sourceTree = "<group>"; };
@@ -75,6 +79,8 @@
 		C952440F19BE62D2005E6DC4 /* Codeforces */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Codeforces; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9711A5A19E2EDE900D17AB6 /* KeyboardA.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KeyboardA.cpp; sourceTree = "<group>"; };
 		C9711A5C19E2F2BF00D17AB6 /* WormsB.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WormsB.cpp; sourceTree = "<group>"; };
+		C98FE17719F49A7700AA46B9 /* uva540.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uva540.cpp; sourceTree = "<group>"; };
+		C98FE17819F49A7700AA46B9 /* uva540.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = uva540.txt; sourceTree = "<group>"; };
 		C9A4BC1919C967F9002A89D9 /* Eevee452A.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Eevee452A.cpp; sourceTree = "<group>"; };
 		C9A4BC1B19CDB2A1002A89D9 /* WannaBeTheGuy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WannaBeTheGuy.cpp; sourceTree = "<group>"; };
 		C9A4BC1D19CDB96A002A89D9 /* Game24.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game24.cpp; sourceTree = "<group>"; };
@@ -189,6 +195,10 @@
 		C9B836F119F24EC900B1F612 /* UVa */ = {
 			isa = PBXGroup;
 			children = (
+				C93E0A2419F5C0A80002B559 /* uva12100.cpp */,
+				C93E0A2519F5C0A80002B559 /* uva12100.txt */,
+				C98FE17719F49A7700AA46B9 /* uva540.cpp */,
+				C98FE17819F49A7700AA46B9 /* uva540.txt */,
 				C9B836F219F24EC900B1F612 /* uva11239.cpp */,
 				C9B836F319F24EC900B1F612 /* uva11239.txt */,
 				C9B836F519F2500500B1F612 /* uva417.cpp */,
@@ -281,6 +291,7 @@
 				C9E1246A19C268DE002D2885 /* Socks460A.cpp in Sources */,
 				C9E7404819D5BF8600CB4525 /* MuhAndSticksA.cpp in Sources */,
 				C9F2CEE419C798CD009A2773 /* PetyaAndStrings112A.cpp in Sources */,
+				C93E0A2619F5C0A80002B559 /* uva12100.cpp in Sources */,
 				C9E1246819C18824002D2885 /* translate41A.cpp in Sources */,
 				C9F2CEC119C41E67009A2773 /* MartianString149E.cpp in Sources */,
 				C9E1246E19C30880002D2885 /* FlipGame327A.cpp in Sources */,
@@ -300,6 +311,7 @@
 				C9F2CEE819C824D2009A2773 /* GnikoolSsalg130B.cpp in Sources */,
 				C9E2FD9519DE195B0001BB1A /* TeXQuote.cpp in Sources */,
 				C9F2CEE619C81A2F009A2773 /* KString219A.cpp in Sources */,
+				C98FE17919F49A7700AA46B9 /* uva540.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
