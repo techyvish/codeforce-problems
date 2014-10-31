@@ -106,6 +106,7 @@ int toInt(string s )
 
 int main()
 {
+    
     //FILE *fp = freopen("/Users/Shared/codeforces/codeforces/in.txt", "rt", stdin);
     fstream fin("/Users/Shared/codeforces/codeforces/uva/uva12100.txt");
     
