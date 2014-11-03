@@ -94,7 +94,7 @@ const double eps = 1e-9;
 
 #endif
 #define fin cin
-/*
+
 int toInt(string s )
 {
     stringstream ss;
@@ -107,7 +107,7 @@ int toInt(string s )
 int main()
 {
     //FILE *fp = freopen("/Users/Shared/codeforces/codeforces/in.txt", "rt", stdin);
-    fstream fin("/Users/Shared/codeforces/codeforces/uva/uva540.txt");
+    fstream fin("/Users/Shared/codeforces/codeforces/uva/uva414.txt");
     
     int ts ;
     cin >> ts;
@@ -116,59 +116,43 @@ int main()
     
     while (ts != 0 ) {
         
-        for ( int i =0 ; i < ts ; i ++ )
+        vector<string > stringArr;
+        for ( int i = 0 ; i < ts ; i ++ )
         {
-            int invs;
-            cin >> invs;
-            
-            for ( int  j = 0 ; j < invs ; j++  )
-            {
-                int inv;
-                cin >> inv;
-                team[inv] = i;
+            string str;
+            cin >> str;
+            stringArr.push_back(str);
+        }
+        
+        int max = 0;
+        vector<int > lengths ;
+        for ( int i = 0 ; i < ts ; i++ )
+        {
+            string str = stringArr[i];
+            int k = 0 , l =0;
+            while ( str[k]) {
+                while (str[k++]== 'B') {
+                    l++;
+                }
+                k++;
                 
             }
+            lengths.push_back(l);
+            if ( l > max )
+                max = l;
         }
         
-        vector<queue<int> > qs(ts);
-        vector<bool> fqs(ts,false);
-        queue<int > qts;
+        int sum = 0;
         
-        string cmd;
-        cin >> cmd;
-        
-        while (cmd != "STOP")
+        for ( int i = 0; i < lengths.size() ; i++ )
         {
-            if (cmd == "DEQUEUE")
-            {
-                int t = qts.front();
-                int inv = qs[t].front();
-                qs[t].pop();
-                cout << inv << endl;
-            }
-            else if ( cmd == "ENQUEUE")
-            {
-                int inv;
-                cin >> inv;
-                int t = team[inv];
-                qs[t].push(inv);
-                {
-                    qts.push(t);
-                }
-            }
-            else
-            {
-               
-            }
-            cin >> cmd;
+            sum += (max - lengths[i]);
         }
         
-        cout << endl;
         cin >> ts;
-    
     }
     
 }
  
- */
+
 
