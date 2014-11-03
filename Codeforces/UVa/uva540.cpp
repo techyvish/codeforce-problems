@@ -94,7 +94,7 @@ const double eps = 1e-9;
 
 #endif
 #define fin cin
-/*
+
 int toInt(string s )
 {
     stringstream ss;
@@ -109,46 +109,65 @@ int main()
     //FILE *fp = freopen("/Users/Shared/codeforces/codeforces/in.txt", "rt", stdin);
     fstream fin("/Users/Shared/codeforces/codeforces/uva/uva540.txt");
     
-    char sti[1024],stn[1024],stnum[1024],cmd[1024];
-    string buffstr;
-    int A,B,C,D;
-    while (getline(fin, buffstr) && sscanf(buffstr.c_str(), "%[0-9]%*[^\n\r]",sti) == 1) {
-        A = toInt(sti);
-        vector<vector<int> > v;
-
-        while (getline(fin, buffstr) && sscanf(buffstr.c_str(), "%[^\n\r]",stn) == 1)
-        {
-            if ( A == 0 )
-                break;
-            vector<int > dd;
-            stringstream ss((string(stn)));
-            vector<string> stv;
-            int t ;
-            while ( ss>>t ) {
-                dd.push_back(t);
-            }
-            vector<int>::iterator it = dd.begin();
-            dd.erase(it);
-            v.push_back(dd);
-            A --;
-        }
+    int ts ;
+    cin >> ts;
+    
+    map<int,int> team;
+    
+    while (ts != 0 ) {
         
-        
-        while (getline(fin,buffstr) && sscanf(buffstr.c_str(), " %[A-Z]", cmd) == 1)
+        for ( int i =0 ; i < ts ; i ++ )
         {
-            if ( strcmp(cmd,"ENQUEUE") == 0 )
+            int invs;
+            cin >> invs;
+            
+            for ( int  j = 0 ; j < invs ; j++  )
             {
-                if ( sscanf(buffstr.c_str(),"ENQUEUE %[^\n\r]",sti) == 1 )
-                {
-                    
-                }
-            }
-            if ( strcmp(cmd,"DEQUEUE") == 0 )
-            {
+                int inv;
+                cin >> inv;
+                team[inv] = i;
                 
             }
         }
+        
+        vector<queue<int> > qs(ts);
+        vector<bool> fqs(ts,false);
+        queue<int > qts;
+        
+        string cmd;
+        cin >> cmd;
+        
+        while (cmd != "STOP")
+        {
+            if (cmd == "DEQUEUE")
+            {
+                int t = qts.front();
+                int inv = qs[t].front();
+                qs[t].pop();
+                cout << inv << endl;
+            }
+            else if ( cmd == "ENQUEUE")
+            {
+                int inv;
+                cin >> inv;
+                int t = team[inv];
+                qs[t].push(inv);
+                {
+                    qts.push(t);
+                }
+            }
+            else
+            {
+               
+            }
+            cin >> cmd;
+        }
+        
+        cout << endl;
+        cin >> ts;
+    
     }
+    
 }
  
-*/
+

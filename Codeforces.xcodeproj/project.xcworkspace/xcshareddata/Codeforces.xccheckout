@@ -14,7 +14,7 @@
 		<string>https://github.com/techyvish/codeforce-problems.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Codeforces.xcodeproj/project.xcworkspace</string>
+	<string>Codeforces.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>462ACCAFD75E33068777F42A27F33E75B5B79E9B</key>

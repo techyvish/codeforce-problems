@@ -95,6 +95,7 @@ const double eps = 1e-9;
 #endif
 #define fin cin
 
+/*
 int toInt(string s )
 {
     stringstream ss;
@@ -153,5 +154,5 @@ int main()
         
     }
 }
- 
+ */
 
