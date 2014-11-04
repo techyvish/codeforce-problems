@@ -35,64 +35,64 @@ typedef vector<int> vi;
 typedef pair<int,int> pi;
 typedef vector<string> vs;
 
-// Basic macros
-#define st          first
-#define se          second
-#define ALL(x)      (x).begin(), (x).end()
-#define ini(a, v)   memset(a, v, sizeof(a))
-#define re(i,s,n)  	for(int i=s;i<(n);++i)
-#define rep(i,s,n)  for(int i=s;i<=(n);++i)
-#define fr(i,n)     re(i,0,n)
-#define repv(i,f,t) for(int i = f; i >= t; --i)
-#define rev(i,f,t)  repv(i,f - 1,t)
-#define frv(i,n)    rev(i,n,0)
-#define pu          push_back
-#define mp          make_pair
-#define sz(x)       (int)(x.size())
-
-#define PB push_back
-#define MP make_pair
-#define F first
-#define S second
-#define SZ(a) (int)(a.size())
-#define CLR(a) a.clear()
-#define SET(a,b) memset(a,b,sizeof(a))
-#define LET(x,a) __typeof(a) x(a)
-#define TR(v,it) for( LET(it,v.begin()) ; it != v.end() ; it++)
-#define FORi(i,a,b) for(LET(i,a) ; i<b; i++)
-#define repi(i,n) FORi(i,(__typeof(n))0,n)
-#define FOR(i,a,b) for(i=a ; i<b; i++)
-#define si(n) scanf("%d",&n)
-#define sll(n) scanf("%lld",&n)
-#define pi(n) printf("%d",n)
-#define piw(n) printf("%d ",n)
-#define pin(n) printf("%d\n",n)
-#define sortv(a) sort(a.begin(),a.end())
-#define DRT()  int t; cin>>t; while(t--)
-#define DRI(n)  int n; cin>>n;
-#define DRII(n,m)  int n,m; cin>>n>>m;
-
-const int oo = 2000000009;
-const double eps = 1e-9;
-
-#ifdef TRACE
-#define trace1(x)                cerr << #x << ": " << x << endl;
-#define trace2(x, y)             cerr << #x << ": " << x << " | " << #y << ": " << y << endl;
-#define trace3(x, y, z)          cerr << #x << ": " << x << " | " << #y << ": " << y << " | " << #z << ": " << z << endl;
-#define trace4(a, b, c, d)       cerr << #a << ": " << a << " | " << #b << ": " << b << " | " << #c << ": " << c << " | " << #d << ": " << d << endl;
-#define trace5(a, b, c, d, e)    cerr << #a << ": " << a << " | " << #b << ": " << b << " | " << #c << ": " << c << " | " << #d << ": " << d << " | " << #e << ": " << e << endl;
-#define trace6(a, b, c, d, e, f) cerr << #a << ": " << a << " | " << #b << ": " << b << " | " << #c << ": " << c << " | " << #d << ": " << d << " | " << #e << ": " << e << " | " << #f << ": " << f << endl;
-
-#else
-
-#define trace1(x)
-#define trace2(x, y)
-#define trace3(x, y, z)
-#define trace4(a, b, c, d)
-#define trace5(a, b, c, d, e)
-#define trace6(a, b, c, d, e, f)
-
-#endif
+//// Basic macros
+//#define st          first
+//#define se          second
+//#define ALL(x)      (x).begin(), (x).end()
+//#define ini(a, v)   memset(a, v, sizeof(a))
+//#define re(i,s,n)  	for(int i=s;i<(n);++i)
+//#define rep(i,s,n)  for(int i=s;i<=(n);++i)
+//#define fr(i,n)     re(i,0,n)
+//#define repv(i,f,t) for(int i = f; i >= t; --i)
+//#define rev(i,f,t)  repv(i,f - 1,t)
+//#define frv(i,n)    rev(i,n,0)
+//#define pu          push_back
+//#define mp          make_pair
+//#define sz(x)       (int)(x.size())
+//
+//#define PB push_back
+//#define MP make_pair
+//#define F first
+//#define S second
+//#define SZ(a) (int)(a.size())
+//#define CLR(a) a.clear()
+//#define SET(a,b) memset(a,b,sizeof(a))
+//#define LET(x,a) __typeof(a) x(a)
+//#define TR(v,it) for( LET(it,v.begin()) ; it != v.end() ; it++)
+//#define FORi(i,a,b) for(LET(i,a) ; i<b; i++)
+//#define repi(i,n) FORi(i,(__typeof(n))0,n)
+//#define FOR(i,a,b) for(i=a ; i<b; i++)
+//#define si(n) scanf("%d",&n)
+//#define sll(n) scanf("%lld",&n)
+//#define pi(n) printf("%d",n)
+//#define piw(n) printf("%d ",n)
+//#define pin(n) printf("%d\n",n)
+//#define sortv(a) sort(a.begin(),a.end())
+//#define DRT()  int t; cin>>t; while(t--)
+//#define DRI(n)  int n; cin>>n;
+//#define DRII(n,m)  int n,m; cin>>n>>m;
+//
+//const int oo = 2000000009;
+//const double eps = 1e-9;
+//
+//#ifdef TRACE
+//#define trace1(x)                cerr << #x << ": " << x << endl;
+//#define trace2(x, y)             cerr << #x << ": " << x << " | " << #y << ": " << y << endl;
+//#define trace3(x, y, z)          cerr << #x << ": " << x << " | " << #y << ": " << y << " | " << #z << ": " << z << endl;
+//#define trace4(a, b, c, d)       cerr << #a << ": " << a << " | " << #b << ": " << b << " | " << #c << ": " << c << " | " << #d << ": " << d << endl;
+//#define trace5(a, b, c, d, e)    cerr << #a << ": " << a << " | " << #b << ": " << b << " | " << #c << ": " << c << " | " << #d << ": " << d << " | " << #e << ": " << e << endl;
+//#define trace6(a, b, c, d, e, f) cerr << #a << ": " << a << " | " << #b << ": " << b << " | " << #c << ": " << c << " | " << #d << ": " << d << " | " << #e << ": " << e << " | " << #f << ": " << f << endl;
+//
+//#else
+//
+//#define trace1(x)
+//#define trace2(x, y)
+//#define trace3(x, y, z)
+//#define trace4(a, b, c, d)
+//#define trace5(a, b, c, d, e)
+//#define trace6(a, b, c, d, e, f)
+//
+//#endif
 #define fin cin
 
 int toInt(string s )
@@ -107,10 +107,12 @@ int toInt(string s )
 int main()
 {
     //FILE *fp = freopen("/Users/Shared/codeforces/codeforces/in.txt", "rt", stdin);
-    fstream fin("/Users/Shared/codeforces/codeforces/uva/uva414.txt");
+    //fstream fin("/Users/Shared/codeforces/codeforces/uva/uva414.txt");
     
-    int ts ;
-    cin >> ts;
+    char sti[1024];
+    string buffstr;
+    getline(fin, buffstr) && sscanf(buffstr.c_str(), "%[^\n\r]",sti) ;
+    int ts = toInt(sti);
     
     map<int,int> team;
     
@@ -119,37 +121,48 @@ int main()
         vector<string > stringArr;
         for ( int i = 0 ; i < ts ; i ++ )
         {
-            string str;
-            cin >> str;
-            stringArr.push_back(str);
+            getline(fin, buffstr) && sscanf(buffstr.c_str(), "%[^\n\r]",sti) ;
+            stringArr.push_back(sti);
         }
         
         int max = 0;
+        int min = 999999;
+        int sumBlank = 0;
         vector<int > lengths ;
+        
         for ( int i = 0 ; i < ts ; i++ )
         {
             string str = stringArr[i];
-            int k = 0 , l =0;
+            int k = 0  ,a = 0, blank = 0;
             while ( str[k]) {
-                while (str[k++]== 'B') {
-                    l++;
+                a++;
+                while ( str[k]== ' ') {
+                    blank++;
+                    k++;
                 }
                 k++;
                 
             }
-            lengths.push_back(l);
-            if ( l > max )
-                max = l;
+            
+            
+            sumBlank+= blank;
+            lengths.push_back(a);
+            if ( a >= max )
+                max = a;
+            if ( blank <= min )
+                min = blank;
+                
+        
         }
         
         int sum = 0;
+        sum = (sumBlank - min * ts );
+
+        cout << sum << endl;
         
-        for ( int i = 0; i < lengths.size() ; i++ )
-        {
-            sum += (max - lengths[i]);
-        }
+        getline(fin, buffstr) && sscanf(buffstr.c_str(), "%[^\n\r]",sti) ;
+        ts = toInt(sti);
         
-        cin >> ts;
     }
     
 }
