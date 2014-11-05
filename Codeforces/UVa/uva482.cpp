@@ -93,6 +93,26 @@ const double eps = 1e-9;
 #endif
 #define fin cin
 
+
+vector<int> pos;
+vector<float> numbers;
+
+
+struct compareNumbers : std::binary_function<int, int, bool>
+{
+    bool operator()(int l,int r) const
+    {
+        bool s = pos[l-1] > pos[r-1];
+        if ( s )
+        {
+            float temp = numbers[l-1];
+            numbers[l-1] = numbers[r-1];
+            numbers[r-1] = temp;
+        }
+        return s;
+    }
+};
+
 int main()
 {
     //FILE *fp = freopen("/Users/Shared/codeforces/codeforces/in.txt", "rt", stdin);
@@ -104,8 +124,7 @@ int main()
     fin >> ts;
     getline(fin, buffstr) && sscanf(buffstr.c_str(), "%[^\n\r]",sti);
     while ( ts ) {
-         vector<int> pos;
-        vector<int> numbers;
+   
         getline(fin, buffstr) && sscanf(buffstr.c_str(), "%[^\n\r]",sti);
     
         getline(fin, buffstr) && sscanf(buffstr.c_str(), "%[^\n\r]",sti);
@@ -124,6 +143,6 @@ int main()
         while (B>>ch)
             numbers.push_back(ch);
         
-
+        sort(pos.begin(), pos.end(), compareNumbers());
     }
 }
