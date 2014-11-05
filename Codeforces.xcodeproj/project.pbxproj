@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C915B8551A0741C50025D16B /* uva414.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C915B8531A0741C50025D16B /* uva414.cpp */; };
+		C915B8571A0984AD0025D16B /* uva482.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C915B8561A0984AD0025D16B /* uva482.cpp */; };
 		C918ABDE19EDD0CB004BAFE7 /* uva10038.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C918ABDD19EDD0CB004BAFE7 /* uva10038.cpp */; };
 		C919F9C219EC42D600E001F2 /* scanregex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C919F9C119EC42D600E001F2 /* scanregex.cpp */; };
 		C925A6D919F02FB000AF67B6 /* 272Bnew.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C925A6D819F02FB000AF67B6 /* 272Bnew.cpp */; };
@@ -67,6 +68,8 @@
 /* Begin PBXFileReference section */
 		C915B8531A0741C50025D16B /* uva414.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uva414.cpp; sourceTree = "<group>"; };
 		C915B8541A0741C50025D16B /* uva414.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = uva414.txt; sourceTree = "<group>"; };
+		C915B8561A0984AD0025D16B /* uva482.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uva482.cpp; sourceTree = "<group>"; };
+		C915B8581A09851F0025D16B /* uva482.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = uva482.txt; sourceTree = "<group>"; };
 		C918ABDD19EDD0CB004BAFE7 /* uva10038.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uva10038.cpp; sourceTree = "<group>"; };
 		C919F9C119EC42D600E001F2 /* scanregex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scanregex.cpp; sourceTree = "<group>"; };
 		C919F9C319EC447A00E001F2 /* scantest.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = scantest.txt; sourceTree = "<group>"; };
@@ -208,6 +211,8 @@
 				C9B836F319F24EC900B1F612 /* uva11239.txt */,
 				C9B836F519F2500500B1F612 /* uva417.cpp */,
 				C9B836F819F2503400B1F612 /* uva417.txt */,
+				C915B8561A0984AD0025D16B /* uva482.cpp */,
+				C915B8581A09851F0025D16B /* uva482.txt */,
 			);
 			path = UVa;
 			sourceTree = "<group>";
@@ -284,6 +289,7 @@
 				C9E7404A19D5C5EF00CB4525 /* MuhAndImportantThingsB.cpp in Sources */,
 				C93E84FF19E801D500BCC99C /* uva11364.cpp in Sources */,
 				C9F2CEF819CBA789009A2773 /* HKCommonChild.cpp in Sources */,
+				C915B8571A0984AD0025D16B /* uva482.cpp in Sources */,
 				C9F2CEBF19C411DF009A2773 /* Football43A.cpp in Sources */,
 				C9711A5B19E2EDE900D17AB6 /* KeyboardA.cpp in Sources */,
 				C9B836F719F2500500B1F612 /* uva417.cpp in Sources */,

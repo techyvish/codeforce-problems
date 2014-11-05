@@ -93,8 +93,9 @@ typedef vector<string> vs;
 //#define trace6(a, b, c, d, e, f)
 //
 //#endif
-#define fin cin
+//#define fin cin
 
+/*
 int toInt(string s )
 {
     stringstream ss;
@@ -166,6 +167,6 @@ int main()
     }
     
 }
- 
+*/
 
 
