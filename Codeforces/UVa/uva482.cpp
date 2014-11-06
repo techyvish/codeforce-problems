@@ -94,55 +94,85 @@ const double eps = 1e-9;
 #define fin cin
 
 
-vector<int> pos;
-vector<float> numbers;
 
 
-struct compareNumbers : std::binary_function<int, int, bool>
-{
-    bool operator()(int l,int r) const
-    {
-        bool s = pos[l-1] > pos[r-1];
-        if ( s )
-        {
-            float temp = numbers[l-1];
-            numbers[l-1] = numbers[r-1];
-            numbers[r-1] = temp;
-        }
-        return s;
-    }
-};
+//struct compareNumbers : std::binary_function<int, int, bool>
+//{
+//    
+//    const vector<int> &value_vector;
+//    
+//    compareNumbers(const vector<int> &val_vac):value_vector(val_vac) {}
+//
+//    bool operator()(int l, int r) const{
+//        return value_vector[l] > value_vector[r];
+//    }
+////    bool operator()(int l,int r) const
+////    {
+////        l = l -1 , r = r -1;
+////        bool s = pos[l] > pos[r];
+////        if ( s )
+////        {
+////            float temp = numbers[l];
+////            numbers[l] = numbers[r];
+////            numbers[r] = temp;
+////        }
+////        return s;
+////    }
+//};
 
 int main()
 {
     //FILE *fp = freopen("/Users/Shared/codeforces/codeforces/in.txt", "rt", stdin);
-    fstream fin("/Users/Shared/codeforces/codeforces/uva/uva482.txt");
+    //fstream fin("/Users/Shared/codeforces/codeforces/uva/uva482.txt");
     
-    char sti[1024];
     string buffstr;
     int ts;
     fin >> ts;
-    getline(fin, buffstr) && sscanf(buffstr.c_str(), "%[^\n\r]",sti);
-    while ( ts ) {
-   
-        getline(fin, buffstr) && sscanf(buffstr.c_str(), "%[^\n\r]",sti);
+    getline(fin, buffstr);
     
-        getline(fin, buffstr) && sscanf(buffstr.c_str(), "%[^\n\r]",sti);
+    vector<int> pos;
+    vector<string> numbers;
+    
+    while ( ts ) {
+
+        std::cout << std::fixed << std::setprecision(1);
+
+        pos.clear();
+        numbers.clear();
         
-        std::stringstream A(sti);
+        getline(fin, buffstr);
+    
+        getline(fin, buffstr);
+        
+        std::stringstream A(buffstr);
         std::vector<std::string> res;
         int t;
         while (A>>t)
             pos.push_back(t);
         
-        getline(fin, buffstr) && sscanf(buffstr.c_str(), "%[^\n\r]",sti);
+        getline(fin, buffstr);
         
-        std::stringstream B(sti);
+        std::stringstream B(buffstr);
         
-        float ch;
+        string ch;
         while (B>>ch)
             numbers.push_back(ch);
         
-        sort(pos.begin(), pos.end(), compareNumbers());
-    }
+        vector<string> v(pos.size() + 1);
+        for ( int i = 0 ; i < pos.size() ; i++ )
+        {
+            v[pos[i]] = numbers[i];
+        }
+        
+        for ( int i = 1 ; i < v.size() ; i++ )
+        {
+            cout << v[i] << endl;
+        }
+        
+        if ( ts > 1 )
+            cout << endl;
+        
+        v.clear();
+        ts --;
+     }
 }

@@ -182,28 +182,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Codeforces/UVa/uva482.cpp"
-            timestampString = "436917384.05406"
+            timestampString = "437010568.637077"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
             landmarkName = "main()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Codeforces/UVa/uva482.cpp"
-            timestampString = "436917459.510169"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
-            landmarkName = "operator()(int l,int r)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
