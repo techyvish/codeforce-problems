@@ -1,8 +1,8 @@
 //
-//  uva482.cpp
+//  uva167.cpp
 //  Codeforces
 //
-//  Created by Vishal Patel on 5/11/2014.
+//  Created by Vishal Patel on 7/11/2014.
 //  Copyright (c) 2014 Vishal Patel. All rights reserved.
 //
 
@@ -93,86 +93,73 @@ const double eps = 1e-9;
 #endif
 #define fin cin
 
-/*
-//struct compareNumbers : std::binary_function<int, int, bool>
-//{
-//    
-//    const vector<int> &value_vector;
-//    
-//    compareNumbers(const vector<int> &val_vac):value_vector(val_vac) {}
-//
-//    bool operator()(int l, int r) const{
-//        return value_vector[l] > value_vector[r];
-//    }
-////    bool operator()(int l,int r) const
-////    {
-////        l = l -1 , r = r -1;
-////        bool s = pos[l] > pos[r];
-////        if ( s )
-////        {
-////            float temp = numbers[l];
-////            numbers[l] = numbers[r];
-////            numbers[r] = temp;
-////        }
-////        return s;
-////    }
-//};
+bool finished = false;
+
+bool is_a_solution(int a[][8], int k , int n)
+{
+    return true;
+}
+
+void process_solution( int a[][8], int k , int n )
+{
+    
+}
+
+
+void construct_candidates(int a[][8], int k , int n, int c[8], int *ncandidates)
+{
+    
+}
+
+void backtrack(int a[][8], int k ,int n )
+{
+    int c[8];
+    int ncandidates;
+    
+    if ( is_a_solution(a,k,n))
+    {
+        process_solution(a,k,n);
+    }
+    else
+    {
+        k = k + 1;
+        construct_candidates(a,k,n,c,&ncandidates);
+        for ( int i = 0 ; i < ncandidates; i++ )
+        {
+            backtrack(a,k,n);
+            if (finished)
+                break;
+        }
+    }
+    
+}
 
 int main()
 {
     //FILE *fp = freopen("/Users/Shared/codeforces/codeforces/in.txt", "rt", stdin);
-    //fstream fin("/Users/Shared/codeforces/codeforces/uva/uva482.txt");
+    fstream fin("/Users/Shared/codeforces/codeforces/uva/uva167.txt");
     
     string buffstr;
-    int ts;
-    fin >> ts;
+    int tc;
+    fin >> tc;
     getline(fin, buffstr);
-    
-    vector<int> pos;
-    vector<string> numbers;
-    
-    while ( ts ) {
-
-        std::cout << std::fixed << std::setprecision(1);
-
-        pos.clear();
-        numbers.clear();
-        
-        getline(fin, buffstr);
-    
-        getline(fin, buffstr);
-        
-        std::stringstream A(buffstr);
-        std::vector<std::string> res;
-        int t;
-        while (A>>t)
-            pos.push_back(t);
-        
-        getline(fin, buffstr);
-        
-        std::stringstream B(buffstr);
-        
-        string ch;
-        while (B>>ch)
-            numbers.push_back(ch);
-        
-        vector<string> v(pos.size() + 1);
-        for ( int i = 0 ; i < pos.size() ; i++ )
+    while (tc ) {
+        int n = 8;
+        int a[8][8] = {0};
+        for ( int i = 0 ; i < 8 ; i++ )
         {
-            v[pos[i]] = numbers[i];
+            getline(fin, buffstr);
+            stringstream A(buffstr);
+            int num ;
+            int j = 0 ;
+            while ( A >> num ) {
+                a[i][j++] = num;
+            }
         }
         
-        for ( int i = 1 ; i < v.size() ; i++ )
-        {
-            cout << v[i] << endl;
-        }
+        backtrack(a,-1,n);
         
-        if ( ts > 1 )
-            cout << endl;
-        
-        v.clear();
-        ts --;
-     }
+        tc --;
+    }
+
 }
-
-*/
