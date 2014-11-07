@@ -146,6 +146,7 @@ int main()
     while (tc ) {
         int n = 8;
         int a[8][8] = {0};
+        int b[8][8] = {0};
         for ( int i = 0 ; i < 8 ; i++ )
         {
             getline(fin, buffstr);
@@ -157,7 +158,7 @@ int main()
             }
         }
         
-        backtrack(a,-1,n);
+        backtrack(b,-1,n);
         
         tc --;
     }
