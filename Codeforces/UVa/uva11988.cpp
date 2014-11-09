@@ -1,5 +1,5 @@
 //
-//  uva167.cpp
+//  uva442.cpp
 //  Codeforces
 //
 //  Created by Vishal Patel on 7/11/2014.
@@ -91,77 +91,30 @@ const double eps = 1e-9;
 #define trace6(a, b, c, d, e, f)
 
 #endif
-#define fin cin
-/*
-bool finished = false;
-
-bool is_a_solution(int a[][8], int k , int n)
-{
-    return true;
-}
-
-void process_solution( int a[][8], int k , int n )
-{
-    
-}
-
-
-void construct_candidates(int a[][8], int k , int n, int c[8], int *ncandidates)
-{
-    
-}
-
-void backtrack(int a[][8], int k ,int n )
-{
-    int c[8];
-    int ncandidates;
-    
-    if ( is_a_solution(a,k,n))
-    {
-        process_solution(a,k,n);
-    }
-    else
-    {
-        k = k + 1;
-        construct_candidates(a,k,n,c,&ncandidates);
-        for ( int i = 0 ; i < ncandidates; i++ )
-        {
-            backtrack(a,k,n);
-            if (finished)
-                break;
-        }
-    }
-    
-}
+//#define fin cin
 
 int main()
 {
     //FILE *fp = freopen("/Users/Shared/codeforces/codeforces/in.txt", "rt", stdin);
-    fstream fin("/Users/Shared/codeforces/codeforces/uva/uva167.txt");
+    fstream fin("/Users/Shared/codeforces/codeforces/uva/uva11988.txt");
     
+    char sti[100007];
     string buffstr;
-    int tc;
-    fin >> tc;
-    getline(fin, buffstr);
-    while (tc ) {
-        int n = 8;
-        int a[8][8] = {0};
-        int b[8][8] = {0};
-        for ( int i = 0 ; i < 8 ; i++ )
-        {
-            getline(fin, buffstr);
-            stringstream A(buffstr);
-            int num ;
-            int j = 0 ;
-            while ( A >> num ) {
-                a[i][j++] = num;
+    while (getline(fin, buffstr) && sscanf(buffstr.c_str(), "%[^\n\r]",sti) == 1) {
+
+        string s(sti);
+        stack<string> frontTexts;
+        stack<string> backTexts;
+        int i = 0;
+        while (s[i]) {
+            if ( s[i] == '[' )
+            {
+                while ( s[i] != '[' ||  ) {
+                    
+                }
             }
+            i++;
         }
         
-        backtrack(b,-1,n);
-        
-        tc --;
     }
-
 }
-*/
