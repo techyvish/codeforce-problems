@@ -1,8 +1,8 @@
 //
-//  uva442.cpp
+//  uva118.cpp
 //  Codeforces
 //
-//  Created by Vishal Patel on 7/11/2014.
+//  Created by Vishal Patel on 10/11/2014.
 //  Copyright (c) 2014 Vishal Patel. All rights reserved.
 //
 
@@ -91,107 +91,18 @@ const double eps = 1e-9;
 #define trace6(a, b, c, d, e, f)
 
 #endif
-#define fin cin
+//#define fin cin
 
 int main()
 {
     //FILE *fp = freopen("/Users/Shared/codeforces/codeforces/in.txt", "rt", stdin);
-    fstream fin("/Users/Shared/codeforces/codeforces/uva/uva11988.txt");
+    fstream fin("/Users/Shared/codeforces/codeforces/uva/uva118.txt");
     
-    char sti[100007];
+    char sti[1024];
     string buffstr;
     while (getline(fin, buffstr) && sscanf(buffstr.c_str(), "%[^\n\r]",sti) == 1) {
-
-        string s(sti);
-        queue<string> frontTexts;
-        stack<string> backTexts;
-        stack<char> allinpara;
-        int i = 0;
-        
-        string newString ;
-    
-        int openpara = 0;
-        int closepara = 0;
-        while (s[i]) {
-            
-            if ( s[i] == '[')
-            {
-                openpara ++;
-                allinpara.push(s[i]);
-                i++;
-                do {
-                    if (s[i] == '[' )
-                    {
-                        openpara ++;
-                    }
-                    
-                    if ( s[i] == ']')
-                    {
-                        closepara ++;
-                    }
-                    
-                    allinpara.push(s[i]);
-                    i++;
-                    
-                } while (openpara != closepara);
-            }
-            
-            newString += s[i];
-            i++;
-        }
-        
-        allinpara.pop();
-        
-        string str;
-        do {
-            
-            char c = allinpara.top();
-            allinpara.pop();
-            if ( c == '[')
-            {
-                string qreversed(str.rbegin(),str.rend());
-                frontTexts.push(qreversed);
-                str.clear();
-                if ( !allinpara.empty())
-                {
-                    c = allinpara.top();
-                    allinpara.pop();
-                }
-                
-            }
-            else if ( c == ']')
-            {
-                string qreversed(str.rbegin(),str.rend());
-                backTexts.push(qreversed);
-                str.clear();
-                if ( !allinpara.empty())
-                {
-                    c = allinpara.top();
-                    allinpara.pop();
-                }
-            }
-            str += c;
-        } while (!allinpara.empty());
-        
-        string finalString ;
-        string frontstring ;
-        string backstring  ;
-        
-        while (!frontTexts.empty()) {
-            string t = frontTexts.front();
-            frontTexts.pop();
-            frontstring += t ;
-        }
-        
-        while (!backTexts.empty()) {
-            string t = backTexts.top();
-            backTexts.pop();
-            backstring += t ;
-        }
-
-        finalString = frontstring+ newString;
-        finalString = finalString + backstring;
-        
-        cout << finalString << endl;
+        if ( buffstr == "END")
+            break;
+        cout << sti << endl;
     }
 }
