@@ -91,7 +91,7 @@ const double eps = 1e-9;
 #define trace6(a, b, c, d, e, f)
 
 #endif
-//#define fin cin
+#define fin cin
 
 int main()
 {
@@ -100,9 +100,18 @@ int main()
     
     char sti[1024];
     string buffstr;
-    while (getline(fin, buffstr) && sscanf(buffstr.c_str(), "%[^\n\r]",sti) == 1) {
-        if ( buffstr == "END")
-            break;
-        cout << sti << endl;
-    }
+    
+    
+    int x,y;
+    fin >> x >> y;
+    getline(fin, buffstr);
+    //while (getline(fin, buffstr) && sscanf(buffstr.c_str(), "%[^\n\r]",sti) == 1) {
+        
+        int initx,inity;
+        char initdir;
+        fin >> initx >> inity >> initdir;
+        string sequence;
+        fin >> sequence;
+        
+    //}
 }

@@ -92,7 +92,7 @@ const double eps = 1e-9;
 
 #endif
 #define fin cin
-
+/*
 int main()
 {
     //FILE *fp = freopen("/Users/Shared/codeforces/codeforces/in.txt", "rt", stdin);
@@ -195,3 +195,4 @@ int main()
         cout << finalString << endl;
     }
 }
+*/
