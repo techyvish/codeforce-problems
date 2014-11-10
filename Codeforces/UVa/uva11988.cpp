@@ -91,7 +91,7 @@ const double eps = 1e-9;
 #define trace6(a, b, c, d, e, f)
 
 #endif
-//#define fin cin
+#define fin cin
 
 int main()
 {
@@ -103,18 +103,95 @@ int main()
     while (getline(fin, buffstr) && sscanf(buffstr.c_str(), "%[^\n\r]",sti) == 1) {
 
         string s(sti);
-        stack<string> frontTexts;
+        queue<string> frontTexts;
         stack<string> backTexts;
+        stack<char> allinpara;
         int i = 0;
+        
+        string newString ;
+    
+        int openpara = 0;
+        int closepara = 0;
         while (s[i]) {
-            if ( s[i] == '[' )
+            
+            if ( s[i] == '[')
             {
-                while ( s[i] != '[' ||  ) {
+                openpara ++;
+                allinpara.push(s[i]);
+                i++;
+                do {
+                    if (s[i] == '[' )
+                    {
+                        openpara ++;
+                    }
                     
-                }
+                    if ( s[i] == ']')
+                    {
+                        closepara ++;
+                    }
+                    
+                    allinpara.push(s[i]);
+                    i++;
+                    
+                } while (openpara != closepara);
             }
+            
+            newString += s[i];
             i++;
         }
         
+        allinpara.pop();
+        
+        string str;
+        do {
+            
+            char c = allinpara.top();
+            allinpara.pop();
+            if ( c == '[')
+            {
+                string qreversed(str.rbegin(),str.rend());
+                frontTexts.push(qreversed);
+                str.clear();
+                if ( !allinpara.empty())
+                {
+                    c = allinpara.top();
+                    allinpara.pop();
+                }
+                
+            }
+            else if ( c == ']')
+            {
+                string qreversed(str.rbegin(),str.rend());
+                backTexts.push(qreversed);
+                str.clear();
+                if ( !allinpara.empty())
+                {
+                    c = allinpara.top();
+                    allinpara.pop();
+                }
+            }
+            str += c;
+        } while (!allinpara.empty());
+        
+        string finalString ;
+        string frontstring ;
+        string backstring;
+        
+        while (!frontTexts.empty()) {
+            string t = frontTexts.front();
+            frontTexts.pop();
+            frontstring += t ;
+        }
+        
+        while (!backTexts.empty()) {
+            string t = backTexts.top();
+            backTexts.pop();
+            backstring += t ;
+        }
+
+        finalString = frontstring+ newString;
+        finalString = finalString + backstring;
+        
+        cout << finalString << endl;
     }
 }
