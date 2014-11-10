@@ -92,6 +92,12 @@ const double eps = 1e-9;
 
 #endif
 #define fin cin
+struct robot
+{
+    pair<int,int> pos;
+    char orientation;
+    bool isLost;
+};
 
 int main()
 {
@@ -105,13 +111,153 @@ int main()
     int x,y;
     fin >> x >> y;
     getline(fin, buffstr);
-    //while (getline(fin, buffstr) && sscanf(buffstr.c_str(), "%[^\n\r]",sti) == 1) {
+    while ( !cin.eof() && cin.good()) {
+        
         
         int initx,inity;
         char initdir;
         fin >> initx >> inity >> initdir;
-        string sequence;
-        fin >> sequence;
+        string s;
+        fin >> s;
+        int A[100][100];
+        robot r;
+        //        int **A = new int*[x+4];
+        //        for ( int i = 0 ; i <= y ; i++ )
+        //        {
+        //            A[i] = new int[y+4];
+        //        }
         
-    //}
+        for ( int i = x+1 ; i >=0 ; i-- )
+        {
+            for ( int j = y+1 ; j >= 0 ; j-- )
+            {
+                A[i][j] = 1;
+            }
+        }
+        
+        
+        r.pos = make_pair(initx, inity);
+        r.orientation = initdir;
+        
+        int i = 0;
+        while ( s[i]) {
+            
+            if ( s[i] == 'R')
+            {
+                switch (r.orientation) {
+                    case 'N':
+                        r.orientation = 'E';
+                        break;
+                        
+                    case 'E':
+                        r.orientation = 'S';
+                        break;
+                        
+                    case 'S':
+                        r.orientation = 'W';
+                        break;
+                        
+                    case 'W':
+                        r.orientation = 'N';
+                        break;
+                        
+                    default:
+                        break;
+                }
+            }
+            
+            if ( s[i] == 'L')
+            {
+                switch (r.orientation) {
+                    case 'N':
+                        r.orientation = 'W';
+                        break;
+                        
+                    case 'W':
+                        r.orientation = 'S';
+                        break;
+                        
+                    case 'S':
+                        r.orientation = 'E';
+                        break;
+                        
+                    case 'E':
+                        r.orientation = 'N';
+                        break;
+                        
+                    default:
+                        break;
+                }
+            }
+            
+            if (s[i] == 'F')
+            {
+                pair<int, int> p = r.pos;
+                
+                
+                switch (r.orientation) {
+                        
+                    case 'N':
+                        if ( A[p.first][p.second+1] == 1)
+                            r.pos = make_pair( p.first , p.second + 1);
+                        else
+                            r.isLost = true;
+                        
+                        break;
+                        
+                    case 'W':
+                        if ( A[p.first-1][p.second] == 1)
+                            r.pos = make_pair( p.first -1, p.second );
+                        else
+                            r.isLost = true;
+                        
+                        break;
+                        
+                    case 'S':
+                        if ( A[p.first][p.second-1] == 1)
+                            r.pos = make_pair( p.first , p.second - 1);
+                        else
+                            r.isLost = true;
+                        break;
+                        
+                    case 'E':
+                        if ( A[p.first+1][p.second] == 1)
+                            r.pos = make_pair( p.first + 1 , p.second );
+                        else
+                            r.isLost = true;
+                        
+                        break;
+                        
+                    default:
+                        break;
+                        
+                }
+            }
+            
+            if ( r.isLost )
+                break;
+            
+            i++;
+        }
+        
+        cout << r.pos.first << " " << r.pos.second << " " << (char)r.orientation;
+        if ( r.isLost )
+        {
+            cout << " LOST";
+        }
+        cout << endl;
+        
+//        for ( int i = x+1 ; i >=0 ; i-- )
+//        {
+//            for ( int j = y+1 ; j >= 0 ; j-- )
+//            {
+//                cout << A[i][j] << " ";
+//            }
+//            cout <<endl;
+//        }
+//        
+//        cout << "";
+        
+        //}
+    }
 }
