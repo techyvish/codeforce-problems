@@ -94,33 +94,68 @@ const double eps = 1e-9;
 #endif
 #define fin cin
 typedef unsigned long long llu;
+
+bool isPalindrom(llu sum)
+{
+    stringstream ss;
+    ss << sum;
+    string number;
+    ss >> number;
+    
+    int i = 0 ;
+    int j = (int)number.size()-1;
+    bool p = true;
+    while ( (i != j) )
+    {
+        if ( i == j + 1 )
+            break;
+        if ( number[i] == number[j] ){
+            i++ ; j--;
+        }
+        else
+        {
+            p = false;
+            break;
+        }
+            
+    }
+    return p;
+}
+
 int main()
 {
     //FILE *fp = freopen("/Users/Shared/codeforces/codeforces/in.txt", "rt", stdin);
-    fstream fin("/Users/Shared/codeforces/codeforces/uva/uva10018.txt");
-    
-    char sti[1024];
-    string buffstr;
+    //fstream fin("/Users/Shared/codeforces/codeforces/uva/uva10018.txt");
     int ts;
+    llu sum = 0;
     cin >> ts;
     while ( ts != 0 ) {
-        llu number1;
-        cin >> number1;
-        stringstream ss;
-        ss << number1;
-        string num1str ;
-        ss >> num1str;
-        string newnum1str(num1str.rbegin(),num1str.rend());
-        cout << newnum1str << endl;
-        llu number2 =0;
-        
-        ss.clear();
-        ss << newnum1str;
-        ss >> number2;
-        
-        llu sum = number2 + number1;
-        
-    
+        int i = 0;
+        do {
+            llu number1;
+            if ( i == 0 )
+            {
+                cin >> number1;
+            }
+            else{
+                number1 = sum;
+            }
+            stringstream ss;
+            ss << number1;
+            string num1str ;
+            ss >> num1str;
+            string newnum1str(num1str.rbegin(),num1str.rend());
+            llu number2 =0;
+            
+            ss.clear();
+            ss << newnum1str;
+            ss >> number2;
+            
+            sum = number2 + number1;
+            i++;
+        }
+        while ( !isPalindrom(sum));
+        cout << i << " " << sum << endl;
         
         ts --;
     }
