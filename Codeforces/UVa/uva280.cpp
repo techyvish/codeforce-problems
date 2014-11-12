@@ -93,6 +93,34 @@ const double eps = 1e-9;
 
 #endif
 #define fin cin
+class Graph
+{
+    int V ;
+    list<int> *adj;
+    
+public:
+    Graph(int V)
+    {
+        this->V = V;
+        adj = new list<int>[V];
+        
+    }
+    
+    void addEdge(int v,int w)
+    {
+        adj[v].push_back(w);
+    }
+    
+    bool isReachable(int s, int d)
+    {
+        for ( auto i = adj[s].begin() ; i != adj[s].end(); ++i)
+        {
+            
+        }
+        return true;
+    }
+};
+
 
 int main()
 {
@@ -105,11 +133,11 @@ int main()
     while (getline(fin, buffstr)) {
         
         sscanf(buffstr.c_str(), "%d",&numvert);
-        vector<vector<int> > v(numvert+1);
         vector<int> vertlist;
+        Graph g(numvert);
         
         while (getline(fin, buffstr) && sscanf(buffstr.c_str(), "%[^\n\r]", sti ) == 1) {
-            {
+        {
                 if (buffstr == "0")
                     break;
                 stringstream A(sti);
@@ -118,7 +146,7 @@ int main()
                 int a;
                 while (A >> a)
                 {
-                    v[c].push_back(a);
+                    g.addEdge(c, a);
                 }
             }
             
@@ -135,6 +163,34 @@ int main()
             {
                 vertlist.push_back(a);
             }
+            
+            int i = 0;
+            string str;
+            int count = 0;
+            while (!vertlist.empty()) {
+                int node = vertlist[i++];
+                for ( int i = 1 ; i <= numvert ; i++ )
+                {
+                    if ( !g.isReachable(node, i))
+                    {
+                        stringstream a;
+                        a << i;
+                        string n;
+                        a >> n;
+                        str += (n + " ");
+                        count ++;
+                    }
+                }
+                vertlist.pop_back();
+            }
+            
+            stringstream b;
+            b << count;
+            string final;
+            b >> final;
+            final += " ";
+            final += str;
+            cout << final;
             
             getline(fin, buffstr) && sscanf(buffstr.c_str(), "%[^\n\r]", sti);
             if ( buffstr == "0" )
