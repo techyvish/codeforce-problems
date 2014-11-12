@@ -122,7 +122,7 @@ bool isPalindrom(llu sum)
     return p;
 }
 
-int main()
+int main_uva10018()
 {
     //FILE *fp = freopen("/Users/Shared/codeforces/codeforces/in.txt", "rt", stdin);
     //fstream fin("/Users/Shared/codeforces/codeforces/uva/uva10018.txt");
@@ -159,5 +159,5 @@ int main()
         
         ts --;
     }
-    
+    return 0;
 }
