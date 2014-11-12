@@ -91,6 +91,8 @@ const double eps = 1e-9;
 #define trace6(a, b, c, d, e, f)
 
 #endif
+/*
+
 #define fin cin
 struct robot
 {
@@ -250,3 +252,5 @@ int main()
         //}
     }
 }
+
+*/

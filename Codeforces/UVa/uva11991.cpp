@@ -1,8 +1,8 @@
 //
-//  uva442.cpp
+//  uva11991.cpp
 //  Codeforces
 //
-//  Created by Vishal Patel on 7/11/2014.
+//  Created by Vishal Patel on 12/11/2014.
 //  Copyright (c) 2014 Vishal Patel. All rights reserved.
 //
 
@@ -92,111 +92,51 @@ const double eps = 1e-9;
 
 #endif
 #define fin cin
-/*
+vector<int> res[1000007];
 int main()
 {
     //FILE *fp = freopen("/Users/Shared/codeforces/codeforces/in.txt", "rt", stdin);
-    //fstream fin("/Users/Shared/codeforces/codeforces/uva/uva11988.txt");
+    //fstream fin("/Users/Shared/codeforces/codeforces/uva/uva11991.txt");
     
-    char sti[100007];
+    int m,n;
     string buffstr;
-    while (getline(fin, buffstr) && sscanf(buffstr.c_str(), "%[^\n\r]",sti) == 1) {
-
-        string s(sti);
-        queue<string> frontTexts;
-        stack<string> backTexts;
-        stack<char> allinpara;
-        int i = 0;
-        
-        string newString ;
-    
-        int openpara = 0;
-        int closepara = 0;
-        while (s[i]) {
-            
-            if ( s[i] == '[')
-            {
-                openpara ++;
-                allinpara.push(s[i]);
-                i++;
-                do {
-                    if (s[i] == '[' )
-                    {
-                        openpara ++;
-                    }
-                    
-                    if ( s[i] == ']')
-                    {
-                        closepara ++;
-                    }
-                    
-                    allinpara.push(s[i]);
-                    i++;
-                    
-                } while (openpara != closepara);
-            }
-            
-            if ( s[i] != '[' && s[i] != ']' )
-                 newString += s[i];
-            i++;
+    while (getline(fin, buffstr))
+    {
+        sscanf(buffstr.c_str(), "%d %d", &m,&n);
+        char sti[1000007];
+        buffstr.clear();
+        getline(fin, buffstr);
+        sscanf(buffstr.c_str(), "%[^\n\r]",sti );
+        int a;
+        stringstream A(sti);
+        vector<int> V;
+        for ( int i = 0 ; i < 1000007; i++)
+        {
+            res[i].clear();
         }
         
-        allinpara.pop();
-        
-        string str;
-        do {
-            
-            char c = allinpara.top();
-            allinpara.pop();
-            if ( c == '[')
-            {
-                string qreversed(str.rbegin(),str.rend());
-                frontTexts.push(qreversed);
-                str.clear();
-                if ( !allinpara.empty())
-                {
-                    c = allinpara.top();
-                    allinpara.pop();
-                }
-                
-            }
-            else if ( c == ']')
-            {
-                string qreversed(str.rbegin(),str.rend());
-                backTexts.push(qreversed);
-                str.clear();
-                if ( !allinpara.empty())
-                {
-                    c = allinpara.top();
-                    allinpara.pop();
-                }
-            }
-            if ( c != '[' && c != ']' )
-                str += c;
-            
-        } while (!allinpara.empty());
-        
-        string finalString ;
-        string frontstring ;
-        string backstring  ;
-        
-        while (!frontTexts.empty()) {
-            string t = frontTexts.front();
-            frontTexts.pop();
-            frontstring += t ;
+        while (A>>a) {
+            V.push_back(a);
         }
         
-        while (!backTexts.empty()) {
-            string t = backTexts.top();
-            backTexts.pop();
-            backstring += t ;
+        for ( int i = 0 ; i < m ; i++ )
+        {
+            res[V[i]].push_back(i+1);
         }
-
-        finalString = frontstring+ newString;
-        finalString = finalString + backstring;
         
-        cout << finalString << endl;
+        buffstr.clear();
+        while ( n != 0) {
+            int k , v;
+            
+            getline(fin, buffstr);
+            sscanf(buffstr.c_str(), "%d %d", &k,&v);
+            
+            if ( res[v].size() < k )
+                cout << "0" << endl;
+            else
+                cout << res[v][k-1]<< endl;
+            n--;
+        }
+        
     }
 }
- 
- */

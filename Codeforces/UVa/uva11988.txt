@@ -1,3 +1,3 @@
+[[]][][]Happy_Birthday_to_Tsinghua_University
 abc[def[ghi]jkl[123]wxy]mno
 This_is_a_[Beiju]_text
-[[]][][]Happy_Birthday_to_Tsinghua_University
