@@ -92,6 +92,7 @@ const double eps = 1e-9;
 
 #endif
 #define fin cin
+/*
 vector<int> res[1000007];
 int main()
 {
@@ -140,3 +141,4 @@ int main()
         
     }
 }
+*/
