@@ -1,8 +1,8 @@
 //
-//  uva280.cpp
+//  uva10018.cpp
 //  Codeforces
 //
-//  Created by Vishal Patel on 11/11/2014.
+//  Created by Vishal Patel on 12/11/2014.
 //  Copyright (c) 2014 Vishal Patel. All rights reserved.
 //
 
@@ -92,113 +92,37 @@ const double eps = 1e-9;
 #define trace6(a, b, c, d, e, f)
 
 #endif
-/*
 #define fin cin
-class Graph
-{
-    int V ;
-    list<int> *adj;
-    
-public:
-    Graph(int V)
-    {
-        this->V = V;
-        adj = new list<int>[V];
-        
-    }
-    
-    void addEdge(int v,int w)
-    {
-        adj[v].push_back(w);
-    }
-    
-    bool isReachable(int s, int d)
-    {
-        for ( auto i = adj[s].begin() ; i != adj[s].end(); ++i)
-        {
-            
-        }
-        return true;
-    }
-};
-
-
+typedef unsigned long long llu;
 int main()
 {
     //FILE *fp = freopen("/Users/Shared/codeforces/codeforces/in.txt", "rt", stdin);
-    fstream fin("/Users/Shared/codeforces/codeforces/uva/uva280.txt");
+    fstream fin("/Users/Shared/codeforces/codeforces/uva/uva10018.txt");
     
     char sti[1024];
     string buffstr;
-    int numvert = 0;
-    while (getline(fin, buffstr)) {
+    int ts;
+    cin >> ts;
+    while ( ts != 0 ) {
+        llu number1;
+        cin >> number1;
+        stringstream ss;
+        ss << number1;
+        string num1str ;
+        ss >> num1str;
+        string newnum1str(num1str.rbegin(),num1str.rend());
+        cout << newnum1str << endl;
+        llu number2 =0;
         
-        sscanf(buffstr.c_str(), "%d",&numvert);
-        vector<int> vertlist;
-        Graph g(numvert);
+        ss.clear();
+        ss << newnum1str;
+        ss >> number2;
         
-        while (getline(fin, buffstr) && sscanf(buffstr.c_str(), "%[^\n\r]", sti ) == 1) {
-        {
-                if (buffstr == "0")
-                    break;
-                stringstream A(sti);
-                int c ;
-                A >> c;
-                int a;
-                while (A >> a)
-                {
-                    g.addEdge(c, a);
-                }
-            }
-            
-            if ( buffstr == "0")
-                break;
-            cout << sti << endl;
-        }
+        llu sum = number2 + number1;
         
-        while (getline(fin, buffstr) && sscanf(buffstr.c_str(), "%[^\n\r]", sti ) == 1)
-        {
-            stringstream A(sti);
-            int a;
-            while (A >> a)
-            {
-                vertlist.push_back(a);
-            }
-            
-            int i = 0;
-            string str;
-            int count = 0;
-            while (!vertlist.empty()) {
-                int node = vertlist[i++];
-                for ( int i = 1 ; i <= numvert ; i++ )
-                {
-                    if ( !g.isReachable(node, i))
-                    {
-                        stringstream a;
-                        a << i;
-                        string n;
-                        a >> n;
-                        str += (n + " ");
-                        count ++;
-                    }
-                }
-                vertlist.pop_back();
-            }
-            
-            stringstream b;
-            b << count;
-            string final;
-            b >> final;
-            final += " ";
-            final += str;
-            cout << final;
-            
-            getline(fin, buffstr) && sscanf(buffstr.c_str(), "%[^\n\r]", sti);
-            if ( buffstr == "0" )
-                break;
-        }
+    
         
+        ts --;
     }
+    
 }
-
-*/
