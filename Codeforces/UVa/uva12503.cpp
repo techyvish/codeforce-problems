@@ -1,12 +1,10 @@
 //
-//  uva280.cpp
+//  uva12503.cpp
 //  Codeforces
 //
-//  Created by Vishal Patel on 11/11/2014.
+//  Created by Vishal Patel on 14/11/2014.
 //  Copyright (c) 2014 Vishal Patel. All rights reserved.
 //
-
-#include <stdio.h>
 #include <stdio.h>
 #include <cstdio>
 #include <cstdlib>
@@ -92,113 +90,75 @@ const double eps = 1e-9;
 #define trace6(a, b, c, d, e, f)
 
 #endif
-
 #define fin cin
-class Graph
+
+struct Int
 {
-    int V ;
-    list<int> *adj;
-    
-public:
-    Graph(int V)
-    {
-        this->V = V;
-        adj = new list<int>[V];
-        
-    }
-    
-    void addEdge(int v,int w)
-    {
-        adj[v].push_back(w);
-    }
-    
-    bool isReachable(int s, int d)
-    {
-        for ( auto i = adj[s].begin() ; i != adj[s].end(); ++i)
-        {
-            
-        }
-        return true;
-    }
+    char dir;
+    char step;
 };
-
-
-int main_uva280()
+typedef struct Int Instruction;
+int main()
 {
     //FILE *fp = freopen("/Users/Shared/codeforces/codeforces/in.txt", "rt", stdin);
-    fstream fin("/Users/Shared/codeforces/codeforces/uva/uva280.txt");
+    //fstream fin("/Users/Shared/codeforces/codeforces/uva/uva12503.txt");
     
     char sti[1024];
     string buffstr;
-    int numvert = 0;
-    while (getline(fin, buffstr)) {
+    int ts;
+    fin >> ts;
+    int step = 0;
+    vector<Instruction> instList;
+    while (ts != 0) {
         
-        sscanf(buffstr.c_str(), "%d",&numvert);
-        vector<int> vertlist;
-        Graph g(numvert);
+        int nCommands;
+        fin >> nCommands;
         
-        while (getline(fin, buffstr) && sscanf(buffstr.c_str(), "%[^\n\r]", sti ) == 1) {
-        {
-                if (buffstr == "0")
-                    break;
-                stringstream A(sti);
-                int c ;
-                A >> c;
-                int a;
-                while (A >> a)
-                {
-                    g.addEdge(c, a);
-                }
-            }
+        getline(fin,buffstr);
+        
+        while (nCommands != 0) {
             
-            if ( buffstr == "0")
-                break;
-            cout << sti << endl;
-        }
-        
-        while (getline(fin, buffstr) && sscanf(buffstr.c_str(), "%[^\n\r]", sti ) == 1)
-        {
-            stringstream A(sti);
-            int a;
-            while (A >> a)
+            getline(fin,buffstr);
+            int steps;
+            Instruction i;
+            if ( buffstr == "LEFT")
             {
-                vertlist.push_back(a);
+                i.dir = 'L';
+            }
+            else if ( buffstr == "RIGHT")
+            {
+                i.dir = 'R';
+            }
+            else if ( sscanf( buffstr.c_str(), "SAME AS %d", &steps ) == 1)
+            {
+                Instruction in  = instList[steps-1];
+                i.dir = in.dir;
             }
             
-            int i = 0;
-            string str;
-            int count = 0;
-            while (!vertlist.empty()) {
-                int node = vertlist[i++];
-                for ( int i = 1 ; i <= numvert ; i++ )
-                {
-                    if ( !g.isReachable(node, i))
-                    {
-                        stringstream a;
-                        a << i;
-                        string n;
-                        a >> n;
-                        str += (n + " ");
-                        count ++;
-                    }
-                }
-                vertlist.pop_back();
-            }
-            
-            stringstream b;
-            b << count;
-            string final;
-            b >> final;
-            final += " ";
-            final += str;
-            cout << final;
-            
-            getline(fin, buffstr) && sscanf(buffstr.c_str(), "%[^\n\r]", sti);
-            if ( buffstr == "0" )
-                break;
+            instList.push_back(i);
+            nCommands --;
         }
         
+        for ( int i = 0 ; i < instList.size() ; i++)
+        {
+            if ( instList[i].dir == 'L')
+            {
+                step = step - 1;
+            }
+            else
+            {
+                step = step + 1;
+            }
+        }
+    
+        cout << step << endl;
+    
+        instList.clear();
+        step = 0;
+        ts --;
     }
-    return 0;
+    
+    
+    //while ( sscanf(buffstr.c_str(), "%[^\n\r]",sti) == 1) {
+    //}
 }
-

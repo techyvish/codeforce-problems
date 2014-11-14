@@ -26,6 +26,8 @@
 		C9711A5B19E2EDE900D17AB6 /* KeyboardA.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9711A5A19E2EDE900D17AB6 /* KeyboardA.cpp */; };
 		C9711A5D19E2F2BF00D17AB6 /* WormsB.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9711A5C19E2F2BF00D17AB6 /* WormsB.cpp */; };
 		C982F7811A136C85005132D3 /* uva10018.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C982F7801A136C85005132D3 /* uva10018.cpp */; };
+		C982F7841A140DDD005132D3 /* dfs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C982F7831A140DDD005132D3 /* dfs.cpp */; };
+		C982F7881A15B500005132D3 /* uva12503.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C982F7871A15B500005132D3 /* uva12503.cpp */; };
 		C98FE17919F49A7700AA46B9 /* uva540.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C98FE17719F49A7700AA46B9 /* uva540.cpp */; };
 		C9A4BC1A19C967F9002A89D9 /* Eevee452A.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9A4BC1919C967F9002A89D9 /* Eevee452A.cpp */; };
 		C9A4BC1C19CDB2A1002A89D9 /* WannaBeTheGuy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9A4BC1B19CDB2A1002A89D9 /* WannaBeTheGuy.cpp */; };
@@ -103,6 +105,10 @@
 		C9711A5C19E2F2BF00D17AB6 /* WormsB.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WormsB.cpp; sourceTree = "<group>"; };
 		C982F7801A136C85005132D3 /* uva10018.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uva10018.cpp; sourceTree = "<group>"; };
 		C982F7821A136CB2005132D3 /* uva10018.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = uva10018.txt; sourceTree = "<group>"; };
+		C982F7831A140DDD005132D3 /* dfs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dfs.cpp; sourceTree = "<group>"; };
+		C982F7851A14237B005132D3 /* dfs.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dfs.txt; sourceTree = "<group>"; };
+		C982F7871A15B500005132D3 /* uva12503.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uva12503.cpp; sourceTree = "<group>"; };
+		C982F7891A15B553005132D3 /* uva12503.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = uva12503.txt; sourceTree = "<group>"; };
 		C98FE17719F49A7700AA46B9 /* uva540.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uva540.cpp; sourceTree = "<group>"; };
 		C98FE17819F49A7700AA46B9 /* uva540.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = uva540.txt; sourceTree = "<group>"; };
 		C9A4BC1919C967F9002A89D9 /* Eevee452A.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Eevee452A.cpp; sourceTree = "<group>"; };
@@ -243,6 +249,10 @@
 				C922541E1A12E4C500C921DA /* uva11991.txt */,
 				C982F7801A136C85005132D3 /* uva10018.cpp */,
 				C982F7821A136CB2005132D3 /* uva10018.txt */,
+				C982F7831A140DDD005132D3 /* dfs.cpp */,
+				C982F7851A14237B005132D3 /* dfs.txt */,
+				C982F7871A15B500005132D3 /* uva12503.cpp */,
+				C982F7891A15B553005132D3 /* uva12503.txt */,
 			);
 			path = UVa;
 			sourceTree = "<group>";
@@ -331,6 +341,7 @@
 				C9F2CEF219CA8F20009A2773 /* HKAshtonAndStrings.cpp in Sources */,
 				C90E855A1A0C4621003033B6 /* uva167.cpp in Sources */,
 				C9F2CEEE19C8FB68009A2773 /* Dubstep208B.cpp in Sources */,
+				C982F7841A140DDD005132D3 /* dfs.cpp in Sources */,
 				C9F2CED219C65675009A2773 /* SequenceFormatting81B.cpp in Sources */,
 				C9F2CEC419C4CE4F009A2773 /* TwoStrings223B.cpp in Sources */,
 				C982F7811A136C85005132D3 /* uva10018.cpp in Sources */,
@@ -349,6 +360,7 @@
 				C9F2CEF019C903D1009A2773 /* Chatroom58A.cpp in Sources */,
 				C9F2CEBD19C3FE7B009A2773 /* Pelisection17E.cpp in Sources */,
 				C9CC17D719F0194100E5772C /* 272A.cpp in Sources */,
+				C982F7881A15B500005132D3 /* uva12503.cpp in Sources */,
 				C9CC17DA19F0196700E5772C /* 272B.cpp in Sources */,
 				C93E84FD19E7F81200BCC99C /* uva1124.cpp in Sources */,
 				C9A4BC1C19CDB2A1002A89D9 /* WannaBeTheGuy.cpp in Sources */,
