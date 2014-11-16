@@ -1,10 +1,11 @@
 //
-//  uva12503.cpp
+//  uva12554.cpp
 //  Codeforces
 //
 //  Created by Vishal Patel on 14/11/2014.
 //  Copyright (c) 2014 Vishal Patel. All rights reserved.
 //
+
 #include <stdio.h>
 #include <cstdio>
 #include <cstdlib>
@@ -92,74 +93,20 @@ const double eps = 1e-9;
 #endif
 #define fin cin
 
-struct Int
-{
-    char dir;
-    char step;
-};
-typedef struct Int Instruction;
-void main_uva12503()
+void main_uva12554()
 //int main()
 {
     //FILE *fp = freopen("/Users/Shared/codeforces/codeforces/in.txt", "rt", stdin);
-    //fstream fin("/Users/Shared/codeforces/codeforces/uva/uva12503.txt");
+    fstream fin("/Users/Shared/codeforces/codeforces/uva/uva12554.txt");
     
-    char sti[1024];
-    string buffstr;
     int ts;
-    fin >> ts;
-    int step = 0;
-    vector<Instruction> instList;
-    while (ts != 0) {
-        
-        int nCommands;
-        fin >> nCommands;
-        
-        getline(fin,buffstr);
-        
-        while (nCommands != 0) {
-            
-            getline(fin,buffstr);
-            int steps;
-            Instruction i;
-            if ( buffstr == "LEFT")
-            {
-                i.dir = 'L';
-            }
-            else if ( buffstr == "RIGHT")
-            {
-                i.dir = 'R';
-            }
-            else if ( sscanf( buffstr.c_str(), "SAME AS %d", &steps ) == 1)
-            {
-                Instruction in  = instList[steps-1];
-                i.dir = in.dir;
-            }
-            
-            instList.push_back(i);
-            nCommands --;
-        }
-        
-        for ( int i = 0 ; i < instList.size() ; i++)
-        {
-            if ( instList[i].dir == 'L')
-            {
-                step = step - 1;
-            }
-            else
-            {
-                step = step + 1;
-            }
-        }
-    
-        cout << step << endl;
-    
-        instList.clear();
-        step = 0;
+    cin >> ts;
+    map<string,set<string>> person_mapping;
+    while ( ts != 0) {
+        string s;
+        cin >> s;
+        set<string> song;
+        person_mapping[s]=song;
         ts --;
     }
-    
-    
-    //while ( sscanf(buffstr.c_str(), "%[^\n\r]",sti) == 1) {
-    //}
 }
