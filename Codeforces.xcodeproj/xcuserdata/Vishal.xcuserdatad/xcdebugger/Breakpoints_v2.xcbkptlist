@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Codeforces/UVa/uva12554.cpp"
-            timestampString = "437635285.532987"
+            timestampString = "437871283.809831"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
             landmarkName = "main()"
             landmarkType = "7">
          </BreakpointContent>
