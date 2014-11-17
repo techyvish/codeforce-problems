@@ -93,11 +93,12 @@ const double eps = 1e-9;
 #endif
 #define fin cin
 
-int main()
+void main_uva1585()
+//int main()
 {
     std::ios::sync_with_stdio(false);
     //FILE *fp = freopen("/Users/Shared/codeforces/codeforces/in.txt", "rt", stdin);
-    //fstream fin("/Users/Shared/codeforces/codeforces/uva/uva1585.txt");
+    //0fstream fin("/Users/Shared/codeforces/codeforces/uva/uva1585.txt");
     
     string buffstr;
     int tc = 0;
