@@ -1,12 +1,11 @@
 //
-//  uva1586.cpp
+//  uva1585.cpp
 //  Codeforces
 //
 //  Created by Vishal Patel on 17/11/2014.
 //  Copyright (c) 2014 Vishal Patel. All rights reserved.
 //
 
-#include <stdio.h>
 #include <stdio.h>
 #include <cstdio>
 #include <cstdlib>
@@ -94,75 +93,43 @@ const double eps = 1e-9;
 #endif
 #define fin cin
 
-void main_1586()
-//int main()
+int main()
 {
+    std::ios::sync_with_stdio(false);
     //FILE *fp = freopen("/Users/Shared/codeforces/codeforces/in.txt", "rt", stdin);
-    //fstream fin("/Users/Shared/codeforces/codeforces/uva/uva1586.txt");
+    //fstream fin("/Users/Shared/codeforces/codeforces/uva/uva1585.txt");
+    
     char sti[1024];
     string buffstr;
-    int tc;
-    cin >> tc;
-    map<char, double> atomicweight;
-    atomicweight['C'] = 12.01;
-    atomicweight['H'] = 1.008;
-    atomicweight['O'] = 16.00;
-    atomicweight['N'] = 14.01;
-    cout << fixed << setprecision(3);
-    map<char, int> atoms;
-    
+    int tc = 0;
+    fin >> tc;
     getline(fin, buffstr);
-    while (tc != 0) {
-        
-        while (getline(fin, buffstr) && sscanf(buffstr.c_str(), "%[^\n\r]",sti) == 1) {
-            if ( buffstr == "END")
-                break;
-            string s(sti);
-            int i = 0;
-            string num;
-            double sum = 0.0;
-            while (s[i]) {
-                if ( s[i] == 'C' ||  s[i] == 'H' ||  s[i] == 'O' ||  s[i] == 'N')
-                {
-                    if ( i < s.length() )
-                    {
-                        if ( s[i+1] == 'C' ||  s[i+1] == 'H' ||  s[i+1] == 'O' ||  s[i+1] == 'N')
-                        {
-                            atoms[s[i]] += 1;
-                        }
-                        else if ( i + 1 == s.length() )
-                        {
-                            atoms[s[i]] += 1;
-                        }
-                        else
-                        {
-                            i++;
-                            char c = s[i-1];
-                            while ( s[i] >= '0' && s[i] <= '9' ) {
-                                num += s[i];
-                                i++;
-                            }
-                            i--;
-                            stringstream ss;
-                            ss << num;
-                            int at;
-                            ss >> at;
-                            atoms[c] += at;
-                            num.clear();
-                            
-                        }
-                    }
-                }
-                i++;
-            }
-           
-            for ( auto it = atoms.begin() ; it != atoms.end() ; it++)
+    while ( tc != 0 ) {
+        int count = 0;
+        getline(fin, buffstr);
+        sscanf(buffstr.c_str(), "%[^\n\r]",sti) ;
+        string s(sti);
+        int sum = 0;
+        int i = 0;
+        while ( s[i] )  {
+            if ( s[i] == 'O')
             {
-                sum += atomicweight[it->first] * it->second;
+                int p = 1;
+                count = 0;
+                count += p;
+                i++;
+                while ( s[i] == 'O') {
+                    p++;
+                    i++;
+                    count += p;
+                }
+                sum += count;
             }
-            atoms.clear();
-            cout << sum << endl;
+            i++;
         }
+        
+        cout << sum << endl;
         tc --;
     }
+    
 }
