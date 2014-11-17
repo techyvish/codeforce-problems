@@ -99,7 +99,6 @@ int main()
     //FILE *fp = freopen("/Users/Shared/codeforces/codeforces/in.txt", "rt", stdin);
     //fstream fin("/Users/Shared/codeforces/codeforces/uva/uva1585.txt");
     
-    char sti[1024];
     string buffstr;
     int tc = 0;
     fin >> tc;
@@ -107,27 +106,26 @@ int main()
     while ( tc != 0 ) {
         int count = 0;
         getline(fin, buffstr);
-        sscanf(buffstr.c_str(), "%[^\n\r]",sti) ;
-        string s(sti);
+        string s(buffstr);
         int sum = 0;
-        int i = 0;
-        while ( s[i] )  {
-            if ( s[i] == 'O')
+        int j = 0;
+        while ( s[j] )  {
+            if ( s[j] == 'O')
             {
                 int p = 1;
                 count = 0;
                 count += p;
-                i++;
-                while ( s[i] == 'O') {
+                j++;
+                while ( s[j] == 'O') {
                     p++;
-                    i++;
+                    j++;
                     count += p;
                 }
+                j--;
                 sum += count;
             }
-            i++;
+            j++;
         }
-        
         cout << sum << endl;
         tc --;
     }
