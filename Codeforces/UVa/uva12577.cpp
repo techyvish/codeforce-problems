@@ -1,11 +1,12 @@
-    //
-//  uva12219.cpp
+//
+//  uva12577.cpp
 //  Codeforces
 //
-//  Created by Vishal Patel on 17/11/2014.
+//  Created by Vishal Patel on 18/11/2014.
 //  Copyright (c) 2014 Vishal Patel. All rights reserved.
 //
 
+#include <stdio.h>
 #include <stdio.h>
 #include <cstdio>
 #include <cstdlib>
@@ -93,114 +94,26 @@ const double eps = 1e-9;
 #endif
 #define fin cin
 
-struct _node
+int main_uva12577()
 {
-    _node* nodes[101];
-    _node *parent;
-    int value;
-};
-typedef  struct _node node;
-bool gfound = false ;
-
-node *nodes[300008];
-
-bool testParent(node *node, int parent)
-{
-    bool found = false;
-    while ( node->parent != NULL ) {
-        
-        node = node->parent;
-        
-        if ( node->value == parent )
-        {
-            found = true;
-            break;
-        }
-       
-    }
     
-    return found;
-}
-
-void dfs(node *root, int parent, int child)
-{
-    node *n = nodes[child];
-    if ( testParent(n, parent ))
-    {
-        gfound= true;
-        return;
-    }
-}
-
-int main()
-{
-    //fstream fin("/Users/Shared/codeforces/codeforces/uva/uva1357.txt");
-
+    std::ios::sync_with_stdio(false);
+    //FILE *fp = freopen("/Users/Shared/codeforces/codeforces/in.txt", "rt", stdin);
+    //fstream fin("/Users/Shared/codeforces/codeforces/uva/uva12577.txt");
+    
+    char sti[1024];
     string buffstr;
-    int ts;
-    fin >> ts;
-    int k = 1;
-    while ( ts != 0 )
-    {
-        int N;
-        fin >> N;
-        node *root = NULL;
-        int j = 0;
-        queue<node *> items;
-        int childern = 0;
+    int i = 1;
+    while (getline(fin, buffstr) && sscanf(buffstr.c_str(), "%[^\n\r]",sti) == 1) {
         
-        node *head = new node;
-        root = new node;
-        root->value = j;
-        root->parent = NULL;
-        head = root;
-        items.push(root);
-        nodes[j] = root;
-        j++;
+        if ( buffstr == "*")
+            break;
+        string s(sti);
         
-        while (!items.empty())
-        {
-            if ( childern == N ){
-                break;
-            }
-            childern ++;
-            root = items.front();
-            items.pop();
-            int child ;
-            fin >> child;
-            for (int i = 0 ; i < child ; i++ )
-            {
-                node *n = new node;
-                n->value = j;
-                n->parent = root;
-                root->nodes[i] = n ;
-                items.push(n);
-                nodes[j] = n;
-                j++;
-            }
-        }
-        
-
-        int query;
-        cin >> query;
-        cout << "Case " << k++ << ":" << endl;
-        while ( query != 0) {
-            int child;
-            int parent;
-            cin >> parent;
-            cin >> child;
-            dfs(head,parent,child);
-            if (gfound )
-                cout << "Yes" << endl;
-            else
-                cout << "No" << endl;
-            gfound = false;
-            query--;
-        }
-        ts--;
-        memset(nodes, 0, sizeof(node *)*300008);
-        if ( ts > 0 )
-            cout << endl;
+        if ( s == "Hajj")
+            cout << "Case " << i++ << ": " << "Hajj-e-Akbar" << endl;
+        else
+            cout << "Case " << i++ << ": " << "Hajj-e-Asghar" << endl;
     }
     return 0;
 }
