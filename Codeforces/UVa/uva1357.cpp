@@ -102,6 +102,8 @@ struct _node
 typedef  struct _node node;
 bool gfound = false ;
 
+node *nodes[300008];
+
 bool testParent(node *node, int parent)
 {
     bool found = false;
@@ -119,55 +121,27 @@ bool testParent(node *node, int parent)
     
     return found;
 }
-vector<bool> visited;
+
 void dfs(node *root, int parent, int child)
 {
-    //if (  root->nodes.size() > 0 )
-    //{
-    visited[root->value] = 1;
-    for ( int i = 0 ; i < root->nodes.size() ; i++)
+    node *n = nodes[child];
+    if ( testParent(n, parent ))
     {
-        node *n = root->nodes[i];
-        if ( visited[n->value] != 1 )
-        {
-            if ( n->value == child )
-            {
-                if ( testParent(n, parent ))
-                {
-                    gfound= true;
-                    return;
-                }
-                //gfound = true;
-                //return true;
-            }
-            
-            if ( gfound )
-            {
-                //return true;
-                //break;
-            }
-            else
-                dfs(n,child,parent);
-        }
+        gfound= true;
+        return;
     }
-    //if ( gfound )
-    //    return true;
-    //}
-    //return false;
 }
 
 int main()
 {
     
     std::ios::sync_with_stdio(false);
-    fstream fin("/Users/Shared/codeforces/codeforces/uva/uva1357.txt");
+    //fstream fin("/Users/Shared/codeforces/codeforces/uva/uva1357.txt");
     
     string buffstr;
     int ts;
     fin >> ts;
-    getline(fin, buffstr);
-    getline(fin, buffstr);
-    
+    int k = 1;
     while ( ts != 0 )
     {
         int N;
@@ -179,10 +153,12 @@ int main()
         
         node *head = new node;
         root = new node;
-        root->value = j++;
+        root->value = j;
         root->parent = NULL;
         head = root;
         items.push(root);
+        nodes[j] = root;
+        j++;
         
         while (!items.empty())
         {
@@ -197,17 +173,19 @@ int main()
             for (int i = 0 ; i < child ; i++ )
             {
                 node *n = new node;
-                n->value = j++;
+                n->value = j;
                 n->parent = root;
                 root->nodes.push_back(n);
                 items.push(n);
+                nodes[j] = n;
+                j++;
             }
         }
-        visited.resize(j);
-        queue<node *> empty;
-        swap(items, empty);
+        
+
         int query;
         cin >> query;
+        cout << "Case " << k++ << ":" << endl;
         while ( query != 0) {
             int child;
             int parent;
@@ -219,8 +197,12 @@ int main()
             else
                 cout << "No" << endl;
             gfound = false;
+            query--;
         }
-        
+        ts--;
+        memset(nodes, 0, sizeof(node *)*300008);
+        if ( ts > 0 )
+            cout << endl;
     }
-    ts --;
+    return 0;
 }
