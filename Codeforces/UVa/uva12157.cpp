@@ -1,12 +1,14 @@
 //
-//  uva280.cpp
+//  uva12157.cpp
 //  Codeforces
 //
-//  Created by Vishal Patel on 11/11/2014.
+//  Created by Vishal Patel on 19/11/2014.
 //  Copyright (c) 2014 Vishal Patel. All rights reserved.
 //
 
 #include <stdio.h>
+
+
 #include <stdio.h>
 #include <cstdio>
 #include <cstdlib>
@@ -92,113 +94,43 @@ const double eps = 1e-9;
 #define trace6(a, b, c, d, e, f)
 
 #endif
+//#define fin cin
 
-#define fin cin
-class Graph
+int main()
 {
-    int V ;
-    list<int> *adj;
     
-public:
-    Graph(int V)
-    {
-        this->V = V;
-        adj = new list<int>[V];
-        
-    }
-    
-    void addEdge(int v,int w)
-    {
-        adj[v].push_back(w);
-    }
-    
-    bool isReachable(int s, int d)
-    {
-        for ( auto i = adj[s].begin() ; i != adj[s].end(); ++i)
-        {
-            
-        }
-        return true;
-    }
-};
-
-
-int main_uva280()
-{
+    std::ios::sync_with_stdio(false);
     //FILE *fp = freopen("/Users/Shared/codeforces/codeforces/in.txt", "rt", stdin);
-    fstream fin("/Users/Shared/codeforces/codeforces/uva/uva280.txt");
+    fstream fin("/Users/Shared/codeforces/codeforces/uva/uva12157.txt");
+    int tc;
+    cin >> tc;
     
-    char sti[1024];
-    string buffstr;
-    int numvert = 0;
-    while (getline(fin, buffstr)) {
+    while (tc != 0) {
         
-        sscanf(buffstr.c_str(), "%d",&numvert);
-        vector<int> vertlist;
-        Graph g(numvert);
+        int durations;
+        cin >> durations ;
+        vector<int> calls;
+        int tmile = 0;
+        int rmile = 0;
         
-        while (getline(fin, buffstr) && sscanf(buffstr.c_str(), "%[^\n\r]", sti ) == 1) {
-        {
-                if (buffstr == "0")
-                    break;
-                stringstream A(sti);
-                int c ;
-                A >> c;
-                int a;
-                while (A >> a)
-                {
-                    g.addEdge(c, a);
-                }
-            }
+        int tjuice = 0;
+        int rjuice = 0;
+        
+        while ( durations != 0) {
+            int a ;
+            cin >> a;
             
-            if ( buffstr == "0")
-                break;
-            cout << sti << endl;
+            tmile = a / 30;
+            rmile = a % 30;
+            
+            
+            
+        
+            durations --;
         }
         
-        while (getline(fin, buffstr) && sscanf(buffstr.c_str(), "%[^\n\r]", sti ) == 1)
-        {
-            stringstream A(sti);
-            int a;
-            while (A >> a)
-            {
-                vertlist.push_back(a);
-            }
-            
-            int i = 0;
-            string str;
-            int count = 0;
-            while (!vertlist.empty()) {
-                int node = vertlist[i++];
-                for ( int i = 1 ; i <= numvert ; i++ )
-                {
-                    if ( !g.isReachable(node, i))
-                    {
-                        stringstream a;
-                        a << i;
-                        string n;
-                        a >> n;
-                        str += (n + " ");
-                        count ++;
-                    }
-                }
-                vertlist.pop_back();
-            }
-            
-            stringstream b;
-            b << count;
-            string final;
-            b >> final;
-            final += " ";
-            final += str;
-            cout << final;
-            
-            getline(fin, buffstr) && sscanf(buffstr.c_str(), "%[^\n\r]", sti);
-            if ( buffstr == "0" )
-                break;
-        }
         
+        tc --;
     }
-    return 0;
+    
 }
-

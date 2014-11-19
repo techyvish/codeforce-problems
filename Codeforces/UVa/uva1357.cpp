@@ -116,7 +116,6 @@ bool testParent(node *node, int parent)
             found = true;
             break;
         }
-       
     }
     
     return found;
@@ -132,7 +131,7 @@ void dfs(node *root, int parent, int child)
     }
 }
 
-int main()
+int main_uva1357()
 {
     //fstream fin("/Users/Shared/codeforces/codeforces/uva/uva1357.txt");
 

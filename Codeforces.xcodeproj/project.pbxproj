@@ -15,8 +15,8 @@
 		C919F9C219EC42D600E001F2 /* scanregex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C919F9C119EC42D600E001F2 /* scanregex.cpp */; };
 		C922541D1A12E4AC00C921DA /* uva11991.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C922541C1A12E4AC00C921DA /* uva11991.cpp */; };
 		C924A15B1A1B0DDB00858CE2 /* uva12577.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C924A15A1A1B0DDB00858CE2 /* uva12577.cpp */; };
+		C924A15E1A1C632500858CE2 /* uva12157.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C924A15D1A1C632500858CE2 /* uva12157.cpp */; };
 		C924D56B1A1079B10060AA60 /* uva118.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C924D56A1A1079B10060AA60 /* uva118.cpp */; };
-		C924D56E1A11B9310060AA60 /* uva280.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C924D56D1A11B9310060AA60 /* uva280.cpp */; };
 		C925A6D919F02FB000AF67B6 /* 272Bnew.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C925A6D819F02FB000AF67B6 /* 272Bnew.cpp */; };
 		C93BF0EF1A19812B003E96BA /* uva12219.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C93BF0EE1A19812B003E96BA /* uva12219.cpp */; };
 		C93BF0F11A19B385003E96BA /* uva1357.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C93BF0F01A19B385003E96BA /* uva1357.cpp */; };
@@ -95,10 +95,10 @@
 		C922541E1A12E4C500C921DA /* uva11991.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = uva11991.txt; sourceTree = "<group>"; };
 		C924A15A1A1B0DDB00858CE2 /* uva12577.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uva12577.cpp; sourceTree = "<group>"; };
 		C924A15C1A1B0F4200858CE2 /* uva12577.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = uva12577.txt; sourceTree = "<group>"; };
+		C924A15D1A1C632500858CE2 /* uva12157.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uva12157.cpp; sourceTree = "<group>"; };
+		C924A15F1A1C634100858CE2 /* uva12157.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = uva12157.txt; sourceTree = "<group>"; };
 		C924D56A1A1079B10060AA60 /* uva118.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uva118.cpp; sourceTree = "<group>"; };
 		C924D56C1A107A940060AA60 /* uva118.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = uva118.txt; sourceTree = "<group>"; };
-		C924D56D1A11B9310060AA60 /* uva280.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uva280.cpp; sourceTree = "<group>"; };
-		C924D56F1A11B94B0060AA60 /* uva280.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = uva280.txt; sourceTree = "<group>"; };
 		C925A6D819F02FB000AF67B6 /* 272Bnew.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 272Bnew.cpp; sourceTree = "<group>"; };
 		C93BF0EE1A19812B003E96BA /* uva12219.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uva12219.cpp; sourceTree = "<group>"; };
 		C93BF0F01A19B385003E96BA /* uva1357.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uva1357.cpp; sourceTree = "<group>"; };
@@ -260,8 +260,6 @@
 				C90E85641A0C8878003033B6 /* uva11988.txt */,
 				C924D56A1A1079B10060AA60 /* uva118.cpp */,
 				C924D56C1A107A940060AA60 /* uva118.txt */,
-				C924D56D1A11B9310060AA60 /* uva280.cpp */,
-				C924D56F1A11B94B0060AA60 /* uva280.txt */,
 				C922541C1A12E4AC00C921DA /* uva11991.cpp */,
 				C922541E1A12E4C500C921DA /* uva11991.txt */,
 				C982F7801A136C85005132D3 /* uva10018.cpp */,
@@ -281,6 +279,8 @@
 				C93BF0F21A19B38F003E96BA /* uva1357.txt */,
 				C924A15A1A1B0DDB00858CE2 /* uva12577.cpp */,
 				C924A15C1A1B0F4200858CE2 /* uva12577.txt */,
+				C924A15D1A1C632500858CE2 /* uva12157.cpp */,
+				C924A15F1A1C634100858CE2 /* uva12157.txt */,
 			);
 			path = UVa;
 			sourceTree = "<group>";
@@ -350,7 +350,6 @@
 			files = (
 				C919F9C219EC42D600E001F2 /* scanregex.cpp in Sources */,
 				C922541D1A12E4AC00C921DA /* uva11991.cpp in Sources */,
-				C924D56E1A11B9310060AA60 /* uva280.cpp in Sources */,
 				C9B836F419F24EC900B1F612 /* uva11239.cpp in Sources */,
 				C925A6D919F02FB000AF67B6 /* 272Bnew.cpp in Sources */,
 				C93E850119E890E300BCC99C /* uva621.cpp in Sources */,
@@ -372,6 +371,7 @@
 				C9F2CEF219CA8F20009A2773 /* HKAshtonAndStrings.cpp in Sources */,
 				C90E855A1A0C4621003033B6 /* uva167.cpp in Sources */,
 				C9F2CEEE19C8FB68009A2773 /* Dubstep208B.cpp in Sources */,
+				C924A15E1A1C632500858CE2 /* uva12157.cpp in Sources */,
 				C982F7841A140DDD005132D3 /* dfs.cpp in Sources */,
 				C9F2CED219C65675009A2773 /* SequenceFormatting81B.cpp in Sources */,
 				C9F2CEC419C4CE4F009A2773 /* TwoStrings223B.cpp in Sources */,

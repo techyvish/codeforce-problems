@@ -111,6 +111,8 @@ namespace dfs {
         
         vi dfs_num;
         vi reachability;
+        set<int> visitvert;
+        int nodeToFind;
         
         Graph(int v )
         {
@@ -128,21 +130,17 @@ namespace dfs {
         
         void dfs(int u )
         {
-            dfs_num[u] = VISITED;
-            
+            if ( u != nodeToFind )
+                dfs_num[u] = VISITED;
+
             for ( int j = 0 ; j < adjList[u].size() ;j++ )
             {
                 ii v = adjList[u][j];
-//                for ( int i = 1 ; i <= dfs_num.size() ; i++ )
-//                {
-//                    if ( dfs_num[i] && v.first == u )
-//                    {
-//                        reachability[i] = 1;
-//                    }
-//                }
+
                 if ( dfs_num[v.first] != VISITED && v.second == 1 )
                 {
-                    
+                    if ( v.first == nodeToFind )
+                        dfs_num[v.first] = VISITED;
                     dfs(v.first);
                 }
             }
@@ -163,6 +161,7 @@ namespace dfs {
             {
                 dfs_num[p] = !VISITED;
             }
+      
         }
         
         void clear()
@@ -173,7 +172,8 @@ namespace dfs {
     };
 }
 
-int main_dfs()
+//uva280
+int main_uva280()
 //int main()
 {
     //FILE *fp = freopen("/Users/Shared/codeforces/codeforces/in.txt", "rt", stdin);
@@ -218,8 +218,8 @@ int main_dfs()
         int b;
         while (A >> b) {
             g.clear();
+            g.nodeToFind = b;
             g.dfs(b);
-            g.updateSelfLinks(b);
             string str;
             int count = 0;;
             for (int i = 1 ; i <= numvert ;i++)
@@ -243,9 +243,6 @@ int main_dfs()
             s += str;
             cout << s << endl;
         }
-        
-        //if ( end )
-        //break;
     }
     
     return 0;
