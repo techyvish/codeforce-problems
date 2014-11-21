@@ -26,6 +26,7 @@
 #include <vector>
 #include <fstream>
 #include <string>
+#include <math.h>
 
 using namespace std;
 
@@ -92,18 +93,63 @@ const double eps = 1e-9;
 #define trace6(a, b, c, d, e, f)
 
 #endif
-//#define fin cin
+#define fin cin
 
 int main()
 {
     
-    fstream fin("/Users/Shared/codeforces/codeforces/uva/uva417.txt");
+    //fstream fin("/Users/Shared/codeforces/codeforces/uva/uva534.txt");
+    cout << fixed << setprecision(3);
+    int a ;
+    cin >> a;
+    int k = 1;
+    while ( a != 0 ) {
+        int b = a;
+        int fredx,fredy;
+        int fionax,fionay;
+        
+        cin >> fredx >> fredy;
+        cin >> fionax >> fionay;
+        vector<pi> loc;
+        double maxdistance = 9999999;
+        int j = 0;
+        b -= 2;
+        loc.push_back(make_pair(fredx, fredy));
+        j++;
+        while ( b != 0 )
+        {
+            int p,q;
+            cin >> p >> q;
+            loc.push_back(make_pair(p, q));
+            double dist = 0;
+            if ( loc.size() > 1) {
+              dist  = sqrt( (abs(loc[j].first - loc[j-1].first) * abs(loc[j].first - loc[j-1].first)) +
+                           (abs(loc[j].second - loc[j-1].second) * abs(loc[j].second - loc[j-1].second)));
+                           }
+            
+            if ( dist <= maxdistance )
+                maxdistance = dist;
+            b--;
+        }
+        if ( loc.size() > 1)
+        {
+            double dist  = sqrt( (fionax - loc[j-1].first) * abs(fionax - loc[j-1].first) +
+                         (abs(fionay - loc[j-1].second) * abs(fionay - loc[j-1].second)));
+            if ( dist <= maxdistance )
+                maxdistance = dist;
+        }
     
-    char sti[1024];
-    string buffstr;
-    while (getline(fin, buffstr) && sscanf(buffstr.c_str(), "%[^\n\r]",sti) == 1) {
-        if ( buffstr == "END")
-            break;
-        cout << sti << endl;
+        if ( maxdistance == 9999999 )
+        {
+            maxdistance = sqrt( abs(fionax - fredx ) * abs(fionax - fredx ) +
+                               abs( fionay - fredy) *  abs( fionay - fredy));
+        
+        }
+        cout << "Scenario #"<< k++ << endl;
+        cout << "Frog Distance = " << maxdistance << endl;
+        cin >> a;
+        if ( a )
+            cout << endl;
+        
     }
 }
