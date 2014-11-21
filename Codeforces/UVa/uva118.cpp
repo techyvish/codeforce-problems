@@ -91,7 +91,7 @@ const double eps = 1e-9;
 #define trace6(a, b, c, d, e, f)
 
 #endif
-/*
+
 
 #define fin cin
 struct robot
@@ -101,7 +101,7 @@ struct robot
     bool isLost;
 };
 
-int main()
+int main_uva118()
 {
     //FILE *fp = freopen("/Users/Shared/codeforces/codeforces/in.txt", "rt", stdin);
     fstream fin("/Users/Shared/codeforces/codeforces/uva/uva118.txt");
@@ -251,6 +251,6 @@ int main()
         
         //}
     }
+    return 0;
 }
 
-*/
