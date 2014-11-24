@@ -95,7 +95,7 @@ const double eps = 1e-9;
 #endif
 #define fin cin
 
-int main()
+int main_uva534()
 {
     
     //fstream fin("/Users/Shared/codeforces/codeforces/uva/uva534.txt");
@@ -152,4 +152,5 @@ int main()
             cout << endl;
         
     }
+    return 0;
 }

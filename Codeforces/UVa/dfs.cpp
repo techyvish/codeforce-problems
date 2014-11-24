@@ -95,6 +95,7 @@ typedef vector<int> vi;
 typedef pair<int,int> pi;
 typedef vector<vector<int > > vvi;
 typedef vector<string> vs;
+int vn = 0;
 
 #define fin cin
 
@@ -130,38 +131,17 @@ namespace dfs {
         
         void dfs(int u )
         {
-            if ( u != nodeToFind )
-                dfs_num[u] = VISITED;
-
             for ( int j = 0 ; j < adjList[u].size() ;j++ )
             {
                 ii v = adjList[u][j];
 
                 if ( dfs_num[v.first] != VISITED && v.second == 1 )
                 {
-                    if ( v.first == nodeToFind )
-                        dfs_num[v.first] = VISITED;
+                    dfs_num[v.first] = VISITED;
+                    vn--;
                     dfs(v.first);
                 }
             }
-        }
-        
-        bool isReachable(int from,int to)
-        {
-            
-            return false;
-        }
-        void updateSelfLinks(int p)
-        {
-            if ( reachability[p] == 1 )
-            {
-                dfs_num[p] = VISITED;
-            }
-            else
-            {
-                dfs_num[p] = !VISITED;
-            }
-      
         }
         
         void clear()
@@ -177,73 +157,113 @@ int main_uva280()
 //int main()
 {
     //FILE *fp = freopen("/Users/Shared/codeforces/codeforces/in.txt", "rt", stdin);
-    fstream fin("/Users/Shared/codeforces/codeforces/uva/dfs.txt");
-    
-    char sti[1024];
-    string buffstr;
-    bool end = false;
-    while (getline(fin, buffstr) )
+    //fstream fin("/Users/Shared/codeforces/codeforces/uva/dfs.txt");
+    int numvert = 0;
+    cin >> numvert;
+    while ( numvert != 0 )
     {
-        if ( buffstr == "0")
-            break;
-        
-        int numvert = 0;
-        sscanf(buffstr.c_str(), "%d",&numvert);
         dfs::Graph g(numvert);
-
-        while (getline(fin, buffstr) )
+        int p;
+        cin >> p;
+        while ( p != 0 )
         {
-            if ( buffstr == "0")
-                break;
-            sscanf(buffstr.c_str(), "%[^\n\r]", sti);
-            stringstream ss(sti);
-            int p;
-            ss >> p;
-            int q;
-            while (ss>>q) {
-                if ( q != 0 )
-                    g.addEdge(p, q, 1);
+            int q ;
+            cin >> q;
+            while ( q != 0 )
+            {
+                g.addEdge(p, q, 1);
+                cin >> q;
             }
+            cin >> p;
         }
         
-        getline(fin, buffstr);
-        sscanf(buffstr.c_str(), "%[^\n\r]", sti);
-        if ( buffstr == "0" ){
-            end =  true;
-            break;
-        }
-        stringstream A(sti);
-        int a ;
-        A >>a;
-        int b;
-        while (A >> b) {
+        int noOfTest;
+        cin >> noOfTest;
+        while ( noOfTest != 0) {
+            int nodeToTest;
+            cin >> nodeToTest;
             g.clear();
-            g.nodeToFind = b;
-            g.dfs(b);
-            string str;
-            int count = 0;;
+            vn = numvert;
+            g.dfs(nodeToTest);
+            cout << vn;
             for (int i = 1 ; i <= numvert ;i++)
             {
                 if ( !g.dfs_num[i] )
                 {
-                    str += " ";
-                    stringstream ss;
-                    ss << i ;
-                    string s;
-                    ss >> s;
-                    str += s;
-                    count ++;
+                    cout << " " << i ;
                 }
             }
-            
-            stringstream ss;
-            ss << count;
-            string s;
-            ss >> s;
-            s += str;
-            cout << s << endl;
+            cout << endl;
+            noOfTest--;
         }
+        cin >> numvert;
     }
     
     return 0;
 }
+
+
+/*
+#include <cstdio>
+#include <cstring>
+
+const int N = 10;
+
+int i, j, num, n, g[N][N], vn, st;
+
+bool vis[N];
+
+void dfs( int x ) {
+    
+    for ( int i = 1; i <= n; ++i )
+        if ( !vis[i] && g[x][i] ) {
+            vis[i] = true;
+            vn--;
+            dfs(i);
+        }
+}
+
+int main()
+{
+    
+    FILE *fp = freopen("/Users/Shared/codeforces/codeforces/uva/dfs.txt", "rt", stdin);
+    //fstream fin("/Users/Shared/codeforces/codeforces/uva/dfs.txt");
+    
+    
+    
+    while ( scanf("%d", &n) != EOF && n ) {
+        
+        memset( g, 0, sizeof(g) );
+        
+        while ( scanf("%d", &i), i )
+            while ( scanf("%d", &j) , j ) g[i][j] = 1;
+        
+        scanf("%d", &num);
+        
+//        for ( int i = 1 ;i <= N ; i ++ )
+//        {
+//            for ( int j = 1; j <= N ; j++  )
+//            {
+//                printf("%d ",g[i][j]);
+//            }
+//            printf("\n");
+//        }
+        
+        while ( num-- ) {
+            
+            scanf("%d", &st);
+            
+            vn = n;
+            memset( vis, 0, sizeof(vis) );
+            
+            dfs( st );
+            
+            printf("%d", vn);
+            for (i = 1; i <= n; ++i )
+                if ( !vis[i] ) printf(" %d", i);
+            puts("");
+        }
+    }
+}
+
+*/
