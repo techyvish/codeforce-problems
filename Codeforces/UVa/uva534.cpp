@@ -94,63 +94,143 @@ const double eps = 1e-9;
 
 #endif
 #define fin cin
+typedef long long ll;
+typedef pair<int, int> ii;
+typedef vector<ii> vii;
+typedef vector<int> vi;
+typedef pair<int,int> pi;
+typedef vector<vector<int > > vvi;
+typedef vector<string> vs;
 
-int main_uva534()
+namespace floyed {
+    class Graph
+    {
+        
+        vector<vii> adjList;
+        vi dfs_linked;
+        int v;
+        
+    public:
+        
+        vi dfs_num;
+        vi reachability;
+        set<int> visitvert;
+        int nodeToFind;
+        
+        Graph(int v )
+        {
+            this->v = v;
+            adjList.resize(v+1);
+            dfs_num.resize(v+1);
+            dfs_linked.resize(v+1);
+            reachability.resize(v+1);
+        }
+        
+        void addEdge(int p, int q, int weight)
+        {
+            adjList[p].push_back(make_pair(q, weight));
+        }
+        
+        void dfs(int u )
+        {
+            for ( int j = 0 ; j < adjList[u].size() ;j++ )
+            {
+                ii v = adjList[u][j];
+                
+
+            }
+        }
+        
+        void clear()
+        {
+            dfs_num.clear();
+            dfs_num.resize(v+1);
+        }
+    };
+};
+
+const int N = 1002;
+double g[N][N];
+double minrange = 999999;
+#define INF 999999999
+
+int main()
 {
-    
     //fstream fin("/Users/Shared/codeforces/codeforces/uva/uva534.txt");
     cout << fixed << setprecision(3);
     int a ;
     cin >> a;
+    vector<pi> pairs;
+    int numvert = 0;
     int k = 1;
     while ( a != 0 ) {
         int b = a;
         int fredx,fredy;
         int fionax,fionay;
-        
+        pairs.push_back(make_pair(-1, -1));
         cin >> fredx >> fredy;
+        pairs.push_back(make_pair(fredx, fredy));
         cin >> fionax >> fionay;
         vector<pi> loc;
-        double maxdistance = 9999999;
+
         int j = 0;
         b -= 2;
         loc.push_back(make_pair(fredx, fredy));
         j++;
+        numvert += 2;
         while ( b != 0 )
         {
             int p,q;
             cin >> p >> q;
-            loc.push_back(make_pair(p, q));
-            double dist = 0;
-            if ( loc.size() > 1) {
-              dist  = sqrt( (abs(loc[j].first - loc[j-1].first) * abs(loc[j].first - loc[j-1].first)) +
-                           (abs(loc[j].second - loc[j-1].second) * abs(loc[j].second - loc[j-1].second)));
-                           }
-            
-            if ( dist <= maxdistance )
-                maxdistance = dist;
+            pairs.push_back(make_pair(p, q));
+            numvert ++;
             b--;
         }
-        if ( loc.size() > 1)
-        {
-            double dist  = sqrt( (fionax - loc[j-1].first) * abs(fionax - loc[j-1].first) +
-                         (abs(fionay - loc[j-1].second) * abs(fionay - loc[j-1].second)));
-            if ( dist <= maxdistance )
-                maxdistance = dist;
-        }
-    
-        if ( maxdistance == 9999999 )
-        {
-            maxdistance = sqrt( abs(fionax - fredx ) * abs(fionax - fredx ) +
-                               abs( fionay - fredy) *  abs( fionay - fredy));
         
+        pairs.push_back(make_pair(fionax, fionay));
+        
+        for (int i = 1 ; i <= numvert ; i++ ) g[i][i] = 0;
+        for (int i = 1 ; i <= numvert ; i++ )
+        {
+            for (int j = i + 1 ; j <= numvert ; j++ )
+            {
+                g[i][j] = g[j][i] =  abs (pairs[i].first - pairs[j].first) * abs (pairs[i].first - pairs[j].first) +
+                                 abs (pairs[i].second - pairs[j].second) * abs (pairs[i].second - pairs[j].second) ;
+            }
         }
-        cout << "Scenario #"<< k++ << endl;
-        cout << "Frog Distance = " << maxdistance << endl;
+        
+        for ( int k = 1 ; k <= numvert ; k++)
+        {
+            for ( int i = 1 ; i <= numvert ; i++)
+            {
+                for ( int j = 1 ; j <= numvert ; j++)
+                {
+                    g[i][j]=min(g[i][j],max(g[i][k],g[k][j]));
+                }
+            }
+        }
+        
+//        for ( int i = 1 ; i <= numvert ;i++)
+//        {
+//            for ( j = 1 ; j  <= numvert ; j ++ )
+//            {
+//                if (g[i][j] == INF)
+//                    cout << g[i][j] << "   ";
+//                else
+//                    cout << g[i][j] << " ";
+//            }
+//            cout << endl;
+//        }
+        
         cin >> a;
-        if ( a )
+        cout << "Scenario #" << k++ << endl;
+        cout << "Frog Distance = "<< sqrt(g[1][numvert]) << endl ;
+        if (a != 0)
             cout << endl;
-        
+        numvert = 0;
+        pairs.clear();
+   
+        memset(g, 0, sizeof(g));
     }
     return 0;
 }
