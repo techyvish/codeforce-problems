@@ -109,13 +109,12 @@ namespace uva12442 {
     {
         
         vector<vii> adjList;
-        vi dfs_linked;
         int v;
         
     public:
         
         vi dfs_num;
-        vi reachability;
+       
         set<int> visitvert;
         int nodeToFind;
         
@@ -124,8 +123,6 @@ namespace uva12442 {
             this->v = v;
             adjList.resize(v+1);
             dfs_num.resize(v+1);
-            dfs_linked.resize(v+1);
-            reachability.resize(v+1);
         }
         
         void addEdge(int p, int q, int weight)
@@ -135,13 +132,13 @@ namespace uva12442 {
         
         void dfs(int u )
         {
-            
-            linkCount ++;
+            dfs_num[u] = VISITED;
+            num_links[u] =linkCount ++;
             for ( int j = 0 ; j < adjList[u].size() ;j++ )
             {
                 ii v = adjList[u][j];
-                if ( dfs_num[v.first] != VISITED ) {
-                    dfs_num[v.first] = VISITED;
+                if ( dfs_num[v.first] != VISITED )
+                {
                     dfs(v.first);
                 }
             }
@@ -152,6 +149,13 @@ namespace uva12442 {
             dfs_num.clear();
             dfs_num.resize(v+1);
         }
+        
+        void clearGraph()
+        {
+            adjList.clear();
+            adjList.resize(500000);
+        }
+        
     };
 };
 
@@ -159,7 +163,7 @@ namespace uva12442 {
 int main()
 {
     
-    fstream fin("/Users/Shared/codeforces/codeforces/uva/uva12442.txt");
+    //fstream fin("/Users/Shared/codeforces/codeforces/uva/uva12442.txt");
     string buffstr;
     int tc = 0;
     cin >> tc;
@@ -180,21 +184,32 @@ int main()
         }
         
         int max = 0;
+        int maxit = 0;
+        //clock_t tStart = clock();
         for ( auto i = vertex.begin(); i != vertex.end() ; i++)
         {
-            g.dfs(*i);
+            if ( g.dfs_num[*i] != VISITED )
+            {
+                g.dfs(*i);
+            }
             num_links[*i] = linkCount;
             linkCount = 0;
             if ( num_links[*i] > max )
             {
                 max = num_links[*i];
-                max = *i;
+                maxit = *i;
             }
-        }
+            g.clear();
         
-        cout << "Case "<< k++ <<": " << max;
+        }
+        //printf("Time taken: %.2fs\n", (double)(clock() - tStart)/CLOCKS_PER_SEC);
+        
+        
+        g.clearGraph();
+        cout << "Case "<< k++ <<": " << maxit;
         tc --;
-        if ( tc != 0 )
-            cout << endl;
+        cout << endl;
+       
+        
     }
 }
