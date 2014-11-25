@@ -154,7 +154,7 @@ double g[N][N];
 double minrange = 999999;
 #define INF 999999999
 
-int main_uva534()
+int main()
 {
     //fstream fin("/Users/Shared/codeforces/codeforces/uva/uva534.txt");
     cout << fixed << setprecision(3);
@@ -194,8 +194,8 @@ int main_uva534()
         {
             for (int j = i + 1 ; j <= numvert ; j++ )
             {
-                g[i][j] = g[j][i] =  abs (pairs[i].first - pairs[j].first) * abs (pairs[i].first - pairs[j].first) +
-                                 abs (pairs[i].second - pairs[j].second) * abs (pairs[i].second - pairs[j].second) ;
+                g[i][j] = g[j][i] = ( abs (pairs[i].first - pairs[j].first) * abs (pairs[i].first - pairs[j].first) +
+                                 abs (pairs[i].second - pairs[j].second) * abs (pairs[i].second - pairs[j].second) );
             }
         }
         
@@ -210,27 +210,12 @@ int main_uva534()
             }
         }
         
-//        for ( int i = 1 ; i <= numvert ;i++)
-//        {
-//            for ( j = 1 ; j  <= numvert ; j ++ )
-//            {
-//                if (g[i][j] == INF)
-//                    cout << g[i][j] << "   ";
-//                else
-//                    cout << g[i][j] << " ";
-//            }
-//            cout << endl;
-//        }
-        
         cin >> a;
         cout << "Scenario #" << k++ << endl;
         cout << "Frog Distance = "<< sqrt(g[1][numvert]) << endl ;
-        if (a != 0)
-            cout << endl;
+        cout << endl;
         numvert = 0;
         pairs.clear();
-   
-        memset(g, 0, sizeof(g));
     }
     return 0;
 }

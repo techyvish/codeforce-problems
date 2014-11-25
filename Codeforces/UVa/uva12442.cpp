@@ -160,7 +160,7 @@ namespace uva12442 {
 };
 
 
-int main()
+int main_12442()
 {
     
     //fstream fin("/Users/Shared/codeforces/codeforces/uva/uva12442.txt");
@@ -212,4 +212,6 @@ int main()
        
         
     }
+    
+    return 0;
 }
