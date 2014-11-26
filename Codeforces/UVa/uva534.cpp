@@ -154,7 +154,7 @@ double g[N][N];
 double minrange = 999999;
 #define INF 999999999
 
-int main()
+int main_uva354()
 {
     //fstream fin("/Users/Shared/codeforces/codeforces/uva/uva534.txt");
     cout << fixed << setprecision(3);

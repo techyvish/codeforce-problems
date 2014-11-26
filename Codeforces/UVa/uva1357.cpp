@@ -95,6 +95,7 @@ const double eps = 1e-9;
 
 struct _node
 {
+    vector<int> parents;
     _node* nodes[101];
     _node *parent;
     int value;
@@ -107,16 +108,20 @@ node *nodes[300008];
 bool testParent(node *node, int parent)
 {
     bool found = false;
-    while ( node->parent != NULL ) {
-        
-        node = node->parent;
-        
-        if ( node->value == parent )
-        {
-            found = true;
-            break;
-        }
+    if (std::find(node->parents.begin(),node->parents.end(), parent) != node->parents.end())
+    {
+        found = true;
     }
+//    while ( node->parent != NULL ) {
+//        
+//        node = node->parent;
+//        
+//        if ( node->value == parent )
+//        {
+//            found = true;
+//            break;
+//        }
+//    }
     
     return found;
 }
@@ -170,6 +175,8 @@ int main_uva1357()
             for (int i = 0 ; i < child ; i++ )
             {
                 node *n = new node;
+                n->parents = root->parents;
+                n->parents.push_back(root->value);
                 n->value = j;
                 n->parent = root;
                 root->nodes[i] = n ;
