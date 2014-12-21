@@ -1,10 +1,11 @@
 //
-//  CF437C.cpp
+//  topologicalsort.cpp
 //  Codeforces
 //
 //  Created by Vishal Patel on 22/12/2014.
 //  Copyright (c) 2014 Vishal Patel. All rights reserved.
 //
+
 
 #include <stdio.h>
 #include <cstdio>
@@ -103,38 +104,91 @@ typedef vector<string> vs;
 
 #define fin cin
 
-int main_CF437C()
+namespace TopologicalSort {
+    
+    class Graph{
+        
+        list<int> *adj;
+        int V;
+        
+    public:
+        
+        Graph (int v)
+        {
+            V = v;
+            adj = new list<int>[V];
+        }
+        
+        void addEdge(int v, int w)
+        {
+            adj[v].push_back(w);
+        }
+        
+        void topologicalSortUtil(int v, bool visited[] , stack<int> &Stack)
+        {
+            visited[v] = true;
+            for (auto i = adj[v].begin() ; i != adj[v].end() ; ++i )
+            {
+                if ( !visited[*i] )
+                {
+                    topologicalSortUtil(*i, visited, Stack);
+                }
+            }
+            
+            Stack.push(v);
+        }
+        
+        
+        void topologicalSort()
+        {
+            
+            stack<int> Stack;
+            bool *visited = new bool[V];
+            for (int i = 0; i < V; i++)
+                visited[i] = false;
+            
+            
+            for ( int i = 0 ; i < V ; i++ )
+            {
+                if ( visited[i] == false)
+                {
+                    topologicalSortUtil(i, visited, Stack);
+                }
+            }
+            
+            
+            while ( !Stack.empty() ) {
+                
+                cout << Stack.top() << " ";
+                Stack.pop();
+            }
+            
+        }
+        
+    };
+}
+
+int main()
 {
-    //fstream fin("/Users/Shared/codeforces/codeforces/uva/CF437C.txt");
+    fstream fin("/Users/Shared/codeforces/codeforces/uva/topologicalsort.txt");
     
-    int w[10001];
-    vector<iii> edges;
+    int V;
+    cin >> V;
+   
+    TopologicalSort::Graph g(V);
     
-    int nodes ,links;
-    cin >> nodes >> links;
-    for ( int i = 1 ; i <= nodes ;  i++ )
+    int edges;
+    cin >> edges;
+    for ( int i = 0 ; i < edges ; i++ )
     {
-        int a;
-        cin >> a;
-        w[i] = a;
+        int v,w;
+        cin >> v >> w;
+        g.addEdge(v, w);
     }
-    
-    for ( int j = 0 ; j < links ; j++ )
-    {
-        int v1,v2 ;
-        cin >> v1 >>v2;
-        edges.push_back( iii( min(w[v1],w[v2]), ii(v1,v2) ) );
-    }
-    
-    int ans = 0 ;
-    for ( int i = 0 ; i < links ;i ++ )
-    {
-        ans += edges[i].first;
-    }
-    
-    cout << ans;
-    
+
+    g.topologicalSort();
     
     return 0;
 }
+
 
