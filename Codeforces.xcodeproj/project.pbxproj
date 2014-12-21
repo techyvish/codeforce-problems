@@ -45,6 +45,7 @@
 		C9CC17D719F0194100E5772C /* 272A.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9CC17D519F0194100E5772C /* 272A.cpp */; };
 		C9CC17DA19F0196700E5772C /* 272B.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9CC17D819F0196700E5772C /* 272B.cpp */; };
 		C9D668011A45BF1F007AD154 /* CF445A.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9D668001A45BF1F007AD154 /* CF445A.cpp */; };
+		C9D668041A470793007AD154 /* CF437C.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9D668031A470793007AD154 /* CF437C.cpp */; };
 		C9E0851D1A1FB9E4004B9DFB /* uva534.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9E0851C1A1FB9E4004B9DFB /* uva534.cpp */; };
 		C9E085201A22EF79004B9DFB /* uva12442.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9E0851F1A22EF79004B9DFB /* uva12442.cpp */; };
 		C9E1246819C18824002D2885 /* translate41A.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9E1246719C18824002D2885 /* translate41A.cpp */; };
@@ -149,6 +150,8 @@
 		C9CC17D919F0196700E5772C /* B.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = B.txt; sourceTree = "<group>"; };
 		C9D668001A45BF1F007AD154 /* CF445A.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CF445A.cpp; sourceTree = "<group>"; };
 		C9D668021A45BF2F007AD154 /* CF445A.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CF445A.txt; sourceTree = "<group>"; };
+		C9D668031A470793007AD154 /* CF437C.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CF437C.cpp; sourceTree = "<group>"; };
+		C9D668051A4707B1007AD154 /* CF437C.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CF437C.txt; sourceTree = "<group>"; };
 		C9E0851C1A1FB9E4004B9DFB /* uva534.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uva534.cpp; sourceTree = "<group>"; };
 		C9E0851E1A1FBA37004B9DFB /* uva534.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = uva534.txt; sourceTree = "<group>"; };
 		C9E0851F1A22EF79004B9DFB /* uva12442.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uva12442.cpp; sourceTree = "<group>"; };
@@ -256,54 +259,56 @@
 		C9B836F119F24EC900B1F612 /* UVa */ = {
 			isa = PBXGroup;
 			children = (
+				C9D668001A45BF1F007AD154 /* CF445A.cpp */,
+				C9D668021A45BF2F007AD154 /* CF445A.txt */,
+				C982F7831A140DDD005132D3 /* dfs.cpp */,
+				C982F7851A14237B005132D3 /* dfs.txt */,
+				C924D56A1A1079B10060AA60 /* uva118.cpp */,
+				C924D56C1A107A940060AA60 /* uva118.txt */,
+				C90E85591A0C4621003033B6 /* uva167.cpp */,
+				C90E855B1A0C466B003033B6 /* uva167.txt */,
+				C91F8C311A253B5A00B399FC /* uva341.cpp */,
 				C915B8531A0741C50025D16B /* uva414.cpp */,
 				C915B8541A0741C50025D16B /* uva414.txt */,
-				C93E0A2419F5C0A80002B559 /* uva12100.cpp */,
-				C93E0A2519F5C0A80002B559 /* uva12100.txt */,
-				C98FE17719F49A7700AA46B9 /* uva540.cpp */,
-				C98FE17819F49A7700AA46B9 /* uva540.txt */,
-				C9B836F219F24EC900B1F612 /* uva11239.cpp */,
-				C9B836F319F24EC900B1F612 /* uva11239.txt */,
 				C9B836F519F2500500B1F612 /* uva417.cpp */,
 				C9B836F819F2503400B1F612 /* uva417.txt */,
 				C915B8561A0984AD0025D16B /* uva482.cpp */,
 				C915B8581A09851F0025D16B /* uva482.txt */,
-				C90E85591A0C4621003033B6 /* uva167.cpp */,
-				C90E855B1A0C466B003033B6 /* uva167.txt */,
-				C90E85621A0C8813003033B6 /* uva11988.cpp */,
-				C90E85641A0C8878003033B6 /* uva11988.txt */,
-				C924D56A1A1079B10060AA60 /* uva118.cpp */,
-				C924D56C1A107A940060AA60 /* uva118.txt */,
-				C922541C1A12E4AC00C921DA /* uva11991.cpp */,
-				C922541E1A12E4C500C921DA /* uva11991.txt */,
+				C9E0851C1A1FB9E4004B9DFB /* uva534.cpp */,
+				C9E0851E1A1FBA37004B9DFB /* uva534.txt */,
+				C98FE17719F49A7700AA46B9 /* uva540.cpp */,
+				C98FE17819F49A7700AA46B9 /* uva540.txt */,
+				C93BF0F01A19B385003E96BA /* uva1357.cpp */,
+				C93BF0F21A19B38F003E96BA /* uva1357.txt */,
+				C982F7921A196C98005132D3 /* uva1585.cpp */,
+				C982F7941A196CBB005132D3 /* uva1585.txt */,
+				C982F78F1A195924005132D3 /* uva1586.cpp */,
+				C982F7911A195943005132D3 /* uva1586.txt */,
 				C982F7801A136C85005132D3 /* uva10018.cpp */,
 				C982F7821A136CB2005132D3 /* uva10018.txt */,
-				C982F7831A140DDD005132D3 /* dfs.cpp */,
-				C982F7851A14237B005132D3 /* dfs.txt */,
+				C9B836F219F24EC900B1F612 /* uva11239.cpp */,
+				C9B836F319F24EC900B1F612 /* uva11239.txt */,
+				C91F8C331A254EF200B399FC /* uva11504.cpp */,
+				C91F8C351A254F0D00B399FC /* uva11504.txt */,
+				C90E85621A0C8813003033B6 /* uva11988.cpp */,
+				C90E85641A0C8878003033B6 /* uva11988.txt */,
+				C922541C1A12E4AC00C921DA /* uva11991.cpp */,
+				C922541E1A12E4C500C921DA /* uva11991.txt */,
+				C93E0A2419F5C0A80002B559 /* uva12100.cpp */,
+				C93E0A2519F5C0A80002B559 /* uva12100.txt */,
+				C924A15D1A1C632500858CE2 /* uva12157.cpp */,
+				C924A15F1A1C634100858CE2 /* uva12157.txt */,
+				C93BF0EE1A19812B003E96BA /* uva12219.cpp */,
+				C9E0851F1A22EF79004B9DFB /* uva12442.cpp */,
+				C9E085211A22EFA0004B9DFB /* uva12442.txt */,
 				C982F7871A15B500005132D3 /* uva12503.cpp */,
 				C982F7891A15B553005132D3 /* uva12503.txt */,
 				C982F78A1A15C77B005132D3 /* uva12554.cpp */,
 				C982F78C1A15C7A6005132D3 /* uva12554.txt */,
-				C982F78F1A195924005132D3 /* uva1586.cpp */,
-				C982F7911A195943005132D3 /* uva1586.txt */,
-				C982F7921A196C98005132D3 /* uva1585.cpp */,
-				C982F7941A196CBB005132D3 /* uva1585.txt */,
-				C93BF0EE1A19812B003E96BA /* uva12219.cpp */,
-				C93BF0F01A19B385003E96BA /* uva1357.cpp */,
-				C93BF0F21A19B38F003E96BA /* uva1357.txt */,
 				C924A15A1A1B0DDB00858CE2 /* uva12577.cpp */,
 				C924A15C1A1B0F4200858CE2 /* uva12577.txt */,
-				C924A15D1A1C632500858CE2 /* uva12157.cpp */,
-				C924A15F1A1C634100858CE2 /* uva12157.txt */,
-				C9E0851C1A1FB9E4004B9DFB /* uva534.cpp */,
-				C9E0851E1A1FBA37004B9DFB /* uva534.txt */,
-				C9E0851F1A22EF79004B9DFB /* uva12442.cpp */,
-				C9E085211A22EFA0004B9DFB /* uva12442.txt */,
-				C91F8C311A253B5A00B399FC /* uva341.cpp */,
-				C91F8C331A254EF200B399FC /* uva11504.cpp */,
-				C91F8C351A254F0D00B399FC /* uva11504.txt */,
-				C9D668001A45BF1F007AD154 /* CF445A.cpp */,
-				C9D668021A45BF2F007AD154 /* CF445A.txt */,
+				C9D668031A470793007AD154 /* CF437C.cpp */,
+				C9D668051A4707B1007AD154 /* CF437C.txt */,
 			);
 			path = UVa;
 			sourceTree = "<group>";
@@ -408,6 +413,7 @@
 				C93E0A2619F5C0A80002B559 /* uva12100.cpp in Sources */,
 				C9E1246819C18824002D2885 /* translate41A.cpp in Sources */,
 				C9F2CEC119C41E67009A2773 /* MartianString149E.cpp in Sources */,
+				C9D668041A470793007AD154 /* CF437C.cpp in Sources */,
 				C9E1246E19C30880002D2885 /* FlipGame327A.cpp in Sources */,
 				C9E1247019C3B825002D2885 /* CheapTravel466A.cpp in Sources */,
 				C9A4BC1A19C967F9002A89D9 /* Eevee452A.cpp in Sources */,
