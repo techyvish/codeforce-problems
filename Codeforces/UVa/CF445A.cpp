@@ -1,10 +1,11 @@
 //
-//  uva11504.cpp
+//  CF445A.cpp
 //  Codeforces
 //
-//  Created by Vishal Patel on 26/11/2014.
+//  Created by Vishal Patel on 21/12/2014.
 //  Copyright (c) 2014 Vishal Patel. All rights reserved.
 //
+
 
 #include <stdio.h>
 #include <cstdio>
@@ -102,90 +103,38 @@ typedef vector<string> vs;
 
 #define fin cin
 
-namespace uva {
-    class Graph
-    {
-        vector<vii> adjList;
-        vi dfs_linked;
-        int v;
-        
-    public:
-        
-        vi dfs_num;
-        set<int> connectedComp ;
-        int cnt;
-        
-        Graph(int v )
-        {
-            this->v = v;
-            adjList.resize(v+1);
-            dfs_num.resize(v+1);
-        }
-        
-        void addEdge(int p, int q, int weight)
-        {
-            adjList[p].push_back(make_pair(q, weight));
-            // adjList[q].push_back(make_pair(p, weight)); // for undirected
-        }
-        
-        void dfs(int u )
-        {
-            dfs_num[u] = VISITED;
-            
-            for ( int j = 0 ; j < adjList[u].size() ;j++ )
-            {
-                ii v = adjList[u][j];
-                
-                if ( dfs_num[v.first] != VISITED && v.second == 1 )
-                {
-                    dfs(v.first);
-                }
-            }
-        }
-        
-        void clear()
-        {
-            dfs_num.clear();
-            dfs_num.resize(v+1);
-            connectedComp.clear();
-            cnt = 0;
-        }
-    };
-}
-
-int main_uva11504()
+int main()
 {
-    fstream fin("/Users/Shared/codeforces/codeforces/uva/uva11504.txt");
+    //fstream fin("/Users/Shared/codeforces/codeforces/uva/CF445A.txt");
     
-    int ts ;
-    cin >> ts;
-    
-    while ( ts != 0) {
-    
-        int N;
-        cin >> N;
-        
-        int glines;
-        cin >> glines;
-        uva::Graph g(100000);
-        while ( glines != 0) {
-            int p,q;
-            cin >> p >> q;
-            g.addEdge(p,q,1);
-            glines --;
-        
-        }
-        for ( int i = 0 ; i < N ; i++ )
+    int m,n;
+    cin >> n >> m;
+    char s[1000];
+
+    string a;
+
+    for ( int i = 0 ; i < n ; i ++ )
+    {
+        cin >> a;
+        int j = 0;
+        for (  ; j < m ; j++ )
         {
-            if ( g.dfs_num[i+1] != VISITED)
+            if ( a[j] == '.' )
             {
-                g.dfs(i+1);
-                g.cnt++;
+                if ( (i + j) & 1 )
+                    s[j] = 'W';
+                else
+                    s[j] = 'B';
+                
             }
+            else
+                s[j] = '-';
         }
-        cout << g.cnt << endl;
-        g.clear();
-        ts --;
+        s[j] = '\0';
+        cout << s << endl;
     }
+    
+    
+
     return 0;
 }
