@@ -1,11 +1,10 @@
 //
-//  uva377A.cpp
+//  uva459.cpp
 //  Codeforces
 //
-//  Created by Vishal Patel on 13/01/2015.
+//  Created by Vishal Patel on 1/18/15.
 //  Copyright (c) 2015 Vishal Patel. All rights reserved.
 //
-
 
 #include <stdio.h>
 #include <cstdio>
@@ -104,16 +103,15 @@ typedef vector<string> vs;
 
 #define fin cin
 
-int main_377A()
+int main()
 {
-    fstream fin("/Users/Shared/codeforces/codeforces/uva/uva377A.txt");
+    fstream fin("/Users/Shared/codeforces/codeforces/uva/uva459.txt");
     
-    int n,m,p;
-    cin >> n >> m >> p;
     
-
+    
     
     return 0;
 }
+
 
 

@@ -73,6 +73,7 @@
 		C9F2CEF419CAF769009A2773 /* PinProblem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9F2CEF319CAF769009A2773 /* PinProblem.cpp */; };
 		C9F2CEF619CAFFAA009A2773 /* Pangrams.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9F2CEF519CAFFAA009A2773 /* Pangrams.cpp */; };
 		C9F2CEF819CBA789009A2773 /* HKCommonChild.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9F2CEF719CBA789009A2773 /* HKCommonChild.cpp */; };
+		C9F629A21A6B5CE8008ACDEF /* uva459.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9F629A11A6B5CE8008ACDEF /* uva459.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -186,6 +187,8 @@
 		C9F2CEF319CAF769009A2773 /* PinProblem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PinProblem.cpp; sourceTree = "<group>"; };
 		C9F2CEF519CAFFAA009A2773 /* Pangrams.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Pangrams.cpp; sourceTree = "<group>"; };
 		C9F2CEF719CBA789009A2773 /* HKCommonChild.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HKCommonChild.cpp; sourceTree = "<group>"; };
+		C9F629A11A6B5CE8008ACDEF /* uva459.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uva459.cpp; sourceTree = "<group>"; };
+		C9F629A31A6B5D02008ACDEF /* uva459.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = uva459.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -319,6 +322,8 @@
 				C9D668081A4714D1007AD154 /* topologicalsort.txt */,
 				C9524A791A64D649008939B0 /* uva377A.cpp */,
 				C9524A7B1A64D70F008939B0 /* uva377A.txt */,
+				C9F629A11A6B5CE8008ACDEF /* uva459.cpp */,
+				C9F629A31A6B5D02008ACDEF /* uva459.txt */,
 			);
 			path = UVa;
 			sourceTree = "<group>";
@@ -451,6 +456,7 @@
 				C9E0851D1A1FB9E4004B9DFB /* uva534.cpp in Sources */,
 				C9E2FD9519DE195B0001BB1A /* TeXQuote.cpp in Sources */,
 				C9F2CEE619C81A2F009A2773 /* KString219A.cpp in Sources */,
+				C9F629A21A6B5CE8008ACDEF /* uva459.cpp in Sources */,
 				C98FE17919F49A7700AA46B9 /* uva540.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
