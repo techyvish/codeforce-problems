@@ -25,6 +25,7 @@
 #include <vector>
 #include <fstream>
 #include <string>
+#include <list>
 
 using namespace std;
 
@@ -103,12 +104,78 @@ typedef vector<string> vs;
 
 #define fin cin
 
+namespace UVA459 {
+    
+    class Graph{
+        
+        list<int> *adj;
+        int V;
+        int *visited;
+        int connectedComp = 0;
+        
+    public:
+        
+        Graph (int v)
+        {
+            V = v;
+            adj = new list<int>[V];
+            visited = new int[V];
+        }
+        
+        void addEdge(int v, int w)
+        {
+            adj[v].push_back(w);
+        }
+        
+        void  dfs(int v)
+        {
+            for (auto i = adj[v].begin() ; i != adj[v].end() ; ++i )
+            {
+                if ( !visited[*i] )
+                {
+                    connectedComp ++;
+                    //visited[*i] = true;
+                    dfs(*i);
+                   
+                }
+            }
+            //return  connectedComp;
+        }
+        
+    };
+}
+
+
+
 int main()
 {
-    fstream fin("/Users/Shared/codeforces/codeforces/uva/uva459.txt");
+    fstream fin("/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/uva459.txt");
+    
+    int tc;
+    fin >> tc;
     
     
-    
+    while ( tc-- ) {
+        char c;
+        fin >> c ;
+        int N = c-65;
+        
+        UVA459::Graph g(N+1);
+        string str;
+       
+        
+        while (fin >> str ) {
+            
+            int node1 = str[0] - 65;
+            int node2 = str[1] - 65;
+            g.addEdge(node1, node2);
+            
+        }
+        
+         g.dfs(0);
+        //cout << cc << endl;
+        
+    }
     
     return 0;
 }
