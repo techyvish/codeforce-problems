@@ -130,16 +130,6 @@ namespace UVA459 {
         
         int connectedComponents()
         {
-         
-//            for ( int j = 0 ; j < V ; j++ )
-//            {
-//                for (auto i = adj[j].begin() ; i != adj[j].end() ; ++i )
-//                {
-//                    cout << *i << " " ;
-//                }
-//                cout << endl;
-//            }
-        
             for ( int i = 0 ; i < V ; i++ )
             {
                 if ( !visited[i])
@@ -162,11 +152,6 @@ namespace UVA459 {
                 }
             }
         }
-        
-//        ~Graph()
-//        {
-//            delete adj;
-//        }
         
     };
 }
