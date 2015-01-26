@@ -1,7 +1,15 @@
-1
+4
 
-E
+F
 AB
-CE
-DB
-EC
+CF
+
+C
+AB
+
+G
+
+Z
+AB
+BC
+XY

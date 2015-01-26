@@ -125,28 +125,51 @@ namespace UVA459 {
         void addEdge(int v, int w)
         {
             adj[v].push_back(w);
+            adj[w].push_back(v);
+        }
+        
+        int connectedComponents()
+        {
+         
+//            for ( int j = 0 ; j < V ; j++ )
+//            {
+//                for (auto i = adj[j].begin() ; i != adj[j].end() ; ++i )
+//                {
+//                    cout << *i << " " ;
+//                }
+//                cout << endl;
+//            }
+        
+            for ( int i = 0 ; i < V ; i++ )
+            {
+                if ( !visited[i])
+                {
+                    connectedComp ++;
+                    dfs(i);
+                }
+            }
+            return connectedComp;
         }
         
         void  dfs(int v)
         {
+            visited[v] = true;
             for (auto i = adj[v].begin() ; i != adj[v].end() ; ++i )
             {
                 if ( !visited[*i] )
                 {
-                    connectedComp ++;
-                    //visited[*i] = true;
                     dfs(*i);
-                   
-                
                 }
             }
-            //return  connectedComp;
         }
+        
+//        ~Graph()
+//        {
+//            delete adj;
+//        }
         
     };
 }
-
-
 
 int main()
 {
@@ -155,29 +178,30 @@ int main()
     int tc;
     fin >> tc;
     
+    char c;
+    fin >> c ;
+    int N = c-65;
     
-    while ( tc-- ) {
-        char c;
-        fin >> c ;
-        int N = c-65;
-        
+    while ( tc -- ) {
         UVA459::Graph g(N+1);
         string str;
-       
-        
         while (fin >> str ) {
-            
+            if ( str.length() == 1)
+            {
+                N = str[0]-65;
+                break;
+            }
             int node1 = str[0] - 65;
             int node2 = str[1] - 65;
             g.addEdge(node1, node2);
             
         }
         
-         g.dfs(0);
-        //cout << cc << endl;
+        int cc = g.connectedComponents();
+        cout << cc << endl << endl;
         
     }
-    
+
     return 0;
 }
 
