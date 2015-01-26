@@ -1,4 +1,12 @@
 //
+//  uva469.cpp
+//  Codeforces
+//
+//  Created by Vishal Patel on 1/27/15.
+//  Copyright (c) 2015 Vishal Patel. All rights reserved.
+//
+
+//
 //  uva459.cpp
 //  Codeforces
 //
@@ -104,7 +112,7 @@ typedef vector<string> vs;
 
 #define fin cin
 
-namespace UVA459 {
+namespace UVA469 {
     
     class Graph{
         
@@ -157,9 +165,9 @@ namespace UVA459 {
     };
 }
 
-int main_459()
+int main()
 {
-    //fstream fin("/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/uva459.txt");
+    fstream fin("/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/uva469.txt");
     
     int tc;
     fin >> tc;
@@ -169,7 +177,7 @@ int main_459()
     int N = c-65;
     
     while ( tc -- ) {
-        UVA459::Graph g(N+1);
+        UVA469::Graph g(N+1);
         string str;
         while (fin >> str ) {
             if ( str.length() == 1)
@@ -193,7 +201,7 @@ int main_459()
         }
         
     }
-
+    
     return 0;
 }
 
