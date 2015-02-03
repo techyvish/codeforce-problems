@@ -106,94 +106,14 @@ typedef vector<string> vs;
 
 namespace UVA459 {
     
-    class Graph{
-        
-        list<int> *adj;
-        int V;
-        int *visited;
-        int connectedComp = 0;
-        
-    public:
-        
-        Graph (int v)
-        {
-            V = v;
-            adj = new list<int>[V];
-            visited = new int[V];
-            memset(visited, 0, sizeof(int) * V);
-        }
-        
-        void addEdge(int v, int w)
-        {
-            adj[v].push_back(w);
-            adj[w].push_back(v);
-        }
-        
-        int connectedComponents()
-        {
-            for ( int i = 0 ; i < V ; i++ )
-            {
-                if ( !visited[i])
-                {
-                    connectedComp ++;
-                    dfs(i);
-                }
-            }
-            return connectedComp;
-        }
-        
-        void  dfs(int v)
-        {
-            visited[v] = true;
-            for (auto i = adj[v].begin() ; i != adj[v].end() ; ++i )
-            {
-                if ( !visited[*i] )
-                {
-                    dfs(*i);
-                }
-            }
-        }
-        
-    };
+
 }
 
 int main_459()
 {
-    //fstream fin("/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/uva459.txt");
+    fstream fin("/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/uva459.txt");
     
-    int tc;
-    fin >> tc;
     
-    char c;
-    fin >> c ;
-    int N = c-65;
-    
-    while ( tc -- ) {
-        UVA459::Graph g(N+1);
-        string str;
-        while (fin >> str ) {
-            if ( str.length() == 1)
-            {
-                N = str[0]-65;
-                break;
-            }
-            int node1 = str[0] - 65;
-            int node2 = str[1] - 65;
-            
-            if ( node1 <= N && node2 <= N )
-                g.addEdge(node1, node2);
-            
-        }
-        
-        int cc = g.connectedComponents();
-        cout << cc ;
-        if ( tc != 0 )
-        {
-            cout << endl ;
-        }
-        
-    }
-
     return 0;
 }
 
