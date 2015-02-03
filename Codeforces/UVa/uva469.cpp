@@ -165,7 +165,7 @@ namespace UVA469 {
     };
 }
 
-int main()
+int main_469()
 {
     //fstream fin("/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/uva469.txt");
     
