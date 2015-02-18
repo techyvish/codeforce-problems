@@ -119,9 +119,16 @@ namespace UVA459 {
 
 int dr[] = {1,1,0,-1,-1,-1, 0, 1};
 int dc[] = {0,1,1, 1, 0,-1,-1,-1};
+
+
 int grid[8][8] = {};
+
+
 int R = 0 ;
 int C = 0 ;
+
+
+
 
 int floodFill(int r, int c, char c1, char c2 )
 {
@@ -138,6 +145,8 @@ int floodFill(int r, int c, char c1, char c2 )
     {
         ans += floodFill(r + dr[d], c + dc[d], c1 , c2 );
     }
+    
+
     return  ans ;
 }
 
@@ -145,10 +154,6 @@ int main()
 {
     floodFill(0, 0, 'L', 'F');
     //fstream fin("/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/uva459.txt");
-    
-
-    
-    
     
     return 0;
 }
