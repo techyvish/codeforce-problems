@@ -117,30 +117,39 @@ namespace UVA459 {
     
 }
 
-int dr[] = {1,1,0,-1,-1,-1, 0, 1};
-int dc[] = {0,1,1, 1, 0,-1,-1,-1};
+int dr[] = {1,1,0,-1,-1,-1, 0, 1};  // Trick to explore implicit 2D grid
+int dc[] = {0,1,1, 1, 0,-1,-1,-1};  // S,SE,E,NE,N,NW,W,SW
 
 
-int grid[8][8] = {};
+int grid[8][8] =
+{
+    {'L','L','L','L','L','L','L','L'},
+    {'L','L','L','L','L','L','L','L'},
+    {'L','L','L','R','R','L','L','L'},
+    {'L','L','L','R','R','L','L','L'},
+    {'L','L','L','R','R','L','L','L'},
+    {'L','L','L','L','L','L','L','L'},
+    {'L','L','L','L','L','L','L','L'},
+    {'L','L','L','L','L','L','L','L'}
+};
 
 
-int R = 0 ;
-int C = 0 ;
+int R = 8 ;
+int C = 8 ;
 
 
-
-
-int floodFill(int r, int c, char c1, char c2 )
+int floodFill(int r, int c, char c1, char c2 ) // returns the size of Connected components.
 {
     
-    if ( r < 0 || r >= R || c < 0 || c >= C)
+    if ( r < 0 || r >= R || c < 0 || c >= C) // outside of the grid
     {
         return 0;
     }
-    if ( grid[r][c] != c1 )
+    if ( grid[r][c] != c1 ) // does not have the color c1
         return 0;
     
-    int ans = 1;
+    int ans = 1; // add 1 to the answer because vertex (r,c) has c1 as its color.
+    grid[r][c] = c2 ; // now recolors vertex(r,c) to c2 to avoid cycling.
     for ( int d = 0 ; d < 8 ; d ++)
     {
         ans += floodFill(r + dr[d], c + dc[d], c1 , c2 );
@@ -152,7 +161,7 @@ int floodFill(int r, int c, char c1, char c2 )
 
 int main()
 {
-    floodFill(0, 0, 'L', 'F');
+    int ans = floodFill(0, 0, 'L', 'F');
     //fstream fin("/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/uva459.txt");
     
     return 0;
