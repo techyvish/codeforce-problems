@@ -106,13 +106,85 @@ typedef vector<string> vs;
 
 namespace UVA459 {
     
+char grid[1000][1000] ={};
+
+int R = 0;
+int C = 0;
+
+int dr[] = {1,1,0,-1,-1,-1, 0, 1};  // Trick to explore implicit 2D grid
+int dc[] = {0,1,1, 1, 0,-1,-1,-1};  // S,SE,E,NE,N,NW,W,SW
+
+int floodFill(int r, int c, char c1, char c2 ) // returns the size of Connected components.
+{
+    
+    if ( r < 0 || r >= R || c < 0 || c >= C) // outside of the grid
+    {
+        return 0;
+    }
+    if ( grid[r][c] != c1 ) // does not have the color c1
+        return 0;
+    
+    int ans = 1; // add 1 to the answer because vertex (r,c) has c1 as its color.
+    grid[r][c] = c2 ; // now recolors vertex(r,c) to c2 to avoid cycling.
+    for ( int d = 0 ; d < 8 ; d ++)
+    {
+        ans += floodFill(r + dr[d], c + dc[d], c1 , c2 );
+    }
+    
+    
+    return  ans ;
+}
 
 }
 
-int main_459()
+int main()
 {
-    fstream fin("/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/uva459.txt");
+    //fstream fin("/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/uva459.txt");
+
+    int tc = 0;
+    fin >> tc;
+
+    while (tc ) {
     
+        int k = 0;
+
+        string str;
+        fin >> str;
+
+        while ( str.length() > 1 ) {
+
+            for (int i = 0 ; i < str.length() ; i++ )
+            {
+                UVA459::grid[k][i] = str[i];
+            }
+            UVA459::R = (int)str.length();
+            k++;
+            fin >> str;
+        }
+        
+        UVA459::C = k;
+        
+        stringstream ss;
+        ss << str ;
+        int x , y;
+        ss >> x ;
+        fin >> y;
+        vii v;
+        v.push_back(make_pair(x, y));
+
+        int ans = UVA459::floodFill(x-1, y-1, 'W', '.');
+        string buffstr;
+        getline(fin, buffstr);
+        cout << ans << endl;
+         while (getline(fin, buffstr) && sscanf(buffstr.c_str(), "%d %d",&x,&y) == 2)
+        {
+            v.push_back(make_pair(x, y));
+            ans = UVA459::floodFill(x-1, y-1, 'W', '.');
+            cout << ans << endl;
+        }
+        cout << endl;
+        tc --;
+    }
     
     return 0;
 }

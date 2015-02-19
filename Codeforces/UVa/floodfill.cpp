@@ -159,9 +159,9 @@ int floodFill(int r, int c, char c1, char c2 ) // returns the size of Connected 
     return  ans ;
 }
 
-int main()
+int main_floodfill()
 {
-    int ans = floodFill(0, 0, 'L', 'F');
+    int ans =  floodFill(0, 0, 'L', 'F');
     //fstream fin("/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/uva459.txt");
     
     return 0;
