@@ -109,10 +109,10 @@ typedef vector<string> vs;
 
 
 
-namespace UVAf72 {
+namespace UVA572 {
 
     
-    int grid[1000][1000] = {};
+    char  grid[1000][1000] = {};
     
     int dr[] = {1,1,0,-1,-1,-1, 0, 1};  // Trick to explore implicit 2D grid
     int dc[] = {0,1,1, 1, 0,-1,-1,-1};  // S,SE,E,NE,N,NW,W,SW
@@ -145,8 +145,31 @@ namespace UVAf72 {
 
 int main()
 {
-    int ans =  UVAf72::floodFill(0, 0, 'L', 'F');
-    //fstream fin("/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/uva459.txt");
+     fstream fin("/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/uva572.txt");
+    
+    string str;
+    getline(fin, str,'\n');
+    int x , y;
+    while ( sscanf(str.c_str(), "%d %d", &x,&y) == 2 ) {
+        vii v;
+        for (int i = 0 ; i < x ; i ++ )
+        {
+            for ( int j = 0 ; j < y ; j++ )
+            {
+                char c;
+                fin >> c;
+                UVA572::grid[i][j] = c;
+                if ( c == '@')
+                    v.push_back(make_pair(i, j));
+            }
+        }
+        
+        while (v.size()) {
+            int ans =  UVA572::floodFill(0, 0, '@', '.',    );
+        }
+        
+        getline(fin, str,'\n');
+    }
     
     return 0;
 }
