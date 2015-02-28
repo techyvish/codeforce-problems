@@ -1,14 +1,12 @@
 //
-//  uva572.cpp
+//  SRM220.cpp
 //  Codeforces
 //
-//  Created by Vishal Patel on 2/22/15.
+//  Created by Vishal Patel on 2/28/15.
 //  Copyright (c) 2015 Vishal Patel. All rights reserved.
 //
 
 #include <stdio.h>
-
-
 #include <stdio.h>
 #include <cstdio>
 #include <cstdlib>
@@ -107,70 +105,80 @@ typedef vector<string> vs;
 
 #define fin cin
 
-
-
-namespace UVA572 {
-
-    
-    char  grid[1000][1000] = {};
-    
-    int dr[] = {1,1,0,-1,-1,-1, 0, 1};  // Trick to explore implicit 2D grid
-    int dc[] = {0,1,1, 1, 0,-1,-1,-1};  // S,SE,E,NE,N,NW,W,SW
-    
-    int R = 8 ;
-    int C = 8 ;
-    
-    
-    int floodFill(int r, int c, char c1, char c2 ) // returns the size of Connected components.
-    {
-        
-        if ( r < 0 || r >= R || c < 0 || c >= C) // outside of the grid
-        {
-            return 0;
-        }
-        if ( grid[r][c] != c1 ) // does not have the color c1
-            return 0;
-        
-        int ans = 1; // add 1 to the answer because vertex (r,c) has c1 as its color.
-        grid[r][c] = c2 ; // now recolors vertex(r,c) to c2 to avoid cycling.
-        for ( int d = 0 ; d < 8 ; d ++)
-        {
-            ans += floodFill(r + dr[d], c + dc[d], c1 , c2 );
-        }
-        
-        
-        return  ans ;
-    }
-}
-
-int main_UVA572()
+// function object
+struct greaterNumber : public std::binary_function<string,string,bool>
 {
-     fstream fin("/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/uva572.txt");
+    inline bool operator()(const string& a, const string& b)
+    {
+        unsigned long na = 0,nb = 0;
+        stringstream ss1;
+        ss1 << a;
+        ss1 >> na ;
+        stringstream ss2;
+        ss2 << b ;
+        ss2 >> nb;
+        //cout << na << "  ,  " << nb << endl;
+        if ( na == nb )
+        {
+            return b.length() > a.length();
+        }
+        return  nb > na ;
+        
+        //return a > b;
+    }
+};
+
+
+int main_SRM220()
+{
+    fstream fin("/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/SRM220.txt");
     
     string str;
-    getline(fin, str,'\n');
-    int x , y;
-    while ( sscanf(str.c_str(), "%d %d", &x,&y) == 2 ) {
-        vii v;
-        for (int i = 0 ; i < x ; i ++ )
-        {
-            for ( int j = 0 ; j < y ; j++ )
+    vector<string> numList;
+    while (getline(fin, str,'\n')) {
+        
+        int i = 0 ;
+        string numString ;
+        
+        while ( str[i] != '\n' ) {
+            if  (str[i]- '0' >= 0 && str[i] - '0' <= 9 )
             {
-                char c;
-                fin >> c;
-                UVA572::grid[i][j] = c;
-                if ( c == '@')
-                    v.push_back(make_pair(i, j));
+                numString += str[i];
             }
+            else
+            {
+                if ( numString !=  "")
+                {
+                    numList.push_back(numString);
+                    numString = "";
+                }
+            }
+            if ( i == str.length() )
+                break;
+            
+            i++;
         }
-        
-        while (v.size()) {
-            //int ans =  UVA572::floodFill(0, 0, '@', '.',    );
-        }
-        
-        getline(fin, str,'\n');
     }
     
+
+    sort(numList.begin(), numList.end(),  greaterNumber());
+    if ( numList.size() )
+    {
+        if ( numList.size() /2  != 0 )
+        {
+            for ( int i = ((int)numList.size())/2  ; i <= numList.size() ; i++ )
+            {
+                cout << numList[i] << endl;
+            }
+        }
+        else
+        {
+            for ( int i = ((int)numList.size()-1)/2  ; i <= numList.size() ; i++ )
+            {
+                cout << numList[i] << endl;
+            }
+        }
+    }
     return 0;
 }
 
