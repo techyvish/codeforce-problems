@@ -65,7 +65,7 @@ int getWinner(vector < int > events) {
 
 
 
-int main() {
+int main_events() {
     ofstream fout("/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/eventsout.txt");
     int res;
     
