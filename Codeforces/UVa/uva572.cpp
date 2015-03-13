@@ -143,7 +143,7 @@ namespace UVA572 {
     }
 }
 
-int main()
+int main_uva572()
 {
      fstream fin("/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/uva572.txt");
     

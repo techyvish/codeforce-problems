@@ -51,6 +51,7 @@
 		C9D668011A45BF1F007AD154 /* CF445A.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9D668001A45BF1F007AD154 /* CF445A.cpp */; };
 		C9D668041A470793007AD154 /* CF437C.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9D668031A470793007AD154 /* CF437C.cpp */; };
 		C9D668071A4714BD007AD154 /* topologicalsort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9D668061A4714BD007AD154 /* topologicalsort.cpp */; };
+		C9DA71C41AB305930047F6F5 /* uva102.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DA71C31AB305930047F6F5 /* uva102.cpp */; };
 		C9E059E31AA197B1006722B4 /* SRM220.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9E059E21AA197B1006722B4 /* SRM220.cpp */; };
 		C9E059E61AA1A5DD006722B4 /* testsrm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9E059E51AA1A5DD006722B4 /* testsrm.cpp */; };
 		C9E059E81AA1AE0C006722B4 /* events.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9E059E71AA1AE0C006722B4 /* events.cpp */; };
@@ -170,6 +171,8 @@
 		C9D668051A4707B1007AD154 /* CF437C.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CF437C.txt; sourceTree = "<group>"; };
 		C9D668061A4714BD007AD154 /* topologicalsort.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = topologicalsort.cpp; sourceTree = "<group>"; };
 		C9D668081A4714D1007AD154 /* topologicalsort.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = topologicalsort.txt; sourceTree = "<group>"; };
+		C9DA71C31AB305930047F6F5 /* uva102.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uva102.cpp; sourceTree = "<group>"; };
+		C9DA71C51AB305B90047F6F5 /* uva102.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = uva102.txt; sourceTree = "<group>"; };
 		C9E059E21AA197B1006722B4 /* SRM220.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SRM220.cpp; sourceTree = "<group>"; };
 		C9E059E41AA197C9006722B4 /* SRM220.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SRM220.txt; sourceTree = "<group>"; };
 		C9E059E51AA1A5DD006722B4 /* testsrm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = testsrm.cpp; sourceTree = "<group>"; };
@@ -350,6 +353,8 @@
 				C9E059E51AA1A5DD006722B4 /* testsrm.cpp */,
 				C9E059E71AA1AE0C006722B4 /* events.cpp */,
 				C9E059E91AA1AE4D006722B4 /* events.txt */,
+				C9DA71C31AB305930047F6F5 /* uva102.cpp */,
+				C9DA71C51AB305B90047F6F5 /* uva102.txt */,
 			);
 			path = UVa;
 			sourceTree = "<group>";
@@ -433,6 +438,7 @@
 				C924A15B1A1B0DDB00858CE2 /* uva12577.cpp in Sources */,
 				C93E84FF19E801D500BCC99C /* uva11364.cpp in Sources */,
 				C982F78B1A15C77B005132D3 /* uva12554.cpp in Sources */,
+				C9DA71C41AB305930047F6F5 /* uva102.cpp in Sources */,
 				C9F2CEF819CBA789009A2773 /* HKCommonChild.cpp in Sources */,
 				C915B8571A0984AD0025D16B /* uva482.cpp in Sources */,
 				C9F2CEBF19C411DF009A2773 /* Football43A.cpp in Sources */,
