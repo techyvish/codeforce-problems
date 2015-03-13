@@ -110,70 +110,57 @@ template<typename T> ostream& operator <<(ostream &s, vector<T> t)
 
 using namespace std;
 
+#define fin cin
 
 int  main()
 {
-     fstream fin("/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/uva102.txt");
+    //fstream fin("/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/uva102.txt");
     
-    string str;
-    while (getline(fin, str,'\n')) {
-        int a,b,c,d,e,f,g,h,i;
-        int arr[4][4]={0};
-        sscanf(str.c_str(), "%d %d %d %d %d %d %d %d %d",&a,&b,&c,&d,&e,&f,&g,&h,&i);
-        
-        int p = 0 ;
-        int q = 0;
-        
-        arr[p][q++] =  b+c;
-        arr[p][q++] =  e+f;
-        arr[p][q++] =  h+i;
-        
-        p++;
-        q=0;
-        arr[p][q++] =  a+c;
-        arr[p][q++] =  d+f;
-        arr[p][q++] =  g+i;
-        
-        p++;
-        q=0;
-        arr[p][q++] =  a+b;
-        arr[p][q++] =  d+e;
-        arr[p][q++] =  g+h;
-        
-        int k = 0;
-        char colors[] = {'B','G','C'};
-        std::pair<int, int > ij[3];
-        std::pair<int, char> AB[3];
-        int sum = 0;
-        int x,y;
-        F(i , 0, 3)
-        {
-            int min = 9999999;
-            F(j, 0, 3)
-            {
-                if ( arr[i][j] < min)
-                {
-                    min = arr[i][j];
-                    x = i ;
-                    y = j ;
-                }
-            }
-        
-            AB[k] = mp(min,colors[k] );
-            sum += min;
-            k++;
+    int B[3], G[3], C[3];
+    
+    while (scanf("%d %d %d %d %d %d %d %d %d", &B[0], &G[0], &C[0], &B[1],
+                 &G[1], &C[1], &B[2], &G[2], &C[2]) != EOF) {
+        int min = INT_MAX, temp;
+        char ans[4];
+        //BCG
+        temp = C[0] + G[0] + B[1] + G[1] + B[2] + C[2];
+        if (temp < min) {
+            min = temp;
+            strcpy(ans, "BCG");
+        }
+        //BGC
+        temp = C[0] + G[0] + B[1] + C[1] + B[2] + G[2];
+        if (temp < min) {
+            min = temp;
+            strcpy(ans, "BGC");
+        }
+        //CBG
+        temp = B[0] + G[0] + C[1] + G[1] + B[2] + C[2];
+        if (temp < min) {
+            min = temp;
+            strcpy(ans, "CBG");
+        }
+        //CGB
+        temp = B[0] + G[0] + B[1] + C[1] + G[2] + C[2];
+        if (temp < min) {
+            min = temp;
+            strcpy(ans, "CGB");
+        }
+        //GBC
+        temp = C[0] + B[0] + C[1] + G[1] + B[2] + G[2];
+        if (temp < min) {
+            min = temp;
+            strcpy(ans, "GBC");
+        }
+        //GCB
+        temp = C[0] + B[0] + B[1] + G[1] + G[2] + C[2];
+        if (temp < min) {
+            min = temp;
+            strcpy(ans, "GCB");
         }
         
-        sort(AB,AB+3);
-        string str ;
-        for ( int i =0 ; i < 3; i++)
-        {
-            str+= AB[i].second;
-        }
-        
-        cout << str << " "<< sum;
-        
-        
+        printf("%s %d\n",ans,min);
     }
+    
     return 0;
 }
