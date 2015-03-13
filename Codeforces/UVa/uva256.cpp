@@ -1,12 +1,11 @@
 //
-//  uva102.cpp
+//  uva256.cpp
 //  Codeforces
 //
-//  Created by Vishal Patel on 3/13/15.
+//  Created by Vishal Patel on 3/14/15.
 //  Copyright (c) 2015 Vishal Patel. All rights reserved.
 //
 
-#include <stdio.h>
 #include <cmath>
 #include <climits>
 #include <queue>
@@ -109,57 +108,24 @@ template<typename T> ostream& operator <<(ostream &s, vector<T> t)
 }
 
 using namespace std;
-
 #define fin cin
 
-int  main_uva102()
+
+int  main()
 {
-    //fstream fin("/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/uva102.txt");
-    
-    int B[3], G[3], C[3];
-    
-    while (scanf("%d %d %d %d %d %d %d %d %d", &B[0], &G[0], &C[0], &B[1],
-                 &G[1], &C[1], &B[2], &G[2], &C[2]) != EOF) {
-        int min = INT_MAX, temp;
-        char ans[4];
-        //BCG
-        temp = C[0] + G[0] + B[1] + G[1] + B[2] + C[2];
-        if (temp < min) {
-            min = temp;
-            strcpy(ans, "BCG");
-        }
-        //BGC
-        temp = C[0] + G[0] + B[1] + C[1] + B[2] + G[2];
-        if (temp < min) {
-            min = temp;
-            strcpy(ans, "BGC");
-        }
-        //CBG
-        temp = B[0] + G[0] + C[1] + G[1] + B[2] + C[2];
-        if (temp < min) {
-            min = temp;
-            strcpy(ans, "CBG");
-        }
-        //CGB
-        temp = B[0] + G[0] + B[1] + C[1] + G[2] + C[2];
-        if (temp < min) {
-            min = temp;
-            strcpy(ans, "CGB");
-        }
-        //GBC
-        temp = C[0] + B[0] + C[1] + G[1] + B[2] + G[2];
-        if (temp < min) {
-            min = temp;
-            strcpy(ans, "GBC");
-        }
-        //GCB
-        temp = C[0] + B[0] + B[1] + G[1] + G[2] + C[2];
-        if (temp < min) {
-            min = temp;
-            strcpy(ans, "GCB");
+    fstream  fin("/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/uva256.txt");
+    int a ;
+    while ( fin >> a ) {
+     
+        if ( a == 2 )
+        {
+            for ( int i = 0 ; i < 99 ; i++ )
+            {
+            
+            }
+            
         }
         
-        printf("%s %d\n",ans,min);
     }
     
     return 0;
