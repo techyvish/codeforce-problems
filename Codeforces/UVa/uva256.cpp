@@ -21,6 +21,7 @@
 #include <cstring>
 #include <cassert>
 #include <set>
+#include <list>
 
 using namespace std;
 
@@ -113,19 +114,27 @@ using namespace std;
 
 int  main()
 {
-    fstream  fin("/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/uva256.txt");
+    //fstream  fin("/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/uva256.txt");
     int a ;
+    vector<int> squres;
+    
+    for ( int i = 0 ; i < 10000 ; i++ )
+    {
+        squres.push_back( i * i );
+    }
+    
+
     while ( fin >> a ) {
-     
-        if ( a == 2 )
+
+        for ( unsigned int i = 0 ; i < squres.size(); i++ )
         {
-            for ( int i = 0 ; i < 99 ; i++ )
+            if ( squres[i] >= pow(10, a) ) break;
+            
+            if ( pow( (squres[i] % (int)pow(10, a/2) )+ (squres[i] / (int)pow(10, a/2))   , 2) ==  squres[i] )
             {
-            
+                cout <<  setw(a) << setfill('0') << squres[i] << endl;
             }
-            
         }
-        
     }
     
     return 0;
