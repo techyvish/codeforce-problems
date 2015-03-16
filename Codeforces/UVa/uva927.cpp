@@ -1,11 +1,12 @@
 //
-//  uva256.cpp
+//  uva927.cpp
 //  Codeforces
 //
-//  Created by Vishal Patel on 3/14/15.
+//  Created by Vishal Patel on 3/15/15.
 //  Copyright (c) 2015 Vishal Patel. All rights reserved.
 //
 
+#include <stdio.h>
 #include <cmath>
 #include <climits>
 #include <queue>
@@ -21,7 +22,6 @@
 #include <cstring>
 #include <cassert>
 #include <set>
-#include <list>
 
 using namespace std;
 
@@ -111,31 +111,8 @@ template<typename T> ostream& operator <<(ostream &s, vector<T> t)
 using namespace std;
 #define fin cin
 
-
-int  main_uva256()
+int main_uva927()
 {
-    //fstream  fin("/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/uva256.txt");
-    int a ;
-    vector<int> squres;
-    
-    for ( int i = 0 ; i < 10000 ; i++ )
-    {
-        squres.push_back( i * i );
-    }
-    
-
-    while ( fin >> a ) {
-
-        for ( unsigned int i = 0 ; i < squres.size(); i++ )
-        {
-            if ( squres[i] >= pow(10, a) ) break;
-            
-            if ( pow( (squres[i] % (int)pow(10, a/2) )+ (squres[i] / (int)pow(10, a/2))   , 2) ==  squres[i] )
-            {
-                cout <<  setw(a) << setfill('0') << squres[i] << endl;
-            }
-        }
-    }
-    
+    fstream fin("/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/uva927.txt");
     return 0;
 }

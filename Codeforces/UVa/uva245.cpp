@@ -1,8 +1,8 @@
 //
-//  uva256.cpp
+//  uva245.cpp
 //  Codeforces
 //
-//  Created by Vishal Patel on 3/14/15.
+//  Created by Vishal Patel on 3/16/15.
 //  Copyright (c) 2015 Vishal Patel. All rights reserved.
 //
 
@@ -21,7 +21,9 @@
 #include <cstring>
 #include <cassert>
 #include <set>
-#include <list>
+#include <iostream>
+#include <stdio.h>
+#include <string.h>
 
 using namespace std;
 
@@ -111,30 +113,44 @@ template<typename T> ostream& operator <<(ostream &s, vector<T> t)
 using namespace std;
 #define fin cin
 
-
-int  main_uva256()
+int main()
 {
-    //fstream  fin("/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/uva256.txt");
-    int a ;
-    vector<int> squres;
+    fstream fin("/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/uva245.txt");
+    deque<string> words;
+    string str;
     
-    for ( int i = 0 ; i < 10000 ; i++ )
-    {
-        squres.push_back( i * i );
-    }
+    while (std::getline(fin, str, '0')) {
+        
     
-
-    while ( fin >> a ) {
-
-        for ( unsigned int i = 0 ; i < squres.size(); i++ )
+//        if ( str == "0")
+//            break;
+        
+        char s[] = "test";
+        char * pch;
+        pch = strtok (s ," ");
+        while (pch != NULL)
         {
-            if ( squres[i] >= pow(10, a) ) break;
-            
-            if ( pow( (squres[i] % (int)pow(10, a/2) )+ (squres[i] / (int)pow(10, a/2))   , 2) ==  squres[i] )
-            {
-                cout <<  setw(a) << setfill('0') << squres[i] << endl;
-            }
+            printf ("%s\n",pch);
+            pch = strtok (NULL, " ,.-");
         }
+        return 0;
+
+        ifstream ifs(str);
+        string temp;
+        while ( ifs ) {
+            if ( ifs.peek() == ' ' || ifs.peek() == ',')
+                string temp;
+            ifs >> temp;
+            words.push_front(temp);
+        }
+//        char *p = strtok(str, " ");
+//        while (p) {
+//            printf ("Token: %s\n", p);
+//            p = strtok(NULL, " ");
+//        }
+
+        //
+        
     }
     
     return 0;
