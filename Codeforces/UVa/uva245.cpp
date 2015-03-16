@@ -118,38 +118,36 @@ int main()
     fstream fin("/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/uva245.txt");
     deque<string> words;
     string str;
-    
+    string uncomp ;
     while (std::getline(fin, str, '0')) {
         
-    
-//        if ( str == "0")
-//            break;
         
-        char s[] = "test";
+        
         char * pch;
-        pch = strtok (s ," ");
+        
+        pch = strtok ((char*)str.c_str() ," ,-'");
+        words.push_front(pch);
         while (pch != NULL)
         {
+            int number ;
+            istringstream ss(pch);
             printf ("%s\n",pch);
-            pch = strtok (NULL, " ,.-");
+            pch = strtok (NULL, " ,-'");
+            
+            if ( !(ss >> number).fail())
+            {
+                string str = words[number];
+                uncomp += str;
+            }
+            else
+            {
+                uncomp += pch;
+                words.push_front(pch);
+            }
         }
         return 0;
 
-        ifstream ifs(str);
-        string temp;
-        while ( ifs ) {
-            if ( ifs.peek() == ' ' || ifs.peek() == ',')
-                string temp;
-            ifs >> temp;
-            words.push_front(temp);
-        }
-//        char *p = strtok(str, " ");
-//        while (p) {
-//            printf ("Token: %s\n", p);
-//            p = strtok(NULL, " ");
-//        }
 
-        //
         
     }
     
