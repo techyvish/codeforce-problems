@@ -115,14 +115,13 @@ using namespace std;
 
 int main()
 {
-    fstream fin("/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/uva245.txt");
-    deque<string> words;
+	ifstream fin("uva245.txt");
+	bool b = fin.is_open();
+	deque<string> words;
     string str;
     string uncomp ;
     while (std::getline(fin, str, '0')) {
-        
-        
-        
+  
         char * pch;
         
         pch = strtok ((char*)str.c_str() ," ,-'");
