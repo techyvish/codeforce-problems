@@ -24,6 +24,7 @@
 #include <iostream>
 #include <stdio.h>
 #include <string.h>
+#include <list>
 
 using namespace std;
 
@@ -128,15 +129,36 @@ int main()
         words.push_front(pch);
         while (pch != NULL)
         {
-            int number ;
-            istringstream ss(pch);
-            printf ("%s\n",pch);
             pch = strtok (NULL, " ,-'");
-            
+			int number;
+			istringstream ss(pch);
+
             if ( !(ss >> number).fail())
             {
-                string str = words[number];
+                string str = words[number-1];
                 uncomp += str;
+				stack<string> vec;
+				string sr;
+				while (sr != str)
+				{
+					sr = words.front();
+					if (sr == str)
+						break;
+					vec.push(sr);
+				} 
+
+				string word = words.front();
+				words.pop_front();
+
+				while (!vec.empty())
+				{
+					string tmp = vec.top();
+					vec.pop();
+					words.push_front(tmp);
+				}
+
+				words.push_front(word);
+
             }
             else
             {
@@ -144,11 +166,7 @@ int main()
                 words.push_front(pch);
             }
         }
-        return 0;
-
-
-        
+		return 0;
     }
-    
     return 0;
 }
