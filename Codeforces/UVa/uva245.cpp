@@ -114,7 +114,7 @@ template<typename T> ostream& operator <<(ostream &s, vector<T> t)
 using namespace std;
 #define fin cin
 
-int main()
+int main_245()
 {
 	ifstream fin("uva245.txt");
 	bool b = fin.is_open();
@@ -144,6 +144,7 @@ int main()
 					sr = words.front();
 					if (sr == str)
 						break;
+					words.pop_front();
 					vec.push(sr);
 				} 
 
