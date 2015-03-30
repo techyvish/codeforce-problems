@@ -94,72 +94,14 @@ const double eps = 1e-9;
 #endif
 #define fin cin
 
-int main_1237()
+int main()
 {
     
     std::ios::sync_with_stdio(false);
-   // fstream fin("../../uva1237.txt");
-    
+    fstream fin("../../uva10976.txt");
+
 	int tc;
-	fin >> tc;
+	cin >> tc;
 
-    char sti[1024];
-    string buffstr;
-    int i = 1;
-
-	map<string, pair<int, int>> m;
-	while (tc)
-	{
-
-		int dbcnt;
-		fin >> dbcnt;
-
-		while ( dbcnt)
-		{
-			string car;
-			fin >> car;
-
-			long long min;
-			fin >> min;
-
-			long long max;
-			fin >> max;
-
-			m[car] = pair<int,int>(min, max);
-
-			dbcnt--;
-		}
-
-
-		int inputtoCheck;
-		fin >> inputtoCheck;
-
-		while (inputtoCheck)
-		{
-
-			long long input;
-			fin >> input;
-
-			string str = "UNDETERMINED";
-			int count = 0;
-			for (auto it = m.begin(); it != m.end(); it++)
-			{
-				pair<int, int> p = it->second;
-				if (input >= p.first && input <= p.second)
-				{
-					str = it->first;
-					count++;
-				}
-			}
-			if (count == 1)
-				cout << str << endl;
-			else
-				cout << "UNDETERMINED" << endl;
-
-			inputtoCheck--;
-		}
-		cout << endl;
-		tc--;
-	}
     return 0;
 }
