@@ -97,15 +97,6 @@ public:
 			i++;
 		}
 
-		// Implement me
-
-		// I couldn't finish the project but my logic is as follows 
-		
-		// 1. Iterate each simlinar movie vector recursively and add highest rating movies into another vector. 
-		// 2. finaly sort that vector and add number of numberOfTopratedSimilarMovies to recommendedMovies vecotr.
-		// This soultion can take upto running time nlog(n). because we're eliminating movies that less then top rated 
-		// movies.
-
 		return;
 	}
 
