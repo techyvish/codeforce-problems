@@ -94,11 +94,11 @@ const double eps = 1e-9;
 #endif
 #define fin cin
 
-int main_1237()
+int main_uva1237()
 {
     
     std::ios::sync_with_stdio(false);
-   // fstream fin("../../uva1237.txt");
+    //fstream fin("../../uva1237.txt");
     
 	int tc;
 	fin >> tc;
@@ -158,8 +158,10 @@ int main_1237()
 
 			inputtoCheck--;
 		}
-		cout << endl;
 		tc--;
+		if ( tc != 0 )
+			cout << endl;
+		
 	}
     return 0;
 }

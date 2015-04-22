@@ -94,7 +94,7 @@ const double eps = 1e-9;
 #endif
 #define fin cin
 
-int main()
+int main_uva10796()
 {
     
     std::ios::sync_with_stdio(false);
