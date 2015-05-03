@@ -94,14 +94,29 @@ const double eps = 1e-9;
 #endif
 #define fin cin
 
+list<int> *adj;
 int g_uva11902[101][101];
+int dfs_num[101];
+
+
+void dfs(int v)
+{
+	dfs_num[v] = true;
+	for (auto i = adj[v].begin(); i != adj[v].end() ; i++)
+	{
+		if (dfs_num[*i] != true)
+		{
+			dfs(*i);
+		}
+	}
+}
+
+
 
 int main()
 {
 
     std::ios::sync_with_stdio(false);
-    //FILE *fp = freopen("/Users/Shared/codeforces/codeforces/in.txt", "rt", stdin);
-    //fstream fin("/Users/Shared/codeforces/codeforces/uva/uva12577.txt");
 	fstream fin("../../uva11902.txt");
 
 	int tc = 0;
@@ -114,19 +129,26 @@ int main()
 		int vertices;
 		fin >> vertices;
 
+		adj  = new list<int>[vertices];
 		for (int i = 0; i < vertices; i++)
 		{
+			list<int> l;
 			for (int j = 0; j < vertices; j++)
 			{
 				int a;
 				fin >> a;
-				g_uva11902[i][j] = a;
+				if (a == 1)
+				{
+					adj[i].push_back(j);
+				}
 			}
 		}
-
-
-
 		tc--;
+	
+
+		dfs(0);
+		
+	
 	}
 
 
