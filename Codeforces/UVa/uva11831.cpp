@@ -97,13 +97,28 @@ const double eps = 1e-9;
 // Sticker collection robot
 int main()
 {
-    
+	char g[101][101];
+
     std::ios::sync_with_stdio(false);
     fstream fin("../../uva11831.txt");
     
 	int row, col, ins;	
 
 	fin >> row >> col >> ins;
+
+	for (int i = 0; i < row; i++)
+	{
+		for (int j = 0; j < col; j++)
+		{
+			char c;
+			fin >> c;
+			g[i][j] = c;
+		}
+	}
+	string inss;
+
+	fin >> inss;
+
 
     return 0;
 }
