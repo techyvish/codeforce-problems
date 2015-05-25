@@ -105,7 +105,7 @@ int main()
 	int row, col, ins;	
 
 	fin >> row >> col >> ins;
-
+	int si, sj = 0;
 	for (int i = 0; i < row; i++)
 	{
 		for (int j = 0; j < col; j++)
@@ -113,11 +113,72 @@ int main()
 			char c;
 			fin >> c;
 			g[i][j] = c;
+			if (c == 'N' || c == 'S' || c == 'L' || c == 'O')
+			{
+				si = i;
+				sj = j;
+			}
 		}
 	}
 	string inss;
 
 	fin >> inss;
+
+	int stickers = 0;
+	int a = 0;
+	while (inss[a])
+	{
+		char currentDir = g[si][sj];
+		char c = inss[a];
+		if (c == 'F')
+		{
+			if (currentDir == 'N')
+			{
+				if (si >= 0 && g[si-1][sj] != '#')
+				{
+					if (g[si - 1][sj] == '*')
+					{
+						stickers++;
+					}
+					g[si - 1][sj] = 'N';
+					g[si][sj] = '.';
+				}
+			}
+			else if (currentDir == 'S')
+			{
+				if (si < row && g[si + 1][sj] != '#')
+				{
+					if (g[si + 1][sj] == '*')
+						stickers++;
+					g[si + 1][sj] = 'S';
+					g[si][sj] = '.';
+				}
+			}
+			else if (currentDir == 'L')
+			{
+				if (si >= 0 && g[si][sj - 1]  != '#')
+				{
+					if (g[si][sj - 1] == '*')
+						stickers++;
+
+					g[si][sj -1] = 'L';
+					g[si][sj] = '.';
+				}
+			}
+			else if (currentDir == 'O')
+			{
+				if (si < col && g[si][sj + 1] != '#')
+				{
+					if (g[si][sj + 1] == '*')
+						stickers++;
+					g[si][sj + 1] = 'O';
+					g[si][sj] = '.';
+				}
+			}
+		}
+		
+		a++;
+	}
 
 
     return 0;
