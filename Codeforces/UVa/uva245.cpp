@@ -114,9 +114,9 @@ template<typename T> ostream& operator <<(ostream &s, vector<T> t)
 using namespace std;
 #define fin cin
 
-int main_245()
+int main()
 {
-	ifstream fin("uva245.txt");
+	ifstream fin("../uva245.txt");
 	bool b = fin.is_open();
 	deque<string> words;
     string str;
