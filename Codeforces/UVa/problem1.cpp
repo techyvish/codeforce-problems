@@ -1,4 +1,18 @@
 
+/*****************************************************************************************
+ *
+ *
+ *
+ * Vishal Patel 
+ * Melbourne
+ * +61 439 590 446
+ * vis8051@gmail.com
+ * 26/04/2015
+ *
+ *
+ *
+ *****************************************************************************************/
+
 #include <stdio.h>
 #include <stdio.h>
 #include <cstdio>
@@ -32,7 +46,9 @@ private:
 	int movieId;
 	float rating;
 	vector<Movie*> similarMovies; // Similarity is bidirectional
-	bool visited;
+
+	// VP: Added to keep track of visited nodes.
+	bool visited; 
 
 
 public:
@@ -59,8 +75,6 @@ public:
 		return similarMovies;
 	}
 
-
-
 	/*
 	* Implement a function to return top rated movies in the network of movies
 	* reachable from the current movie
@@ -80,12 +94,16 @@ public:
 	*                      number of movies we want to return
 	*     @return List of top rated similar movies
 	*/
+
 	static void getMovieRecommendations(Movie& movie, int numTopRatedSimilarMovies, vector<Movie *>& recommendedMovies) {
 
+		// VP: properity queue to maintain heap.
 		priority_queue<Movie *, vector<Movie *>, greater<vector<Movie*>::value_type > >  movieQueue;
-
+		
+		// VP: static method to fill up queue.
 		Movie::createRecommandations(movie, movieQueue);
 
+		// VP: adding required number of movies to passed on vector.
 		int i = 1;
 		while ( !movieQueue.empty() )
 		{
@@ -100,6 +118,17 @@ public:
 		return;
 	}
 
+	/**
+     * VP:
+	 * Core logic for the problem.
+	 * I'm running BFS to scan movies in movie's network.
+	 * while scanning I'm also adding found items in priority queue.
+	 * priority queue will maintain ratings. (i.e. It will keep top rated movies at top of the heap )
+	 *
+	 *
+	 * Running time will be combining time taken by graph traversal and maintaining the heap.
+	 * O((V+E)logn)
+	 */
 
 	static void createRecommandations(Movie& movie, priority_queue<Movie *, vector<Movie *>, greater<vector<Movie*>::value_type > >& movieQueue)
 	{
@@ -129,7 +158,8 @@ public:
 
 
 
-
+// VP: client
+/*
 int main()
 {
 	Movie movie1(1, 1.2);
@@ -152,4 +182,4 @@ int main()
 	}
 
 	return 0;
-}
+}*/
