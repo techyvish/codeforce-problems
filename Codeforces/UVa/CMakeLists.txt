@@ -4,5 +4,6 @@ project(CompProgramming)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=stdlibc++")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES uva245.cpp)
+#set(SOURCE_FILES uva245.cpp)
+set(SOURCE_FILES uva245.cpp dfs_traversal.cpp bfs_traversal.cpp)
 add_executable(CompProgramming ${SOURCE_FILES})
