@@ -64,7 +64,7 @@ namespace FF {
     }
 };
 
-int main() {
+int main_flood_fill() {
 
     FF::run();
 
