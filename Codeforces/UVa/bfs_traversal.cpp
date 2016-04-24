@@ -125,7 +125,7 @@ namespace  bfs {
     }
 }
 
-int main(){
+int main_bfs_traversal(){
 
     bfs::run();
     return 0;
