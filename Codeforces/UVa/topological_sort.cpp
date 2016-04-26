@@ -55,7 +55,7 @@ namespace  TP {
     }
 
 
-    void run() {
+    void run_topo_sort() {
 
         fstream fin("../topological_sort.txt");
 
@@ -107,8 +107,8 @@ namespace  TP {
     }
 };
 
-int main() {
+int main_topological_sort() {
 
-    TP::run();
+    TP::run_topo_sort();
     return  0;
 }
