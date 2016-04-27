@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/dfs_floodfill.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/uva245.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/dfs_traversal.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/uva507.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/topological_sort.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/bipartite_graph.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/bfs_traversal.cpp" isTestSource="false" />

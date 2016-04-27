@@ -112,7 +112,7 @@ namespace BP {
 
 
 
-int main() {
+int main_bipertite_check() {
 
     BP::run();
     return 0;
