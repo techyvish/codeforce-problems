@@ -167,6 +167,3 @@ int main_floodfill()
     return 0;
 }
 
-
-
-

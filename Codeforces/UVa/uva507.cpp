@@ -14,7 +14,7 @@ typedef struct res {
     int sum;
 } res;
 
-int main() {
+int main_uva507() {
 
 
     fstream fin("../uva507.txt");
@@ -29,17 +29,16 @@ int main() {
         fin >> n;
         int a[n+1];
 
-        struct res max_sub[n+1], max, max_cur;
+        struct res *max_sub, max, max_cur;
+        max_sub = new res[n];
         max_cur.sum = -1 * INT_MAX;
         max.sum = max_cur.sum;
         max.i = max_cur.i;
         max.j = max_cur.j;
 
-        int sum = 0 ;
 
-        for (int i = 0 ; i < n ; i ++ ) {
+        for (int i = 0 ; i < n - 1 ; i ++ ) {
             fin >> a[i];
-            sum += a[i];
 
             if (max_cur.sum < 0  ){
                 max_cur.sum = a[i];
@@ -51,7 +50,7 @@ int main() {
                 max_cur.j = i;
             }
 
-            if ( max_cur.sum > max.sum ){
+            if ( max_cur.sum >= max.sum ){
                 max.sum = max_cur.sum;
                 max.i = max_cur.i;
                 max.j = max_cur.j;
@@ -60,7 +59,7 @@ int main() {
             max_sub[i] = max;
         }
 
-        cout << "start " << max_sub[n-1].i + 1<< " end " << max_sub[n-1].j + 1 << endl;
+        cout << "start " << max_sub[n-2].i + 1<< " end " << max_sub[n-2].j + 2 << endl;
 //        if ( start == finish){
 //            cout << "There is no nice road";
 //        }else if ( finish > start ){
