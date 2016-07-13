@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/dfs_floodfill.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/dfs_traversal.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/UVA10684.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/uva245.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/bfs_traversal.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/uva507.cpp" isTestSource="false" />
