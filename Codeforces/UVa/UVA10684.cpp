@@ -20,7 +20,7 @@ typedef struct _max{
 
 }maxx;
 
-int main() {
+int main_uva10684() {
 
     int n, t, tc, a[1000000];
     fstream fin("../UVA10684.txt");
