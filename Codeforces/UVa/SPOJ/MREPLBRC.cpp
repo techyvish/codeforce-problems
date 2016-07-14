@@ -7,12 +7,39 @@
 #include <queue>
 #include <iostream>
 #include <cmath>
+#include <stack>
 
 using namespace std;
 #define fin cin
 
-bool validParanthesis(string str){
+bool  isMathingPair(char opening,char closing) {
 
+    if ( opening == '(' && closing == ')' )return true;
+    if ( opening == '[' && closing == ']' )return true;
+    if ( opening == '{' && closing == '}' )return true;
+    return false;
+}
+
+bool isMatchingParanthesis(string exp) {
+
+    stack<char> s;
+    for ( int i = 0 ; i < exp.length() ; i ++ ){
+        if ( exp[i] == '(' || exp[i] == '{' || exp[i] == '[' ) {
+            s.push(exp[i]);
+        }
+
+        if ( exp[i] == ')' || exp[i] == '}' || exp[i] == ']' ) {
+            if ( s.empty() ){
+                return  false;
+            }else if ( !isMathingPair(s.top(), exp[i]) ){
+                return false;
+            }else {
+                s.pop();
+            }
+        }
+    }
+
+    return s.empty() ? true : false;
 }
 
 bool replaceParanthesis(string str){
@@ -25,14 +52,15 @@ int main() {
     char ch[1000000];
     fstream fin("../SPOJ/MREPLBRC.txt");
 
-    string str ;
+    string exp ;
     fin >> n;
-    fin >> str ;
+    fin >> exp ;
+
+    bool r = isMatchingParanthesis(exp);
     //for ( int i = 0 ; i < n ; i ++ ){
     //    fin >> ch[i];
     //}
 
-
-
     printf("\n");
+    return 0 ;
 }
