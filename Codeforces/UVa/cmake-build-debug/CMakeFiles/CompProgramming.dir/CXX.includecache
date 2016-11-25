@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/HackerEarth/Comrades2.cpp
+fstream
+-
+vector
+-
+queue
+-
+iostream
+-
+cmath
+-
+stack
+-
+map
+-
+
+/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/LeetCode/TWOSUM.cpp
+fstream
+-
+vector
+-
+queue
+-
+iostream
+-
+cmath
+-
+stack
+-
+map
+-
+

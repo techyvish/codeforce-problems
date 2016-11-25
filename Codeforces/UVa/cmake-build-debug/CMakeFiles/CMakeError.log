@@ -1,0 +1,9 @@
+Determining if the C compiler works failed with the following output:
+Change Dir: /Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e2838/fast"
+/Applications/Xcode 7.3.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_e2838.dir/build.make CMakeFiles/cmTC_e2838.dir/build
+make: /Applications/Xcode: No such file or directory
+make: *** [cmTC_e2838/fast] Error 1
+
+

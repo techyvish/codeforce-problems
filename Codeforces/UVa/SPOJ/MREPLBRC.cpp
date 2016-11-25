@@ -46,20 +46,17 @@ bool replaceParanthesis(string str){
 
 }
 
-int main() {
+int main_MREPLBRC() {
 
     int n, t, tc;
     char ch[1000000];
-    fstream fin("../SPOJ/MREPLBRC.txt");
+    fstream fin("../SPOJ/TWOSUM.txt");
 
     string exp ;
     fin >> n;
     fin >> exp ;
 
     bool r = isMatchingParanthesis(exp);
-    //for ( int i = 0 ; i < n ; i ++ ){
-    //    fin >> ch[i];
-    //}
 
     printf("\n");
     return 0 ;
