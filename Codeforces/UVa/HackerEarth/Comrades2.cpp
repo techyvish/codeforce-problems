@@ -14,7 +14,7 @@
 using namespace std;
 #define fin cin
 
-int main_comorade() {
+int main() {
 
     fstream fin("../HackerEarth/Comrades2.txt");
     u_long n, t, tc;

@@ -123,59 +123,32 @@ CompProgramming/fast:
 	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/build
 .PHONY : CompProgramming/fast
 
-HackerEarth/Comrades2.o: HackerEarth/Comrades2.cpp.o
+SPOJ/PERMUTE.o: SPOJ/PERMUTE.cpp.o
 
-.PHONY : HackerEarth/Comrades2.o
-
-# target to build an object file
-HackerEarth/Comrades2.cpp.o:
-	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/HackerEarth/Comrades2.cpp.o
-.PHONY : HackerEarth/Comrades2.cpp.o
-
-HackerEarth/Comrades2.i: HackerEarth/Comrades2.cpp.i
-
-.PHONY : HackerEarth/Comrades2.i
-
-# target to preprocess a source file
-HackerEarth/Comrades2.cpp.i:
-	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/HackerEarth/Comrades2.cpp.i
-.PHONY : HackerEarth/Comrades2.cpp.i
-
-HackerEarth/Comrades2.s: HackerEarth/Comrades2.cpp.s
-
-.PHONY : HackerEarth/Comrades2.s
-
-# target to generate assembly for a file
-HackerEarth/Comrades2.cpp.s:
-	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/HackerEarth/Comrades2.cpp.s
-.PHONY : HackerEarth/Comrades2.cpp.s
-
-LeetCode/TWOSUM.o: LeetCode/TWOSUM.cpp.o
-
-.PHONY : LeetCode/TWOSUM.o
+.PHONY : SPOJ/PERMUTE.o
 
 # target to build an object file
-LeetCode/TWOSUM.cpp.o:
-	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/LeetCode/TWOSUM.cpp.o
-.PHONY : LeetCode/TWOSUM.cpp.o
+SPOJ/PERMUTE.cpp.o:
+	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/SPOJ/PERMUTE.cpp.o
+.PHONY : SPOJ/PERMUTE.cpp.o
 
-LeetCode/TWOSUM.i: LeetCode/TWOSUM.cpp.i
+SPOJ/PERMUTE.i: SPOJ/PERMUTE.cpp.i
 
-.PHONY : LeetCode/TWOSUM.i
+.PHONY : SPOJ/PERMUTE.i
 
 # target to preprocess a source file
-LeetCode/TWOSUM.cpp.i:
-	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/LeetCode/TWOSUM.cpp.i
-.PHONY : LeetCode/TWOSUM.cpp.i
+SPOJ/PERMUTE.cpp.i:
+	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/SPOJ/PERMUTE.cpp.i
+.PHONY : SPOJ/PERMUTE.cpp.i
 
-LeetCode/TWOSUM.s: LeetCode/TWOSUM.cpp.s
+SPOJ/PERMUTE.s: SPOJ/PERMUTE.cpp.s
 
-.PHONY : LeetCode/TWOSUM.s
+.PHONY : SPOJ/PERMUTE.s
 
 # target to generate assembly for a file
-LeetCode/TWOSUM.cpp.s:
-	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/LeetCode/TWOSUM.cpp.s
-.PHONY : LeetCode/TWOSUM.cpp.s
+SPOJ/PERMUTE.cpp.s:
+	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/SPOJ/PERMUTE.cpp.s
+.PHONY : SPOJ/PERMUTE.cpp.s
 
 # Help Target
 help:
@@ -186,12 +159,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... CompProgramming"
-	@echo "... HackerEarth/Comrades2.o"
-	@echo "... HackerEarth/Comrades2.i"
-	@echo "... HackerEarth/Comrades2.s"
-	@echo "... LeetCode/TWOSUM.o"
-	@echo "... LeetCode/TWOSUM.i"
-	@echo "... LeetCode/TWOSUM.s"
+	@echo "... SPOJ/PERMUTE.o"
+	@echo "... SPOJ/PERMUTE.i"
+	@echo "... SPOJ/PERMUTE.s"
 .PHONY : help
 
 

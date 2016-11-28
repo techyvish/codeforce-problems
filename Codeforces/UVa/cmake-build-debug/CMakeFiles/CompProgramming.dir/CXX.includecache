@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/HackerEarth/Comrades2.cpp
+/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/SPOJ/PERMUTE.cpp
 fstream
 -
 vector
@@ -18,23 +18,5 @@ iostream
 cmath
 -
 stack
--
-map
--
-
-/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/LeetCode/TWOSUM.cpp
-fstream
--
-vector
--
-queue
--
-iostream
--
-cmath
--
-stack
--
-map
 -
 

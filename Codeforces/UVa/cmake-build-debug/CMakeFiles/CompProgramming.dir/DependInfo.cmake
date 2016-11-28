@@ -4,8 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/HackerEarth/Comrades2.cpp" "/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/cmake-build-debug/CMakeFiles/CompProgramming.dir/HackerEarth/Comrades2.cpp.o"
-  "/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/LeetCode/TWOSUM.cpp" "/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/cmake-build-debug/CMakeFiles/CompProgramming.dir/LeetCode/TWOSUM.cpp.o"
+  "/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/SPOJ/PERMUTE.cpp" "/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/cmake-build-debug/CMakeFiles/CompProgramming.dir/SPOJ/PERMUTE.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

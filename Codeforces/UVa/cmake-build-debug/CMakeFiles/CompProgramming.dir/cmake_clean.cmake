@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/CompProgramming.dir/HackerEarth/Comrades2.cpp.o"
-  "CMakeFiles/CompProgramming.dir/LeetCode/TWOSUM.cpp.o"
+  "CMakeFiles/CompProgramming.dir/SPOJ/PERMUTE.cpp.o"
   "CompProgramming.pdb"
   "CompProgramming"
 )
