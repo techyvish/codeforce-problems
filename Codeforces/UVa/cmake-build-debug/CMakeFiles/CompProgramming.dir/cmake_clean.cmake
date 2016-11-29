@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/CompProgramming.dir/SPOJ/PERMUTE.cpp.o"
+  "CMakeFiles/CompProgramming.dir/LeetCode/LETTERCOMBO.cpp.o"
   "CompProgramming.pdb"
   "CompProgramming"
 )

@@ -12,26 +12,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="125b265d-6f28-4293-8582-45c4f58ba2de" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeetCode/SINGLENUM.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeetCode/SINGLENUM.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SPOJ/LIFEUNIVERSE.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SPOJ/LIFEUNIVERSE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SPOJ/PERMUTE.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SPOJ/PERMUTE.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CompProgramming" afterPath="$PROJECT_DIR$/cmake-build-debug/CompProgramming" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeetCode/LETTERCOMBO.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeetCode/LETTERCOMBO.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HackerEarth/Comrades2.cpp" afterPath="$PROJECT_DIR$/HackerEarth/Comrades2.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CompProgramming.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CompProgramming.dir/CXX.includecache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CompProgramming.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CompProgramming.dir/DependInfo.cmake" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CompProgramming.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CompProgramming.dir/build.make" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CompProgramming.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CompProgramming.dir/cmake_clean.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CompProgramming.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CompProgramming.dir/depend.internal" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CompProgramming.dir/depend.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CompProgramming.dir/depend.make" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CompProgramming.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CompProgramming.dir/link.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CompProgramming.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CompProgramming.dir/progress.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CompProgramming.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/CompProgramming.cbp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
     </list>
@@ -53,11 +41,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PERMUTE.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PERMUTE.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SPOJ/PERMUTE.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+            <state relative-caret-position="446">
+              <caret line="73" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
               <folding>
                 <element signature="e#47#65#0" expanded="true" />
               </folding>
@@ -65,11 +53,33 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="LETTERCOMBO.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/LeetCode/LETTERCOMBO.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="593">
+              <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+              <folding>
+                <element signature="e#48#66#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LETTERCOMBO.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LeetCode/LETTERCOMBO.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="27" column="17" lean-forward="false" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+            <state relative-caret-position="320">
+              <caret line="27" column="1" lean-forward="false" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -131,8 +141,10 @@
         <option value="$PROJECT_DIR$/SPOJ/LIFEUNIVERSE.cpp" />
         <option value="$PROJECT_DIR$/SPOJ/LIFEUNIVERSE.txt" />
         <option value="$PROJECT_DIR$/SPOJ/PERMUTE.txt" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/SPOJ/PERMUTE.cpp" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/LeetCode/LETTERCOMBO.txt" />
+        <option value="$PROJECT_DIR$/LeetCode/LETTERCOMBO.cpp" />
       </list>
     </option>
   </component>
@@ -441,7 +453,7 @@
       <workItem from="1480028090230" duration="112000" />
       <workItem from="1480054330178" duration="2904000" />
       <workItem from="1480119043686" duration="2445000" />
-      <workItem from="1480312941819" duration="4704000" />
+      <workItem from="1480312941819" duration="6158000" />
     </task>
     <servers />
   </component>
@@ -454,7 +466,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11330000" />
+    <option name="totallyTimeSpent" value="12784000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -615,20 +627,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dfs_traversal.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/topological_sort.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="5" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bipartite_graph.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -945,18 +943,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="27" column="17" lean-forward="false" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+        <state relative-caret-position="320">
+          <caret line="27" column="1" lean-forward="false" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeetCode/LETTERCOMBO.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SPOJ/PERMUTE.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+        <state relative-caret-position="446">
+          <caret line="73" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
           <folding>
             <element signature="e#47#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeetCode/LETTERCOMBO.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="593">
+          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <element signature="e#48#66#0" expanded="true" />
           </folding>
         </state>
       </provider>

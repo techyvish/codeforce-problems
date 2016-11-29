@@ -57,38 +57,38 @@ include CMakeFiles/CompProgramming.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/CompProgramming.dir/flags.make
 
-CMakeFiles/CompProgramming.dir/SPOJ/PERMUTE.cpp.o: CMakeFiles/CompProgramming.dir/flags.make
-CMakeFiles/CompProgramming.dir/SPOJ/PERMUTE.cpp.o: ../SPOJ/PERMUTE.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CompProgramming.dir/SPOJ/PERMUTE.cpp.o"
-	"/Applications/Xcode 7.3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++"   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CompProgramming.dir/SPOJ/PERMUTE.cpp.o -c /Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/SPOJ/PERMUTE.cpp
+CMakeFiles/CompProgramming.dir/LeetCode/LETTERCOMBO.cpp.o: CMakeFiles/CompProgramming.dir/flags.make
+CMakeFiles/CompProgramming.dir/LeetCode/LETTERCOMBO.cpp.o: ../LeetCode/LETTERCOMBO.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CompProgramming.dir/LeetCode/LETTERCOMBO.cpp.o"
+	"/Applications/Xcode 7.3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++"   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CompProgramming.dir/LeetCode/LETTERCOMBO.cpp.o -c /Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/LeetCode/LETTERCOMBO.cpp
 
-CMakeFiles/CompProgramming.dir/SPOJ/PERMUTE.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CompProgramming.dir/SPOJ/PERMUTE.cpp.i"
-	"/Applications/Xcode 7.3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++"  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/SPOJ/PERMUTE.cpp > CMakeFiles/CompProgramming.dir/SPOJ/PERMUTE.cpp.i
+CMakeFiles/CompProgramming.dir/LeetCode/LETTERCOMBO.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CompProgramming.dir/LeetCode/LETTERCOMBO.cpp.i"
+	"/Applications/Xcode 7.3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++"  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/LeetCode/LETTERCOMBO.cpp > CMakeFiles/CompProgramming.dir/LeetCode/LETTERCOMBO.cpp.i
 
-CMakeFiles/CompProgramming.dir/SPOJ/PERMUTE.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CompProgramming.dir/SPOJ/PERMUTE.cpp.s"
-	"/Applications/Xcode 7.3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++"  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/SPOJ/PERMUTE.cpp -o CMakeFiles/CompProgramming.dir/SPOJ/PERMUTE.cpp.s
+CMakeFiles/CompProgramming.dir/LeetCode/LETTERCOMBO.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CompProgramming.dir/LeetCode/LETTERCOMBO.cpp.s"
+	"/Applications/Xcode 7.3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++"  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/LeetCode/LETTERCOMBO.cpp -o CMakeFiles/CompProgramming.dir/LeetCode/LETTERCOMBO.cpp.s
 
-CMakeFiles/CompProgramming.dir/SPOJ/PERMUTE.cpp.o.requires:
+CMakeFiles/CompProgramming.dir/LeetCode/LETTERCOMBO.cpp.o.requires:
 
-.PHONY : CMakeFiles/CompProgramming.dir/SPOJ/PERMUTE.cpp.o.requires
+.PHONY : CMakeFiles/CompProgramming.dir/LeetCode/LETTERCOMBO.cpp.o.requires
 
-CMakeFiles/CompProgramming.dir/SPOJ/PERMUTE.cpp.o.provides: CMakeFiles/CompProgramming.dir/SPOJ/PERMUTE.cpp.o.requires
-	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/SPOJ/PERMUTE.cpp.o.provides.build
-.PHONY : CMakeFiles/CompProgramming.dir/SPOJ/PERMUTE.cpp.o.provides
+CMakeFiles/CompProgramming.dir/LeetCode/LETTERCOMBO.cpp.o.provides: CMakeFiles/CompProgramming.dir/LeetCode/LETTERCOMBO.cpp.o.requires
+	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/LeetCode/LETTERCOMBO.cpp.o.provides.build
+.PHONY : CMakeFiles/CompProgramming.dir/LeetCode/LETTERCOMBO.cpp.o.provides
 
-CMakeFiles/CompProgramming.dir/SPOJ/PERMUTE.cpp.o.provides.build: CMakeFiles/CompProgramming.dir/SPOJ/PERMUTE.cpp.o
+CMakeFiles/CompProgramming.dir/LeetCode/LETTERCOMBO.cpp.o.provides.build: CMakeFiles/CompProgramming.dir/LeetCode/LETTERCOMBO.cpp.o
 
 
 # Object files for target CompProgramming
 CompProgramming_OBJECTS = \
-"CMakeFiles/CompProgramming.dir/SPOJ/PERMUTE.cpp.o"
+"CMakeFiles/CompProgramming.dir/LeetCode/LETTERCOMBO.cpp.o"
 
 # External object files for target CompProgramming
 CompProgramming_EXTERNAL_OBJECTS =
 
-CompProgramming: CMakeFiles/CompProgramming.dir/SPOJ/PERMUTE.cpp.o
+CompProgramming: CMakeFiles/CompProgramming.dir/LeetCode/LETTERCOMBO.cpp.o
 CompProgramming: CMakeFiles/CompProgramming.dir/build.make
 CompProgramming: CMakeFiles/CompProgramming.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable CompProgramming"
@@ -99,7 +99,7 @@ CMakeFiles/CompProgramming.dir/build: CompProgramming
 
 .PHONY : CMakeFiles/CompProgramming.dir/build
 
-CMakeFiles/CompProgramming.dir/requires: CMakeFiles/CompProgramming.dir/SPOJ/PERMUTE.cpp.o.requires
+CMakeFiles/CompProgramming.dir/requires: CMakeFiles/CompProgramming.dir/LeetCode/LETTERCOMBO.cpp.o.requires
 
 .PHONY : CMakeFiles/CompProgramming.dir/requires
 

@@ -123,32 +123,32 @@ CompProgramming/fast:
 	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/build
 .PHONY : CompProgramming/fast
 
-SPOJ/PERMUTE.o: SPOJ/PERMUTE.cpp.o
+LeetCode/LETTERCOMBO.o: LeetCode/LETTERCOMBO.cpp.o
 
-.PHONY : SPOJ/PERMUTE.o
+.PHONY : LeetCode/LETTERCOMBO.o
 
 # target to build an object file
-SPOJ/PERMUTE.cpp.o:
-	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/SPOJ/PERMUTE.cpp.o
-.PHONY : SPOJ/PERMUTE.cpp.o
+LeetCode/LETTERCOMBO.cpp.o:
+	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/LeetCode/LETTERCOMBO.cpp.o
+.PHONY : LeetCode/LETTERCOMBO.cpp.o
 
-SPOJ/PERMUTE.i: SPOJ/PERMUTE.cpp.i
+LeetCode/LETTERCOMBO.i: LeetCode/LETTERCOMBO.cpp.i
 
-.PHONY : SPOJ/PERMUTE.i
+.PHONY : LeetCode/LETTERCOMBO.i
 
 # target to preprocess a source file
-SPOJ/PERMUTE.cpp.i:
-	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/SPOJ/PERMUTE.cpp.i
-.PHONY : SPOJ/PERMUTE.cpp.i
+LeetCode/LETTERCOMBO.cpp.i:
+	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/LeetCode/LETTERCOMBO.cpp.i
+.PHONY : LeetCode/LETTERCOMBO.cpp.i
 
-SPOJ/PERMUTE.s: SPOJ/PERMUTE.cpp.s
+LeetCode/LETTERCOMBO.s: LeetCode/LETTERCOMBO.cpp.s
 
-.PHONY : SPOJ/PERMUTE.s
+.PHONY : LeetCode/LETTERCOMBO.s
 
 # target to generate assembly for a file
-SPOJ/PERMUTE.cpp.s:
-	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/SPOJ/PERMUTE.cpp.s
-.PHONY : SPOJ/PERMUTE.cpp.s
+LeetCode/LETTERCOMBO.cpp.s:
+	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/LeetCode/LETTERCOMBO.cpp.s
+.PHONY : LeetCode/LETTERCOMBO.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... CompProgramming"
-	@echo "... SPOJ/PERMUTE.o"
-	@echo "... SPOJ/PERMUTE.i"
-	@echo "... SPOJ/PERMUTE.s"
+	@echo "... LeetCode/LETTERCOMBO.o"
+	@echo "... LeetCode/LETTERCOMBO.i"
+	@echo "... LeetCode/LETTERCOMBO.s"
 .PHONY : help
 
 
