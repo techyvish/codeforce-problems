@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/SPOJ/PERMUTE.cpp
+/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/LeetCode/LETTERCOMBO.cpp
 fstream
 -
 vector
@@ -18,5 +18,15 @@ iostream
 cmath
 -
 stack
+-
+map
+-
+algorithm
+-
+string
+-
+iostream
+-
+cctype
 -
 

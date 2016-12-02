@@ -9,44 +9,59 @@
 #include <iostream>
 #include <cmath>
 #include <stack>
+#include <map>
+#include <algorithm>
+#include <string>
+#include <iostream>
+#include <cctype>
 
 using namespace std;
 #define fin cin
 
-void permute(string &s,int l,int r )
+
+void permute(string &s , int l , int noOfLoops , int noOfIteration,  map<char,vector<char> > &amap, string &res, vector<string> &result)
 {
-    if ( l == r )
+    if ( l == noOfLoops )
     {
-        cout << s << endl;
+        string k = res;
+        k.erase(remove_if(k.begin(), k.end(), ::isspace), k.end());
+        if ( k.length() == s.length() )
+            result.push_back(k);
         return;
     }
 
-    for ( int i = l ; i < s.length() ; i ++ )
+    for ( int i = 0  ; i < noOfIteration ; i ++ )
     {
-        char temp = s[i];
-        s[i] = s[l];
-        s[l] = temp;
-
-        permute(s,l+1,r);
-
-        temp = s[i];
-        s[i] = s[l];
-        s[l] = temp;
-
+        res[l] = amap[s[l]][i];
+        permute(s,l+1,noOfLoops,noOfIteration,amap,res,result);
     }
-
 }
 
 int main() {
 
+
     int n, t, tc;
     string str;
+
     fstream fin("../LeetCode/LETTERCOMBO.txt");
 
     fin >> str;
 
-    permute(str, 0 ,str.length() - 1);
+    string res;
 
-    printf("\n");
+    map<char,vector<char> > amap;
+    amap['2'] = vector<char> {'a','b','c',' '};
+    amap['3'] = vector<char> {'d','e','f',' '};
+    amap['4'] = vector<char> {'g','h','i',' '};
+    amap['5'] = vector<char> {'j','k','l',' '};
+    amap['6'] = vector<char> {'m','n','o',' '};
+    amap['7'] = vector<char> {'p','q','r','s'};
+    amap['8'] = vector<char> {'t','u','v',' '};
+    amap['9'] = vector<char> {'w','x','y','z'};
+
+    res.resize(str.length());
+    vector<string> result;
+    permute(str, 0 , str.length() , 4 , amap , res , result);
+
     return 0 ;
 }
