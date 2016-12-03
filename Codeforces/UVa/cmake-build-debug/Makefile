@@ -123,32 +123,32 @@ CompProgramming/fast:
 	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/build
 .PHONY : CompProgramming/fast
 
-LeetCode/LETTERCOMBO.o: LeetCode/LETTERCOMBO.cpp.o
+LeetCode/GENERATEPARENTHESES.o: LeetCode/GENERATEPARENTHESES.cpp.o
 
-.PHONY : LeetCode/LETTERCOMBO.o
+.PHONY : LeetCode/GENERATEPARENTHESES.o
 
 # target to build an object file
-LeetCode/LETTERCOMBO.cpp.o:
-	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/LeetCode/LETTERCOMBO.cpp.o
-.PHONY : LeetCode/LETTERCOMBO.cpp.o
+LeetCode/GENERATEPARENTHESES.cpp.o:
+	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/LeetCode/GENERATEPARENTHESES.cpp.o
+.PHONY : LeetCode/GENERATEPARENTHESES.cpp.o
 
-LeetCode/LETTERCOMBO.i: LeetCode/LETTERCOMBO.cpp.i
+LeetCode/GENERATEPARENTHESES.i: LeetCode/GENERATEPARENTHESES.cpp.i
 
-.PHONY : LeetCode/LETTERCOMBO.i
+.PHONY : LeetCode/GENERATEPARENTHESES.i
 
 # target to preprocess a source file
-LeetCode/LETTERCOMBO.cpp.i:
-	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/LeetCode/LETTERCOMBO.cpp.i
-.PHONY : LeetCode/LETTERCOMBO.cpp.i
+LeetCode/GENERATEPARENTHESES.cpp.i:
+	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/LeetCode/GENERATEPARENTHESES.cpp.i
+.PHONY : LeetCode/GENERATEPARENTHESES.cpp.i
 
-LeetCode/LETTERCOMBO.s: LeetCode/LETTERCOMBO.cpp.s
+LeetCode/GENERATEPARENTHESES.s: LeetCode/GENERATEPARENTHESES.cpp.s
 
-.PHONY : LeetCode/LETTERCOMBO.s
+.PHONY : LeetCode/GENERATEPARENTHESES.s
 
 # target to generate assembly for a file
-LeetCode/LETTERCOMBO.cpp.s:
-	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/LeetCode/LETTERCOMBO.cpp.s
-.PHONY : LeetCode/LETTERCOMBO.cpp.s
+LeetCode/GENERATEPARENTHESES.cpp.s:
+	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/LeetCode/GENERATEPARENTHESES.cpp.s
+.PHONY : LeetCode/GENERATEPARENTHESES.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... CompProgramming"
-	@echo "... LeetCode/LETTERCOMBO.o"
-	@echo "... LeetCode/LETTERCOMBO.i"
-	@echo "... LeetCode/LETTERCOMBO.s"
+	@echo "... LeetCode/GENERATEPARENTHESES.o"
+	@echo "... LeetCode/GENERATEPARENTHESES.i"
+	@echo "... LeetCode/GENERATEPARENTHESES.s"
 .PHONY : help
 
 
