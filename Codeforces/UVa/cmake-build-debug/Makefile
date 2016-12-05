@@ -123,32 +123,32 @@ CompProgramming/fast:
 	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/build
 .PHONY : CompProgramming/fast
 
-LeetCode/GENERATEPERMUTATION.o: LeetCode/GENERATEPERMUTATION.cpp.o
+LeetCode/GRAYCODE.o: LeetCode/GRAYCODE.cpp.o
 
-.PHONY : LeetCode/GENERATEPERMUTATION.o
+.PHONY : LeetCode/GRAYCODE.o
 
 # target to build an object file
-LeetCode/GENERATEPERMUTATION.cpp.o:
-	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/LeetCode/GENERATEPERMUTATION.cpp.o
-.PHONY : LeetCode/GENERATEPERMUTATION.cpp.o
+LeetCode/GRAYCODE.cpp.o:
+	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/LeetCode/GRAYCODE.cpp.o
+.PHONY : LeetCode/GRAYCODE.cpp.o
 
-LeetCode/GENERATEPERMUTATION.i: LeetCode/GENERATEPERMUTATION.cpp.i
+LeetCode/GRAYCODE.i: LeetCode/GRAYCODE.cpp.i
 
-.PHONY : LeetCode/GENERATEPERMUTATION.i
+.PHONY : LeetCode/GRAYCODE.i
 
 # target to preprocess a source file
-LeetCode/GENERATEPERMUTATION.cpp.i:
-	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/LeetCode/GENERATEPERMUTATION.cpp.i
-.PHONY : LeetCode/GENERATEPERMUTATION.cpp.i
+LeetCode/GRAYCODE.cpp.i:
+	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/LeetCode/GRAYCODE.cpp.i
+.PHONY : LeetCode/GRAYCODE.cpp.i
 
-LeetCode/GENERATEPERMUTATION.s: LeetCode/GENERATEPERMUTATION.cpp.s
+LeetCode/GRAYCODE.s: LeetCode/GRAYCODE.cpp.s
 
-.PHONY : LeetCode/GENERATEPERMUTATION.s
+.PHONY : LeetCode/GRAYCODE.s
 
 # target to generate assembly for a file
-LeetCode/GENERATEPERMUTATION.cpp.s:
-	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/LeetCode/GENERATEPERMUTATION.cpp.s
-.PHONY : LeetCode/GENERATEPERMUTATION.cpp.s
+LeetCode/GRAYCODE.cpp.s:
+	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/LeetCode/GRAYCODE.cpp.s
+.PHONY : LeetCode/GRAYCODE.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... CompProgramming"
-	@echo "... LeetCode/GENERATEPERMUTATION.o"
-	@echo "... LeetCode/GENERATEPERMUTATION.i"
-	@echo "... LeetCode/GENERATEPERMUTATION.s"
+	@echo "... LeetCode/GRAYCODE.o"
+	@echo "... LeetCode/GRAYCODE.i"
+	@echo "... LeetCode/GRAYCODE.s"
 .PHONY : help
 
 
