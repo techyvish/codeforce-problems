@@ -123,33 +123,6 @@ CompProgramming/fast:
 	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/build
 .PHONY : CompProgramming/fast
 
-LeetCode/GENERATEPARENTHESES.o: LeetCode/GENERATEPARENTHESES.cpp.o
-
-.PHONY : LeetCode/GENERATEPARENTHESES.o
-
-# target to build an object file
-LeetCode/GENERATEPARENTHESES.cpp.o:
-	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/LeetCode/GENERATEPARENTHESES.cpp.o
-.PHONY : LeetCode/GENERATEPARENTHESES.cpp.o
-
-LeetCode/GENERATEPARENTHESES.i: LeetCode/GENERATEPARENTHESES.cpp.i
-
-.PHONY : LeetCode/GENERATEPARENTHESES.i
-
-# target to preprocess a source file
-LeetCode/GENERATEPARENTHESES.cpp.i:
-	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/LeetCode/GENERATEPARENTHESES.cpp.i
-.PHONY : LeetCode/GENERATEPARENTHESES.cpp.i
-
-LeetCode/GENERATEPARENTHESES.s: LeetCode/GENERATEPARENTHESES.cpp.s
-
-.PHONY : LeetCode/GENERATEPARENTHESES.s
-
-# target to generate assembly for a file
-LeetCode/GENERATEPARENTHESES.cpp.s:
-	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/LeetCode/GENERATEPARENTHESES.cpp.s
-.PHONY : LeetCode/GENERATEPARENTHESES.cpp.s
-
 LeetCode/GENERATEPERMUTATION.o: LeetCode/GENERATEPERMUTATION.cpp.o
 
 .PHONY : LeetCode/GENERATEPERMUTATION.o
@@ -186,9 +159,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... CompProgramming"
-	@echo "... LeetCode/GENERATEPARENTHESES.o"
-	@echo "... LeetCode/GENERATEPARENTHESES.i"
-	@echo "... LeetCode/GENERATEPARENTHESES.s"
 	@echo "... LeetCode/GENERATEPERMUTATION.o"
 	@echo "... LeetCode/GENERATEPERMUTATION.i"
 	@echo "... LeetCode/GENERATEPERMUTATION.s"
