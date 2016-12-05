@@ -150,6 +150,33 @@ LeetCode/GENERATEPARENTHESES.cpp.s:
 	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/LeetCode/GENERATEPARENTHESES.cpp.s
 .PHONY : LeetCode/GENERATEPARENTHESES.cpp.s
 
+LeetCode/GENERATEPERMUTATION.o: LeetCode/GENERATEPERMUTATION.cpp.o
+
+.PHONY : LeetCode/GENERATEPERMUTATION.o
+
+# target to build an object file
+LeetCode/GENERATEPERMUTATION.cpp.o:
+	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/LeetCode/GENERATEPERMUTATION.cpp.o
+.PHONY : LeetCode/GENERATEPERMUTATION.cpp.o
+
+LeetCode/GENERATEPERMUTATION.i: LeetCode/GENERATEPERMUTATION.cpp.i
+
+.PHONY : LeetCode/GENERATEPERMUTATION.i
+
+# target to preprocess a source file
+LeetCode/GENERATEPERMUTATION.cpp.i:
+	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/LeetCode/GENERATEPERMUTATION.cpp.i
+.PHONY : LeetCode/GENERATEPERMUTATION.cpp.i
+
+LeetCode/GENERATEPERMUTATION.s: LeetCode/GENERATEPERMUTATION.cpp.s
+
+.PHONY : LeetCode/GENERATEPERMUTATION.s
+
+# target to generate assembly for a file
+LeetCode/GENERATEPERMUTATION.cpp.s:
+	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/LeetCode/GENERATEPERMUTATION.cpp.s
+.PHONY : LeetCode/GENERATEPERMUTATION.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,6 +189,9 @@ help:
 	@echo "... LeetCode/GENERATEPARENTHESES.o"
 	@echo "... LeetCode/GENERATEPARENTHESES.i"
 	@echo "... LeetCode/GENERATEPARENTHESES.s"
+	@echo "... LeetCode/GENERATEPERMUTATION.o"
+	@echo "... LeetCode/GENERATEPERMUTATION.i"
+	@echo "... LeetCode/GENERATEPERMUTATION.s"
 .PHONY : help
 
 
