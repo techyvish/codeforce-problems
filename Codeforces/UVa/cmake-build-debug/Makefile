@@ -150,6 +150,33 @@ LeetCode/GRAYCODE.cpp.s:
 	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/LeetCode/GRAYCODE.cpp.s
 .PHONY : LeetCode/GRAYCODE.cpp.s
 
+LeetCode/PERMUTATIONSEQUENCE.o: LeetCode/PERMUTATIONSEQUENCE.cpp.o
+
+.PHONY : LeetCode/PERMUTATIONSEQUENCE.o
+
+# target to build an object file
+LeetCode/PERMUTATIONSEQUENCE.cpp.o:
+	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/LeetCode/PERMUTATIONSEQUENCE.cpp.o
+.PHONY : LeetCode/PERMUTATIONSEQUENCE.cpp.o
+
+LeetCode/PERMUTATIONSEQUENCE.i: LeetCode/PERMUTATIONSEQUENCE.cpp.i
+
+.PHONY : LeetCode/PERMUTATIONSEQUENCE.i
+
+# target to preprocess a source file
+LeetCode/PERMUTATIONSEQUENCE.cpp.i:
+	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/LeetCode/PERMUTATIONSEQUENCE.cpp.i
+.PHONY : LeetCode/PERMUTATIONSEQUENCE.cpp.i
+
+LeetCode/PERMUTATIONSEQUENCE.s: LeetCode/PERMUTATIONSEQUENCE.cpp.s
+
+.PHONY : LeetCode/PERMUTATIONSEQUENCE.s
+
+# target to generate assembly for a file
+LeetCode/PERMUTATIONSEQUENCE.cpp.s:
+	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/LeetCode/PERMUTATIONSEQUENCE.cpp.s
+.PHONY : LeetCode/PERMUTATIONSEQUENCE.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,6 +189,9 @@ help:
 	@echo "... LeetCode/GRAYCODE.o"
 	@echo "... LeetCode/GRAYCODE.i"
 	@echo "... LeetCode/GRAYCODE.s"
+	@echo "... LeetCode/PERMUTATIONSEQUENCE.o"
+	@echo "... LeetCode/PERMUTATIONSEQUENCE.i"
+	@echo "... LeetCode/PERMUTATIONSEQUENCE.s"
 .PHONY : help
 
 
