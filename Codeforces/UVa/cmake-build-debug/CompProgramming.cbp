@@ -80,9 +80,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/LeetCode/GRAYCODE.cpp">
-			<Option target="CompProgramming"/>
-		</Unit>
 		<Unit filename="/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/LeetCode/PERMUTATIONSEQUENCE.cpp">
 			<Option target="CompProgramming"/>
 		</Unit>

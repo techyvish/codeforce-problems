@@ -123,33 +123,6 @@ CompProgramming/fast:
 	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/build
 .PHONY : CompProgramming/fast
 
-LeetCode/GRAYCODE.o: LeetCode/GRAYCODE.cpp.o
-
-.PHONY : LeetCode/GRAYCODE.o
-
-# target to build an object file
-LeetCode/GRAYCODE.cpp.o:
-	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/LeetCode/GRAYCODE.cpp.o
-.PHONY : LeetCode/GRAYCODE.cpp.o
-
-LeetCode/GRAYCODE.i: LeetCode/GRAYCODE.cpp.i
-
-.PHONY : LeetCode/GRAYCODE.i
-
-# target to preprocess a source file
-LeetCode/GRAYCODE.cpp.i:
-	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/LeetCode/GRAYCODE.cpp.i
-.PHONY : LeetCode/GRAYCODE.cpp.i
-
-LeetCode/GRAYCODE.s: LeetCode/GRAYCODE.cpp.s
-
-.PHONY : LeetCode/GRAYCODE.s
-
-# target to generate assembly for a file
-LeetCode/GRAYCODE.cpp.s:
-	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/LeetCode/GRAYCODE.cpp.s
-.PHONY : LeetCode/GRAYCODE.cpp.s
-
 LeetCode/PERMUTATIONSEQUENCE.o: LeetCode/PERMUTATIONSEQUENCE.cpp.o
 
 .PHONY : LeetCode/PERMUTATIONSEQUENCE.o
@@ -186,9 +159,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... CompProgramming"
-	@echo "... LeetCode/GRAYCODE.o"
-	@echo "... LeetCode/GRAYCODE.i"
-	@echo "... LeetCode/GRAYCODE.s"
 	@echo "... LeetCode/PERMUTATIONSEQUENCE.o"
 	@echo "... LeetCode/PERMUTATIONSEQUENCE.i"
 	@echo "... LeetCode/PERMUTATIONSEQUENCE.s"

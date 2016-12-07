@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/CompProgramming.dir/LeetCode/GRAYCODE.cpp.o"
   "CMakeFiles/CompProgramming.dir/LeetCode/PERMUTATIONSEQUENCE.cpp.o"
   "CompProgramming.pdb"
   "CompProgramming"

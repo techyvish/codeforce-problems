@@ -17,50 +17,62 @@
 using namespace std;
 #define fin cin
 
-int convert(string& str)
-{
-    int sum = 0 ;
-    for ( int i = str.size() - 1 , j = 0  ; i >= 0 ; i-- , j++)
-    {
-        sum += ( pow ( 2 , j) * (str[i] - 48) );
-    }
-    return sum;
-}
 
-void compute(int n,int l, vector<int> &res, string &str)
+void permute(int n , int k,int l, bool found, vector<int> &res , int iter , string resstr)
 {
-    if ( n == l )
+    if ( l == n  )
     {
-        res.push_back(convert(str));
+        if ( iter == k - 1 ) {
+            found = true;
+            string str;
+            str.resize(n);
+            for (int i = 0; i < n; i++)
+                str[i] = (char) res[i] + 48;
+            cout << str << endl;
+            resstr = str;
+        }
         return;
     }
-
-    for ( int i = 0 ; i < 2 ; i ++ )
+    for ( int i = l ; i < n ; i ++ )
     {
-        str[l] = (i % 2 == 0 ? '1' : '0') ;//l % 2 == 0 ?  (i % 2 == 0 ? '1' : '0') : (i % 2 == 0 ? '0' : '1');
-        compute(n, l + 1, res,str);
+        if  (found )
+            break;
+
+        int  temp = res[l];
+        res[l] = res[i] ;
+        res[i] = temp;
+
+        permute(n,k,l+1,found,res,iter,resstr);
+
+        temp = res[l];
+        res[l] = res[i] ;
+        res[i] = temp;
     }
 }
 
-vector<int> grayCode(int n) {
-
-    vector<int> res;
+string getPermutation(int n, int k)
+{
     string str;
+    bool  found  = false;
     str.resize(n);
-    compute(n, 0 ,res,str);
-    return res;
+    vector<int> res(n);
+    for ( int i = 0 ; i < n ; i ++ )
+        res[i] = i+1;
+    int iter = 0;
+    string resstr;
+    permute(n,k,0,found,res,iter + 1,resstr);
+    return resstr;
 }
-
 
 int main() {
 
     fstream fin("../LeetCode/PERMUTATIONSEQUENCE.txt");
 
     vector<int> nums;
-    int n ;
-    fin >>  n;
+    int n , k;
+    fin >>  n >> k;
 
-    grayCode(n);
+    getPermutation(n,k);
 
     return 0 ;
 }
