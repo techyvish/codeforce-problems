@@ -12,11 +12,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="125b265d-6f28-4293-8582-45c4f58ba2de" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CompProgramming.dir/LeetCode/PERMUTATIONSEQUENCE.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CompProgramming.dir/LeetCode/PERMUTATIONSEQUENCE.cpp.o" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HackerEarth/INTELLIGENTGIRL.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HackerEarth/INTELLIGENTGIRL.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HackerEarth/LEAFANDLIMELIGHTATTACK.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HackerEarth/LEAFANDLIMELIGHTATTACK.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CompProgramming" afterPath="$PROJECT_DIR$/cmake-build-debug/CompProgramming" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LeetCode/PERMUTATIONSEQUENCE.cpp" afterPath="$PROJECT_DIR$/LeetCode/PERMUTATIONSEQUENCE.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LeetCode/LETTERCOMBO.cpp" afterPath="$PROJECT_DIR$/LeetCode/LETTERCOMBO.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CompProgramming.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CompProgramming.dir/CXX.includecache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CompProgramming.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CompProgramming.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CompProgramming.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CompProgramming.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CompProgramming.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CompProgramming.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CompProgramming.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CompProgramming.dir/depend.internal" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CompProgramming.dir/depend.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CompProgramming.dir/depend.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CompProgramming.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CompProgramming.dir/link.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CompProgramming.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/CompProgramming.cbp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
     </list>
     <ignored path="UVa.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,32 +52,94 @@
       <file leaf-file-name="GENERATEPERMUTATION.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LeetCode/GENERATEPERMUTATION.cpp">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="53" column="1" lean-forward="false" selection-start-line="53" selection-start-column="1" selection-end-line="57" selection-end-column="14" />
+              <folding>
+                <element signature="e#46#64#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GENERATEPERMUTATION.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LeetCode/GENERATEPERMUTATION.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="21">
+              <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LEAFANDLIMELIGHTATTACK.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HackerEarth/LEAFANDLIMELIGHTATTACK.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="50" column="1" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="50" selection-end-column="1" />
+              <folding>
+                <element signature="e#47#65#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="INTELLIGENTGIRL.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HackerEarth/INTELLIGENTGIRL.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="313">
+              <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+              <folding>
+                <element signature="e#47#65#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="INTELLIGENTGIRL.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HackerEarth/INTELLIGENTGIRL.txt">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-              <folding>
-                <element signature="e#46#64#0" expanded="true" />
-              </folding>
+              <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GRAYCODE.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LeetCode/GRAYCODE.cpp">
+      <file leaf-file-name="vector" pinned="false" current-in-tab="false">
+        <entry file="file:///Applications/Xcode 7.3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/vector">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="819">
-              <caret line="39" column="63" lean-forward="false" selection-start-line="39" selection-start-column="63" selection-end-line="39" selection-end-column="63" />
-              <folding>
-                <element signature="e#46#64#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="153">
+              <caret line="1592" column="0" lean-forward="false" selection-start-line="1592" selection-start-column="0" selection-end-line="1592" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LETTERCOMBO.cpp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/LeetCode/LETTERCOMBO.cpp">
+      <file leaf-file-name="dfs.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dfs.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LEAFANDLIMELIGHTATTACK.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HackerEarth/LEAFANDLIMELIGHTATTACK.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Comrades2.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HackerEarth/Comrades2.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="2" column="114" lean-forward="false" selection-start-line="2" selection-start-column="111" selection-end-line="2" selection-end-column="114" />
               <folding />
             </state>
           </provider>
@@ -73,8 +148,8 @@
       <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="14">
-              <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+            <state relative-caret-position="308">
+              <caret line="29" column="1" lean-forward="false" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -94,8 +169,8 @@
     <findStrings>
       <find>vector&lt;char&gt;</find>
       <find>permu</find>
-      <find>RECURSIO</find>
       <find>resstr</find>
+      <find>RECURSIO</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -104,10 +179,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/bfs_traversal.txt" />
-        <option value="$PROJECT_DIR$/bfs_traversal.cpp" />
-        <option value="$PROJECT_DIR$/dfs_floodfill.cpp" />
-        <option value="$PROJECT_DIR$/topological_sort.txt" />
         <option value="$PROJECT_DIR$/topological_sort.cpp" />
         <option value="$PROJECT_DIR$/bipartite_graph.cpp" />
         <option value="$PROJECT_DIR$/uva507.txt" />
@@ -145,7 +216,6 @@
         <option value="$PROJECT_DIR$/LeetCode/RECURSIONINDEPTH.txt" />
         <option value="$PROJECT_DIR$/LeetCode/RECURSIONINDEPTH.cpp" />
         <option value="$PROJECT_DIR$/LeetCode/LETTERCOMBO.txt" />
-        <option value="$PROJECT_DIR$/LeetCode/LETTERCOMBO.cpp" />
         <option value="$PROJECT_DIR$/LeetCode/GENERATEPARENTHESES.txt" />
         <option value="$PROJECT_DIR$/LeetCode/GENERATEPARENTHESES.cpp" />
         <option value="$PROJECT_DIR$/LeetCode/GENERATEPERMUTATION.txt" />
@@ -153,8 +223,13 @@
         <option value="$PROJECT_DIR$/LeetCode/GRAYCODE.txt" />
         <option value="$PROJECT_DIR$/LeetCode/GRAYCODE.cpp" />
         <option value="$PROJECT_DIR$/LeetCode/PERMUTATIONSEQUENCE.txt" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/LeetCode/PERMUTATIONSEQUENCE.cpp" />
+        <option value="$PROJECT_DIR$/LeetCode/LETTERCOMBO.cpp" />
+        <option value="$PROJECT_DIR$/HackerEarth/LEAFANDLIMELIGHTATTACK.txt" />
+        <option value="$PROJECT_DIR$/HackerEarth/LEAFANDLIMELIGHTATTACK.cpp" />
+        <option value="$PROJECT_DIR$/HackerEarth/INTELLIGENTGIRL.txt" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/HackerEarth/INTELLIGENTGIRL.cpp" />
       </list>
     </option>
   </component>
@@ -251,6 +326,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="$USER_HOME$/.nvm/versions/node/v6.4.0/bin/node" />
     <property name="js.eslint.eslintPackage" value="" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Applications/Xcode 7.3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/vector" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -469,7 +545,7 @@
       <workItem from="1480592369534" duration="17511000" />
       <workItem from="1480912821890" duration="8610000" />
       <workItem from="1482203064731" duration="216000" />
-      <workItem from="1482203301320" duration="2533000" />
+      <workItem from="1482203301320" duration="6769000" />
     </task>
     <servers />
   </component>
@@ -482,7 +558,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52959000" />
+    <option name="totallyTimeSpent" value="57195000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -684,58 +760,25 @@
           <line>66</line>
           <option name="timeStamp" value="124" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/HackerEarth/LEAFANDLIMELIGHTATTACK.cpp</url>
+          <line>38</line>
+          <option name="timeStamp" value="126" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/HackerEarth/LEAFANDLIMELIGHTATTACK.cpp</url>
+          <line>49</line>
+          <option name="timeStamp" value="130" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="125" />
+      <option name="time" value="134" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/uva507.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UVA10684.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cp_tests/basic_test.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/googletest/googletest/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cp_tests/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="29" lean-forward="false" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HackerRank/MAXSUBARRAY.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/googletest/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -801,13 +844,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/LeetCode/TWOSUM.h" />
     <entry file="file://$PROJECT_DIR$/SPOJ/TWOSUM.cpp" />
-    <entry file="file://$PROJECT_DIR$/HackerEarth/Comrades2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="114" lean-forward="false" selection-start-line="2" selection-start-column="111" selection-end-line="2" selection-end-column="114" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LeetCode/TWOSUM.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -822,13 +858,6 @@
           <folding>
             <element signature="e#48#66#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HackerEarth/Comrades2.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -959,44 +988,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LeetCode/GENERATEPERMUTATION.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeetCode/GENERATEPERMUTATION.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-          <folding>
-            <element signature="e#46#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14">
-          <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LeetCode/GRAYCODE.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dfs.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1281">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1030,7 +1025,7 @@
         <state relative-caret-position="-155">
           <caret line="60" column="18" lean-forward="true" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
           <folding>
-            <element signature="e#46#64#0" expanded="true" />
+            <element signature="e#46#64#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1040,16 +1035,120 @@
         <state relative-caret-position="819">
           <caret line="39" column="63" lean-forward="false" selection-start-line="39" selection-start-column="63" selection-end-line="39" selection-end-column="63" />
           <folding>
-            <element signature="e#46#64#0" expanded="true" />
+            <element signature="e#46#64#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LeetCode/LETTERCOMBO.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state relative-caret-position="376">
+          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HackerEarth/LEAFANDLIMELIGHTATTACK.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HackerEarth/Comrades2.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-378">
+          <caret line="5" column="9" lean-forward="false" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+          <folding>
+            <element signature="e#47#65#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeetCode/GENERATEPERMUTATION.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HackerEarth/Comrades2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="114" lean-forward="false" selection-start-line="2" selection-start-column="111" selection-end-line="2" selection-end-column="114" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeetCode/GENERATEPERMUTATION.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="53" column="1" lean-forward="false" selection-start-line="53" selection-start-column="1" selection-end-line="57" selection-end-column="14" />
+          <folding>
+            <element signature="e#46#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dfs.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HackerEarth/LEAFANDLIMELIGHTATTACK.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode 7.3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/vector">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="1592" column="0" lean-forward="false" selection-start-line="1592" selection-start-column="0" selection-end-line="1592" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HackerEarth/LEAFANDLIMELIGHTATTACK.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="50" column="1" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="50" selection-end-column="1" />
+          <folding>
+            <element signature="e#47#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HackerEarth/INTELLIGENTGIRL.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="29" column="1" lean-forward="false" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HackerEarth/INTELLIGENTGIRL.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+          <folding>
+            <element signature="e#47#65#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

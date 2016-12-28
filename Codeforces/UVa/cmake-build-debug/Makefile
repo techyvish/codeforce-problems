@@ -123,32 +123,32 @@ CompProgramming/fast:
 	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/build
 .PHONY : CompProgramming/fast
 
-LeetCode/PERMUTATIONSEQUENCE.o: LeetCode/PERMUTATIONSEQUENCE.cpp.o
+HackerEarth/INTELLIGENTGIRL.o: HackerEarth/INTELLIGENTGIRL.cpp.o
 
-.PHONY : LeetCode/PERMUTATIONSEQUENCE.o
+.PHONY : HackerEarth/INTELLIGENTGIRL.o
 
 # target to build an object file
-LeetCode/PERMUTATIONSEQUENCE.cpp.o:
-	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/LeetCode/PERMUTATIONSEQUENCE.cpp.o
-.PHONY : LeetCode/PERMUTATIONSEQUENCE.cpp.o
+HackerEarth/INTELLIGENTGIRL.cpp.o:
+	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/HackerEarth/INTELLIGENTGIRL.cpp.o
+.PHONY : HackerEarth/INTELLIGENTGIRL.cpp.o
 
-LeetCode/PERMUTATIONSEQUENCE.i: LeetCode/PERMUTATIONSEQUENCE.cpp.i
+HackerEarth/INTELLIGENTGIRL.i: HackerEarth/INTELLIGENTGIRL.cpp.i
 
-.PHONY : LeetCode/PERMUTATIONSEQUENCE.i
+.PHONY : HackerEarth/INTELLIGENTGIRL.i
 
 # target to preprocess a source file
-LeetCode/PERMUTATIONSEQUENCE.cpp.i:
-	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/LeetCode/PERMUTATIONSEQUENCE.cpp.i
-.PHONY : LeetCode/PERMUTATIONSEQUENCE.cpp.i
+HackerEarth/INTELLIGENTGIRL.cpp.i:
+	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/HackerEarth/INTELLIGENTGIRL.cpp.i
+.PHONY : HackerEarth/INTELLIGENTGIRL.cpp.i
 
-LeetCode/PERMUTATIONSEQUENCE.s: LeetCode/PERMUTATIONSEQUENCE.cpp.s
+HackerEarth/INTELLIGENTGIRL.s: HackerEarth/INTELLIGENTGIRL.cpp.s
 
-.PHONY : LeetCode/PERMUTATIONSEQUENCE.s
+.PHONY : HackerEarth/INTELLIGENTGIRL.s
 
 # target to generate assembly for a file
-LeetCode/PERMUTATIONSEQUENCE.cpp.s:
-	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/LeetCode/PERMUTATIONSEQUENCE.cpp.s
-.PHONY : LeetCode/PERMUTATIONSEQUENCE.cpp.s
+HackerEarth/INTELLIGENTGIRL.cpp.s:
+	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/HackerEarth/INTELLIGENTGIRL.cpp.s
+.PHONY : HackerEarth/INTELLIGENTGIRL.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... CompProgramming"
-	@echo "... LeetCode/PERMUTATIONSEQUENCE.o"
-	@echo "... LeetCode/PERMUTATIONSEQUENCE.i"
-	@echo "... LeetCode/PERMUTATIONSEQUENCE.s"
+	@echo "... HackerEarth/INTELLIGENTGIRL.o"
+	@echo "... HackerEarth/INTELLIGENTGIRL.i"
+	@echo "... HackerEarth/INTELLIGENTGIRL.s"
 .PHONY : help
 
 

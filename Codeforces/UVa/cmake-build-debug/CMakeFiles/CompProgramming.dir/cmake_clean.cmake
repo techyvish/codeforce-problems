@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/CompProgramming.dir/LeetCode/PERMUTATIONSEQUENCE.cpp.o"
+  "CMakeFiles/CompProgramming.dir/HackerEarth/INTELLIGENTGIRL.cpp.o"
   "CompProgramming.pdb"
   "CompProgramming"
 )

@@ -80,7 +80,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/LeetCode/PERMUTATIONSEQUENCE.cpp">
+		<Unit filename="/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/HackerEarth/INTELLIGENTGIRL.cpp">
 			<Option target="CompProgramming"/>
 		</Unit>
 		<Unit filename="/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/CMakeLists.txt">
