@@ -17,12 +17,15 @@
 using namespace std;
 #define fin cin
 
+static int iter1 = 0;
+static bool found = false;
+static string resstr = "";
 
-void permute(int n , int k,int l, bool found, vector<int> &res , int iter , string resstr)
+void permute(int n , int k,int l, vector<int> &res)
 {
     if ( l == n  )
     {
-        if ( iter == k - 1 ) {
+        if ( iter1 == k - 1 ) {
             found = true;
             string str;
             str.resize(n);
@@ -31,6 +34,7 @@ void permute(int n , int k,int l, bool found, vector<int> &res , int iter , stri
             cout << str << endl;
             resstr = str;
         }
+        iter1 ++;
         return;
     }
     for ( int i = l ; i < n ; i ++ )
@@ -42,7 +46,7 @@ void permute(int n , int k,int l, bool found, vector<int> &res , int iter , stri
         res[l] = res[i] ;
         res[i] = temp;
 
-        permute(n,k,l+1,found,res,iter,resstr);
+        permute(n,k,l+1,res);
 
         temp = res[l];
         res[l] = res[i] ;
@@ -59,8 +63,7 @@ string getPermutation(int n, int k)
     for ( int i = 0 ; i < n ; i ++ )
         res[i] = i+1;
     int iter = 0;
-    string resstr;
-    permute(n,k,0,found,res,iter + 1,resstr);
+    permute(n,k,0,res);
     return resstr;
 }
 

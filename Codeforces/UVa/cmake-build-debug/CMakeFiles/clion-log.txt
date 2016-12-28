@@ -1,4 +1,8 @@
 /Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa
--- Configuring done
--- Generating done
--- Build files have been written to: /Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/cmake-build-debug
+CMake Error at CMakeLists.txt:43 (add_executable):
+  add_executable called with incorrect number of arguments
+
+
+-- Configuring incomplete, errors occurred!
+See also "/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+See also "/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/cmake-build-debug/CMakeFiles/CMakeError.log".
