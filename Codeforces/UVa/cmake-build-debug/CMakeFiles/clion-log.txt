@@ -1,4 +1,4 @@
-/Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa
+/Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa
 -- Configuring done
 -- Generating done
--- Build files have been written to: /Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/cmake-build-debug
+-- Build files have been written to: /Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/cmake-build-debug

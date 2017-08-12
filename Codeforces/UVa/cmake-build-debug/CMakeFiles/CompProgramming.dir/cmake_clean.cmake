@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/CompProgramming.dir/HackerEarth/INTELLIGENTGIRL.cpp.o"
+  "CMakeFiles/CompProgramming.dir/DaynamicProgramming/WineSelling.cpp.o"
   "CompProgramming.pdb"
   "CompProgramming"
 )

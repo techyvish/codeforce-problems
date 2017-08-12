@@ -8,82 +8,82 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/cmake-build-debug"/>
+				<Option working_dir="/Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/cmake-build-debug"/>
+				<Option working_dir="/Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="CompProgramming">
-				<Option output="/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/cmake-build-debug/CompProgramming" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/cmake-build-debug"/>
+				<Option output="/Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/cmake-build-debug/CompProgramming" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode 7.3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.3.0/include"/>
-					<Add directory="/Applications/Xcode 7.3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
-					<Add directory="/Applications/Xcode 7.3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 CompProgramming"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 CompProgramming"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="CompProgramming/fast">
-				<Option output="/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/cmake-build-debug/CompProgramming" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/cmake-build-debug"/>
+				<Option output="/Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/cmake-build-debug/CompProgramming" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode 7.3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.3.0/include"/>
-					<Add directory="/Applications/Xcode 7.3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
-					<Add directory="/Applications/Xcode 7.3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 CompProgramming/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 CompProgramming/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/HackerEarth/INTELLIGENTGIRL.cpp">
+		<Unit filename="/Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/DaynamicProgramming/WineSelling.cpp">
 			<Option target="CompProgramming"/>
 		</Unit>
-		<Unit filename="/Users/vishal/Cerebro/codeforce-problems/Codeforces/UVa/CMakeLists.txt">
+		<Unit filename="/Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
