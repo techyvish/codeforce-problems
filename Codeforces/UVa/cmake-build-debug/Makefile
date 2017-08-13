@@ -123,32 +123,32 @@ CompProgramming/fast:
 	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/build
 .PHONY : CompProgramming/fast
 
-DaynamicProgramming/WineSelling.o: DaynamicProgramming/WineSelling.cpp.o
+DaynamicProgramming/LongestCommonSubsequence.o: DaynamicProgramming/LongestCommonSubsequence.cpp.o
 
-.PHONY : DaynamicProgramming/WineSelling.o
+.PHONY : DaynamicProgramming/LongestCommonSubsequence.o
 
 # target to build an object file
-DaynamicProgramming/WineSelling.cpp.o:
-	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/DaynamicProgramming/WineSelling.cpp.o
-.PHONY : DaynamicProgramming/WineSelling.cpp.o
+DaynamicProgramming/LongestCommonSubsequence.cpp.o:
+	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/DaynamicProgramming/LongestCommonSubsequence.cpp.o
+.PHONY : DaynamicProgramming/LongestCommonSubsequence.cpp.o
 
-DaynamicProgramming/WineSelling.i: DaynamicProgramming/WineSelling.cpp.i
+DaynamicProgramming/LongestCommonSubsequence.i: DaynamicProgramming/LongestCommonSubsequence.cpp.i
 
-.PHONY : DaynamicProgramming/WineSelling.i
+.PHONY : DaynamicProgramming/LongestCommonSubsequence.i
 
 # target to preprocess a source file
-DaynamicProgramming/WineSelling.cpp.i:
-	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/DaynamicProgramming/WineSelling.cpp.i
-.PHONY : DaynamicProgramming/WineSelling.cpp.i
+DaynamicProgramming/LongestCommonSubsequence.cpp.i:
+	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/DaynamicProgramming/LongestCommonSubsequence.cpp.i
+.PHONY : DaynamicProgramming/LongestCommonSubsequence.cpp.i
 
-DaynamicProgramming/WineSelling.s: DaynamicProgramming/WineSelling.cpp.s
+DaynamicProgramming/LongestCommonSubsequence.s: DaynamicProgramming/LongestCommonSubsequence.cpp.s
 
-.PHONY : DaynamicProgramming/WineSelling.s
+.PHONY : DaynamicProgramming/LongestCommonSubsequence.s
 
 # target to generate assembly for a file
-DaynamicProgramming/WineSelling.cpp.s:
-	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/DaynamicProgramming/WineSelling.cpp.s
-.PHONY : DaynamicProgramming/WineSelling.cpp.s
+DaynamicProgramming/LongestCommonSubsequence.cpp.s:
+	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/DaynamicProgramming/LongestCommonSubsequence.cpp.s
+.PHONY : DaynamicProgramming/LongestCommonSubsequence.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... CompProgramming"
-	@echo "... DaynamicProgramming/WineSelling.o"
-	@echo "... DaynamicProgramming/WineSelling.i"
-	@echo "... DaynamicProgramming/WineSelling.s"
+	@echo "... DaynamicProgramming/LongestCommonSubsequence.o"
+	@echo "... DaynamicProgramming/LongestCommonSubsequence.i"
+	@echo "... DaynamicProgramming/LongestCommonSubsequence.s"
 .PHONY : help
 
 

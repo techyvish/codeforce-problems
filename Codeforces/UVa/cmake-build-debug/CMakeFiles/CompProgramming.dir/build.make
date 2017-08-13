@@ -57,38 +57,38 @@ include CMakeFiles/CompProgramming.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/CompProgramming.dir/flags.make
 
-CMakeFiles/CompProgramming.dir/DaynamicProgramming/WineSelling.cpp.o: CMakeFiles/CompProgramming.dir/flags.make
-CMakeFiles/CompProgramming.dir/DaynamicProgramming/WineSelling.cpp.o: ../DaynamicProgramming/WineSelling.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CompProgramming.dir/DaynamicProgramming/WineSelling.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CompProgramming.dir/DaynamicProgramming/WineSelling.cpp.o -c /Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/DaynamicProgramming/WineSelling.cpp
+CMakeFiles/CompProgramming.dir/DaynamicProgramming/LongestCommonSubsequence.cpp.o: CMakeFiles/CompProgramming.dir/flags.make
+CMakeFiles/CompProgramming.dir/DaynamicProgramming/LongestCommonSubsequence.cpp.o: ../DaynamicProgramming/LongestCommonSubsequence.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CompProgramming.dir/DaynamicProgramming/LongestCommonSubsequence.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CompProgramming.dir/DaynamicProgramming/LongestCommonSubsequence.cpp.o -c /Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/DaynamicProgramming/LongestCommonSubsequence.cpp
 
-CMakeFiles/CompProgramming.dir/DaynamicProgramming/WineSelling.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CompProgramming.dir/DaynamicProgramming/WineSelling.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/DaynamicProgramming/WineSelling.cpp > CMakeFiles/CompProgramming.dir/DaynamicProgramming/WineSelling.cpp.i
+CMakeFiles/CompProgramming.dir/DaynamicProgramming/LongestCommonSubsequence.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CompProgramming.dir/DaynamicProgramming/LongestCommonSubsequence.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/DaynamicProgramming/LongestCommonSubsequence.cpp > CMakeFiles/CompProgramming.dir/DaynamicProgramming/LongestCommonSubsequence.cpp.i
 
-CMakeFiles/CompProgramming.dir/DaynamicProgramming/WineSelling.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CompProgramming.dir/DaynamicProgramming/WineSelling.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/DaynamicProgramming/WineSelling.cpp -o CMakeFiles/CompProgramming.dir/DaynamicProgramming/WineSelling.cpp.s
+CMakeFiles/CompProgramming.dir/DaynamicProgramming/LongestCommonSubsequence.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CompProgramming.dir/DaynamicProgramming/LongestCommonSubsequence.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/DaynamicProgramming/LongestCommonSubsequence.cpp -o CMakeFiles/CompProgramming.dir/DaynamicProgramming/LongestCommonSubsequence.cpp.s
 
-CMakeFiles/CompProgramming.dir/DaynamicProgramming/WineSelling.cpp.o.requires:
+CMakeFiles/CompProgramming.dir/DaynamicProgramming/LongestCommonSubsequence.cpp.o.requires:
 
-.PHONY : CMakeFiles/CompProgramming.dir/DaynamicProgramming/WineSelling.cpp.o.requires
+.PHONY : CMakeFiles/CompProgramming.dir/DaynamicProgramming/LongestCommonSubsequence.cpp.o.requires
 
-CMakeFiles/CompProgramming.dir/DaynamicProgramming/WineSelling.cpp.o.provides: CMakeFiles/CompProgramming.dir/DaynamicProgramming/WineSelling.cpp.o.requires
-	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/DaynamicProgramming/WineSelling.cpp.o.provides.build
-.PHONY : CMakeFiles/CompProgramming.dir/DaynamicProgramming/WineSelling.cpp.o.provides
+CMakeFiles/CompProgramming.dir/DaynamicProgramming/LongestCommonSubsequence.cpp.o.provides: CMakeFiles/CompProgramming.dir/DaynamicProgramming/LongestCommonSubsequence.cpp.o.requires
+	$(MAKE) -f CMakeFiles/CompProgramming.dir/build.make CMakeFiles/CompProgramming.dir/DaynamicProgramming/LongestCommonSubsequence.cpp.o.provides.build
+.PHONY : CMakeFiles/CompProgramming.dir/DaynamicProgramming/LongestCommonSubsequence.cpp.o.provides
 
-CMakeFiles/CompProgramming.dir/DaynamicProgramming/WineSelling.cpp.o.provides.build: CMakeFiles/CompProgramming.dir/DaynamicProgramming/WineSelling.cpp.o
+CMakeFiles/CompProgramming.dir/DaynamicProgramming/LongestCommonSubsequence.cpp.o.provides.build: CMakeFiles/CompProgramming.dir/DaynamicProgramming/LongestCommonSubsequence.cpp.o
 
 
 # Object files for target CompProgramming
 CompProgramming_OBJECTS = \
-"CMakeFiles/CompProgramming.dir/DaynamicProgramming/WineSelling.cpp.o"
+"CMakeFiles/CompProgramming.dir/DaynamicProgramming/LongestCommonSubsequence.cpp.o"
 
 # External object files for target CompProgramming
 CompProgramming_EXTERNAL_OBJECTS =
 
-CompProgramming: CMakeFiles/CompProgramming.dir/DaynamicProgramming/WineSelling.cpp.o
+CompProgramming: CMakeFiles/CompProgramming.dir/DaynamicProgramming/LongestCommonSubsequence.cpp.o
 CompProgramming: CMakeFiles/CompProgramming.dir/build.make
 CompProgramming: CMakeFiles/CompProgramming.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable CompProgramming"
@@ -99,7 +99,7 @@ CMakeFiles/CompProgramming.dir/build: CompProgramming
 
 .PHONY : CMakeFiles/CompProgramming.dir/build
 
-CMakeFiles/CompProgramming.dir/requires: CMakeFiles/CompProgramming.dir/DaynamicProgramming/WineSelling.cpp.o.requires
+CMakeFiles/CompProgramming.dir/requires: CMakeFiles/CompProgramming.dir/DaynamicProgramming/LongestCommonSubsequence.cpp.o.requires
 
 .PHONY : CMakeFiles/CompProgramming.dir/requires
 

@@ -17,7 +17,7 @@
 #include "iostream"
 using namespace std;
 
-// N^3 solution
+// 2^N solution
 int solve(int be, int en, int year, int *a){
 
     if ( be == en ){

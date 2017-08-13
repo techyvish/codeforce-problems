@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/DaynamicProgramming/WineSelling.cpp" "/Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/cmake-build-debug/CMakeFiles/CompProgramming.dir/DaynamicProgramming/WineSelling.cpp.o"
+  "/Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/DaynamicProgramming/LongestCommonSubsequence.cpp" "/Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/cmake-build-debug/CMakeFiles/CompProgramming.dir/DaynamicProgramming/LongestCommonSubsequence.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

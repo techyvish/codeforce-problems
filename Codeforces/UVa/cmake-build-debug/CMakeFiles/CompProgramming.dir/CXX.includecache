@@ -6,7 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/DaynamicProgramming/WineSelling.cpp
+/Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/DaynamicProgramming/LongestCommonSubsequence.cpp
 iostream
 /Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/DaynamicProgramming/iostream
+vector
+/Users/vishal/Documents/Development/codeforce-problems/Codeforces/UVa/DaynamicProgramming/vector
 
